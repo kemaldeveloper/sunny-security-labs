@@ -96,7 +96,7 @@ function svgSprite() {
       }),
     )
     .pipe(svgStore())
-    .pipe(dest('src/img/'));
+    .pipe(dest('src/assets/'));
 }
 
 function browserSync() {
@@ -120,7 +120,7 @@ function buildCopy() {
 
 async function buildHtml() {
   const includes = new ssi('app/', 'dist/', '/**/*.html');
-  
+
   includes.compile();
   await deleteAsync('dist/parts', { force: true });
 }
