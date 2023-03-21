@@ -1,3 +1,4 @@
+import path from 'path';
 import gulp from 'gulp';
 import browsersync from 'browser-sync';
 import bssi from 'browsersync-ssi';
@@ -67,7 +68,7 @@ function css() {
 }
 
 function svgSprite() {
-  return src('src/img/svg-sprite/*.svg')
+  return src('src/assets/svg-sprite/*.svg')
     .pipe(
       svgMin(function (file) {
         var prefix = path.basename(file.relative, path.extname(file.relative));
@@ -119,7 +120,7 @@ function buildCopy() {
 }
 
 async function buildHtml() {
-  const includes = new ssi('app/', 'dist/', '/**/*.html');
+  const includes = new ssi('src/', 'dist/', '/**/*.html');
 
   includes.compile();
   await deleteAsync('dist/parts', { force: true });
@@ -137,5 +138,5 @@ function startWatch() {
 }
 
 // Export
-export const build = series(cleanDist, jsLibs, js, cssLibs, css, buildCopy, buildHtml);
+export const build = series(cleanDist, jsLibs, js, cssLibs, css, buildCopy, buildHtml, svgSprite);
 export default series(jsLibs, js, cssLibs, css, svgSprite, parallel(browserSync, startWatch));
