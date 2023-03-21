@@ -2,22 +2,20 @@
 
 #### Front-end developing start template
 
-Author: [hattam](https://hattam.ru)
-
-![alt](https://raw.githubusercontent.com/hattamsoyunov/start_dev/master/src/assets/images/start_dev_preview.jpg)
+Author: Kemal
 
 ## How to use
 
 1. Install Node Modules - `yarn install` or `npm i`
 2. `yarn start` - to run in dev mode
-2. `yarn build` - build static files for release
+3. `yarn build` - build static files for release
 
-**Concat libraries** Install the libraries and specify all library paths in the "jsLibs" and "cssLibs"
-tasks (gulpfile.js);
+**Concat libraries** Install the libraries and specify all library paths in the "jsLibs" and "cssLibs" tasks
+(gulpfile.js);
 
 ## Main Gulpfile.js options:
 
-`cssLibsPaths` and `jsLibsPaths`: List of library paths 
+`cssLibsPaths` and `jsLibsPaths`: List of library paths
 
 `watchFileTypes`: List of files extensions for watching & hard reload
 
