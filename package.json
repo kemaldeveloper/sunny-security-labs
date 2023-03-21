@@ -2,7 +2,7 @@
   "name": "start_dev",
   "version": "3.0.1",
   "description": "start_dev - Front-end developing start template",
-  "author": "Hatam Soyunov",
+  "author": "Kemal Kurbansahatov",
   "license": "ISC",
   "type": "module",
   "main": "gulpfile.js",
