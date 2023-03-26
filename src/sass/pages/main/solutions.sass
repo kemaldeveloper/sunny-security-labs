@@ -1,1 +1,100 @@
 .solutions
+  position: relative
+  z-index: 2
+
+  &--padding
+    padding-top: 71px
+
+  &__title
+    display: block
+    margin-bottom: 50px
+    color: $mid_blue
+
+  &__wrapper
+    position: relative
+
+  &__item
+    display: flex
+    position: relative
+    width: 887px
+    height: 220px
+    padding: 23px 0 21px 23px
+
+  &__content-wrap
+    position: relative
+    display: flex
+    width: 100%
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      height: 100%
+      width: 2.5px
+      background: $white
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      height: 2.5px
+      width: 100%
+      background: $white
+
+  &__item--web3
+    background: $ocean
+    transition: all 0.5s
+    &:hover
+      background: darken($ocean, 3%)
+
+  &__item--blockchain
+    background: $mid_blue
+    margin-left: 172px
+    transition: all 0.5s
+    &:hover
+      background: darken($mid_blue, 3%)
+
+  &__item--aisolutions
+    background: $deep_blue
+    margin-left: 345px
+    transition: all 0.5s
+    &:hover
+      background: darken($deep_blue, 3%)
+
+  &__item-wrap--left
+    padding: 4px 0 0 42px
+    margin-right: 73px
+
+  &__item-wrap--right
+    padding: 12px 0 0 0
+
+  &__item-title
+    font-weight: 700
+    font-size: 44px
+    line-height: 52px
+    letter-spacing: 0.01em
+    color: $white
+
+  &__item-text
+    color: $dark_blue
+    max-width: 446px
+    margin-bottom: 32px
+
+  &__item-link
+    color: $white
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      right: -70px
+      top: 50%
+      transform: translateY(-50%)
+      height: 1px
+      width: 50px
+      background: $white
+    &:hover
+      color: $white
+
+  &__bg-wrap
+    position: absolute
+    right: 0
+    top: 0
+    z-index: -1

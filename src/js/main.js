@@ -51,7 +51,7 @@ $('.js-popup').on('click', function (event) {
 });
 
 // Mobile menu toggle
-$('.js-menu').on('click',function () {
+$('.js-menu').on('click', function () {
   $(this).toggleClass('is-active');
   $('.menu').toggleClass('is-opened');
 });
@@ -63,7 +63,7 @@ $('input[type="tel"]').inputmask({
 });
 
 // E-mail Ajax Send
-$('form').on('submit',function (e) {
+$('form').on('submit', function (e) {
   e.preventDefault();
 
   let form = $(this);
@@ -137,3 +137,27 @@ const mfpPopup = function (popupID, source) {
     // }
   });
 };
+
+// const anim = lottie;
+
+// anim.loadAnimation({
+//   container: document.querySelector('#Vector1'),
+//   renderer: 'svg',
+//   loop: true,
+//   autoplay: true,
+//   path: '../json/140433-chat-bot.json',
+// });
+
+$('.slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  variableWidth: true,
+  autoplaySpeed: 2000,
+  prevArrow: false,
+  nextArrow: $('.next'),
+});
+
+$('.next').on('click', function () {
+  $(this).closest('.slider-block').find('.slider').slick('slickNext');
+});

@@ -1,1 +1,117 @@
 .portfolio
+
+  &--bg
+    background: #F2F2F2
+    height: 800px
+    position: relative
+    top: -100px
+    z-index: 1
+    padding-top: 177px
+
+  &__title
+    color: $mid_blue
+    &:hover
+      color: $mid_blue
+
+  &__content-wrap
+    margin-top: 46px
+    display: flex
+    justify-content: space-between
+
+  &__rental
+    width: 690px
+    height: 600px
+
+    &-content
+      background: $gradient_plate
+      padding: 34px 30.58px 17px 0
+      height: 234px
+
+    &-title
+      color: $white
+      max-width: 456.6px
+      margin-left: 41.79px
+
+    &-icon-wrap
+      position: relative
+      height: 60px
+      width: 100%
+      transform: translateY(6px)
+      &::after
+        content: ''
+        position: absolute
+        height: 1px
+        width: 568.71px
+        background: $white
+        top: 50%
+        transform: translateY(-50%)
+      &:hover
+        &::after
+          content: ''
+          transition: all 0.5s ease
+          width: 643px
+        .icon--rental-icon
+          visibility: hidden
+        .icon--rental-icon2
+          visibility: visible
+
+    &-date
+      color: $white
+      margin-left: 41.79px
+
+    &-img
+      width: 690px
+      height: 366px
+      object-fit: cover
+
+  &__right-wrap
+    display: flex
+
+  &__inner-wrap
+    display: flex
+    flex-direction: column
+
+  &__right-item
+    width: 330px
+    margin-left: 30px
+
+  &__right-img
+    width: 330px
+    height: 285px
+    object-fit: cover
+    margin-bottom: 16px
+
+  &__right-title
+    font-weight: 700
+    font-size: 24px
+    line-height: 31px
+    letter-spacing: 0.02em
+    color: $dark_blue
+    max-width: 254px
+
+  &__right-title--first
+    margin-bottom: 18px
+
+  &__right-title--second
+    margin-bottom: 49px
+
+  &__right-date
+    color: $dark_blue
+    border-top: 1px solid $dark_blue
+    padding-top: 22.44px
+
+  &__right-link
+    align-self: flex-end
+    position: relative
+    margin-top: 33.46px
+    color: $mid_blue
+    &:hover
+      color: $mid_blue
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: -65px
+      height: 1px
+      width: 50px
+      background: $mid_blue

@@ -35,6 +35,12 @@
     "jquery": "3.6.3",
     "magnific-popup": "1.1.0",
     "node-sass": "8.0.0",
+    "slick-carousel": "^1.8.1",
     "ssi": "0.3.0"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "figmotion-animejs": "0.0.1",
+    "lottie-web": "^5.10.2"
   }
 }
