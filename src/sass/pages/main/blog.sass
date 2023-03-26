@@ -1,8 +1,15 @@
 .blog
 
+  &--padding
+    padding-top: 28px
+
   &__wrapper
+    display: flex
+    justify-content: space-between
 
   &__title
+    display: block
+    margin-bottom: 49px
     color: $mid_blue
     &:hover
       color: $mid_blue
@@ -15,8 +22,73 @@
     display: flex
     justify-content: space-between
 
+  &__content-wrap:first-child
+    margin-bottom: 42px
+
+  &__content-wrap--bordered
+    padding-bottom: 25px
+    margin-bottom: 26px
+    border-bottom: 1px solid #D0D0D0
+
   &__content-title
+    color: $dark
+    max-width: 439px
 
   &__date
+    color: $dark_blue
+    margin-top: 12px
+
+  &__date--mt
+    margin-top: 21px
 
   &__content-subtitle
+    font-weight: 700
+    font-size: 26px
+    line-height: 34px
+    max-width: 391px
+    color: $dark_blue
+
+  &__text-wrap
+    display: flex
+    flex-direction: column
+    position: relative
+    min-height: 198px
+    margin-bottom: 72px
+
+  &__text-icon
+    position: absolute
+    z-index: -1
+    top: 8px
+    left: 0
+
+  &__text-icon
+    svg
+      display: block
+      width: 560px
+      height: 182.5px
+
+  &__text-text
+    max-width: 570px
+    color: $dark_blue
+    margin: 0 0 0 48.25px
+
+  &__text-link
+    align-self: flex-end
+    transform: translateY(27px)
+    color: $mid_blue
+    &:hover
+      color: $mid_blue
+
+  &__quote
+    width: 600px
+    height: 672px
+    background: $mid_blue
+    padding: 32px 36.41px 46px 47.47px
+
+  &__quote-title
+    font-weight: 700
+    font-size: 26px
+    line-height: 34px
+    letter-spacing: 0.01em
+    color: $white
+    margin-bottom: 56px

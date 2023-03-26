@@ -1,13 +1,24 @@
-<section class="blog">
+<section class="blog blog--padding">
   <div class="container">
+    <a href="#" class="blog__title sections-title">Blog</a>
     <div class="blog__wrapper">
-      <a href="#" class="blog__title sections-title">Blog</a>
       <div class="blog__content">
         <div class="blog__content-wrap">
           <h3 class="blog__content-title title-3">10 Trends to Watch Heading Into 2023</h3>
-          <div class="blog__date date">12.10.2021</div>
+          <div class="blog__date date blog__date--mt">12.10.2021</div>
         </div>
-        <div class="blog__content-wrap">
+        <div class="blog__text-wrap">
+          <div class="blog__text-icon">
+            <!--#include virtual="/assets/images/gradient-line.svg" -->
+          </div>
+          <div class="blog__text-text text-2">
+            The global economy faces a critical juncture with a number of parallel and related crises. 2023 promises to
+            be a tougher ride for most businesses, investors and consumers globally, but there is always opportunity in
+            volatility. We analyze the top 10 trends we expect ...
+          </div>
+          <a href="#" class="blog__text-link more-link">read more </a>
+        </div>
+        <div class="blog__content-wrap blog__content-wrap--bordered">
           <h4 class="blog__content-subtitle">Crypto Compliance, Risk and Investigation Services</h4>
           <div class="blog__date date">12.10.2021</div>
         </div>
@@ -16,7 +27,26 @@
           <div class="blog__date date">12.10.2021</div>
         </div>
       </div>
-      <div class="blog__quote"></div>
+      <div class="blog__quote">
+        <h4 class="blog__quote-title">Request a quote</h4>
+        <form action="#" class="quote-form">
+          <label class="quote-form__label">
+            <input class="quote-form__input" type="text" name="name" placeholder="Full Name" />
+          </label>
+          <label class="quote-form__label">
+            <input class="quote-form__input" type="text" name="company" placeholder="Company" />
+          </label>
+          <label class="quote-form__label">
+            <input class="quote-form__input" type="text" name="general-requests" placeholder="General requests" />
+            <svg class="icon icon--quote-arrow"><use xlink:href="assets/svg-sprite.svg#quote-arrow"></use></svg>
+          </label>
+          <label class="quote-form__label">
+            <input class="quote-form__input" type="email" name="email" placeholder="E-mail" />
+          </label>
+          <textarea class="quote-form__textarea" name="request" cols="30" rows="10" placeholder="Request"></textarea>
+          <button class="quote-form__btn">submit</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>

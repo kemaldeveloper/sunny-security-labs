@@ -1,13 +1,8 @@
-.input-wrap
-  margin-bottom: 30px
-
 input,
 textarea
   width: 100%
-  font-size: 16px
-  padding: 5px 10px
-  border: 1px solid #999
   transition: all .3s ease
+  border: none
   &:focus
     outline: none
   &:disabled
@@ -15,3 +10,64 @@ textarea
 
 ::placeholder
   color: #999
+
+.quote-form
+  display: flex
+  flex-direction: column
+
+  &__label
+    border-bottom: 1px solid $light_grey
+    height: 43.5px
+    &:not(:last-child)
+      margin-bottom: 23.5px
+
+  &__input
+    background: transparent
+    color: $light_grey
+    font-weight: 400
+    font-size: 20px
+    line-height: 34px
+    letter-spacing: 0.01em
+    &::placeholder
+      font-weight: 400
+      font-size: 20px
+      line-height: 34px
+      letter-spacing: 0.01em
+      color: $light_grey
+
+  &__textarea
+    background: transparent
+    height: 119px
+    border: 1px solid $light_grey
+    padding: 8px 18.5px
+    resize: none
+    font-weight: 400
+    font-size: 20px
+    line-height: 34px
+    letter-spacing: 0.01em
+    color: $light_grey
+    margin-bottom: 49px
+    &::placeholder
+      font-weight: 400
+      font-size: 20px
+      line-height: 34px
+      letter-spacing: 0.01em
+      color: $light_grey
+
+  &__btn
+    align-self: center
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 182px
+    height: 54px
+    border: 2px solid $white
+    background: transparent
+    font-weight: 700
+    font-size: 22px
+    line-height: 34px
+    letter-spacing: 0.01em
+    color: $white
+    &:hover
+      color: $mid_blue
+      background: $white
