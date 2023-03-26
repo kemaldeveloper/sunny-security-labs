@@ -10,6 +10,26 @@
     padding: 32.47px 41px 56.84px 58px
     margin-right: 30px
     position: relative
+    &:hover
+      background: $gradient_plate
+      .slider__title
+        color: $white
+        transition: all 0.5s ease
+      .slider__text
+        color: $white
+        transition: all 0.5s ease
+      .slider__link
+        transition: all 0.5s ease
+        color: $white
+        margin-left: 67px
+        &::after
+          content: ''
+          background: $white
+          right: 0
+          left: -67px
+      svg
+        path
+          fill: $white
 
   &__svg-wrap
     position: absolute
