@@ -161,3 +161,8 @@ $('.slider').slick({
 $('.next').on('click', function () {
   $(this).closest('.slider-block').find('.slider').slick('slickNext');
 });
+
+$('.quote-form__spoiler-btn').click(function (event) {
+  $(this).toggleClass('active').next().slideToggle(300);
+  $('.quote-form__spoiler-wrap').toggleClass('active');
+});

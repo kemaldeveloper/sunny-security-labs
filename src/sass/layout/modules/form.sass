@@ -18,8 +18,59 @@ textarea
   &__label
     border-bottom: 1px solid $light_grey
     height: 43.5px
-    &:not(:last-child)
-      margin-bottom: 23.5px
+    margin-bottom: 23.5px
+
+  &__label--mb35
+    margin-bottom: 35.5px
+
+  &__spoiler
+    border-bottom: 1px solid $light_grey
+    height: 43.5px
+    margin-bottom: 23.5px
+
+    &-wrap
+      position: relative
+      background: $mid_blue
+      z-index: 3
+
+    &-wrap.active
+      border: 2px solid $white
+      margin-left: -20px
+      margin-right: -20px
+      padding: 0 20px 0
+
+    &-btn
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 100%
+      border: none
+      background: transparent
+      color: $light_grey
+      font-weight: 400
+      font-size: 20px
+      line-height: 34px
+      letter-spacing: 0.01em
+      padding: 0
+
+    &-btn.active
+      .icon--quote-arrow
+        transition: all 0.4s ease
+        transform: rotate(180deg)
+
+    &-list
+      display: none
+
+    &-item
+      font-weight: 400
+      font-size: 20px
+      line-height: 36px
+      letter-spacing: 0.01em
+
+    &-link
+      color: $white
+      &:hover
+        color: $white
 
   &__input
     background: transparent
@@ -28,6 +79,7 @@ textarea
     font-size: 20px
     line-height: 34px
     letter-spacing: 0.01em
+    padding: 0
     &::placeholder
       font-weight: 400
       font-size: 20px
