@@ -166,3 +166,29 @@ $('.quote-form__spoiler-btn').click(function (event) {
   $(this).toggleClass('active').next().slideToggle(300);
   $('.quote-form__spoiler-wrap').toggleClass('active');
 });
+
+
+
+const buttons = document.querySelectorAll('.main-portfolio__link');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(button => {
+      button.classList.remove('main-portfolio__link--active');
+    });
+
+    button.classList.add('main-portfolio__link--active');
+
+    button.style.backgroundColor = '#01AFF3';
+
+    buttons.forEach(otherButton => {
+      if (otherButton !== button) {
+        otherButton.style.backgroundColor = 'transparent';
+      }
+    });
+  });
+
+  if (button.classList.contains('main-portfolio__link--active')) {
+    button.style.backgroundColor = '#01AFF3';
+  }
+});
