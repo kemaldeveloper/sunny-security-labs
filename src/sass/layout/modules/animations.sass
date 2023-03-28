@@ -2,8 +2,6 @@
   position: absolute
   right: 0
   top: 0
-  opacity: 0.8
-  filter: blur(15px)
   animation: img1 1s linear 1
 
 @keyframes img1
@@ -11,8 +9,10 @@
     transform: rotate(90deg)
     top: 100%
     right: -50%
+    opacity: 0
 
   100%
+    opacity: 1
     transform: rotate(0)
     top: 0
     right: 0
@@ -28,6 +28,9 @@
     bottom: -50%
     opacity: 0
     transform: rotate(-90deg)
+
+  50%
+    opacity: 0.2
 
   100%
     bottom: -27px
@@ -68,13 +71,61 @@
   position: absolute
   top: 48px
   right: -9px
-  animation: img4 1s linear 1
+  animation: img5 1s linear 1
 
 @keyframes img5
   0%
+    transform: rotate(90deg)
     top: 100%
     right: -100%
 
   100%
+    transform: rotate(0)
     top: 48px
     right: -9px
+
+.main-screen__title
+  position: absolute
+  top: 152px
+  left: 247px
+  color: $dark_blue
+  max-width: 802px
+  animation: title-anim 1s linear 1
+
+@keyframes title-anim
+  0%
+    opacity: 0
+    left: -100%
+  50%
+    opacity: 0.3
+
+  100%
+    opacity: 1
+    left: 247px
+
+.main-screen__link
+  position: absolute
+  left: 247px
+  top: 425px
+  color: $mid_blue
+  animation: link-anim 1s linear 1
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    right: -68px
+    width: 50px
+    height: 1px
+    background: $mid_blue
+
+@keyframes link-anim
+  0%
+    opacity: 0
+    top: 600px
+
+  50%
+    opacity: 0.8
+
+  100%
+    opacity: 1
+    top: 425px
