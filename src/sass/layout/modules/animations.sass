@@ -1,19 +1,80 @@
-.header
-  &__img-1
-    position: absolute
-    right: 0
-    top: 0
-    animation-name: img1
-    animation-duration: 2s
-    animation-timing-function: ease
-    animation-iteration-count: 1
+.main-screen__img-1
+  position: absolute
+  right: 0
+  top: 0
+  opacity: 0.8
+  filter: blur(15px)
+  animation: img1 1s linear 1
 
 @keyframes img1
   0%
-    right: -100%
-
-  50%
+    transform: rotate(90deg)
+    top: 100%
     right: -50%
 
   100%
+    transform: rotate(0)
+    top: 0
     right: 0
+
+.main-screen__img-2
+  position: absolute
+  right: 425px
+  bottom: -27px
+  animation: img2 1s linear 1
+
+@keyframes img2
+  0%
+    bottom: -50%
+    opacity: 0
+    transform: rotate(-90deg)
+
+  100%
+    bottom: -27px
+    transform: rotate(0)
+    opacity: 0.8
+
+.main-screen__img-3
+  position: absolute
+  top: 1px
+  right: 561px
+  animation: img3 1s linear 1
+
+@keyframes img3
+  0%
+    top: -50%
+    transform: rotate(45deg)
+
+  100%
+    top: 1px
+    transform: rotate(0)
+
+.main-screen__img-4
+  position: absolute
+  right: 0
+  top: 0
+  animation: img4 1s linear 1
+
+@keyframes img4
+  0%
+    right: -100%
+    transform: rotate(-90deg)
+
+  100%
+    right: 0
+    transform: rotate(0)
+
+.main-screen__img-5
+  position: absolute
+  top: 48px
+  right: -9px
+  animation: img4 1s linear 1
+
+@keyframes img5
+  0%
+    top: 100%
+    right: -100%
+
+  100%
+    top: 48px
+    right: -9px
