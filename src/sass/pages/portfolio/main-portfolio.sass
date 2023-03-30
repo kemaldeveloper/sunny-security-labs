@@ -1,9 +1,12 @@
 .main-portfolio
-  padding: 66px 0 146px 0
-
+  padding: 66px 0 159px 0
+  +lg 
+    padding: 66px 0 70px 0
   &__wrap
     display: flex
     justify-content: flex-end
+    +md 
+      display: none
 
   &__item
     width: 755px
@@ -22,3 +25,143 @@
       padding: 5px 20px
     &--active
       border: none
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    padding-top: 40px
+    +lg 
+      flex-wrap: wrap
+      justify-content: center
+    +md 
+      padding: 0
+
+  &__inner
+    padding-top: 23px
+    max-width: 599px
+    position: relative
+    +lg 
+      margin-bottom: 80px
+    +md 
+      display: none
+
+  &__title
+    margin-left: 45px
+    margin-bottom: 33px
+
+  &__str
+    max-width: 439px
+    margin-left: 45px
+    font-weight: 400
+    font-size: 16px
+    line-height: 28px
+    letter-spacing: 0.02em
+    color: $dark_blue
+
+  &__line
+    border: 1px solid $dark_blue
+    margin: 52px 0px 29px 48px
+
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-left: 45px
+
+  &__security
+    font-weight: 400
+    font-size: 15px
+    line-height: 18px
+    text-align: right
+    color: $grey-colour
+
+  &__icon
+    position: absolute
+    left: 0
+    top: 2px
+    z-index: -1
+  &__images
+    max-width: 600px
+    height: 366px
+    object-fit: cover
+    +xxl 
+      max-width: 500px
+    +xl 
+      max-width: 310px
+    +lg 
+      max-width: 100%
+
+  .columns
+    padding-top: 50px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+    &__item
+      max-width: 285px
+      margin-bottom: 42px
+      &:nth-child(5)
+        margin-bottom: 0
+      &:nth-child(6)
+        margin-bottom: 0
+      &:nth-child(7)
+        margin-bottom: 0
+      &:nth-child(8)
+        margin-bottom: 0
+      +xxl 
+        max-width: 260px
+      +xl 
+        max-width: 100%
+      +lg 
+        &:nth-child(5)
+          margin-bottom: 42px
+        &:nth-child(6)
+          margin-bottom: 42px
+      +md 
+        max-width: 237px
+      +sm 
+        max-width: 165px
+        margin-bottom: 25px
+      &--none-sm
+        +sm
+          display: none
+
+    &__img 
+      height: 285px
+      width: 285px
+      object-fit: cover
+      margin-bottom: 16px
+      +sm 
+        height: 165px
+        margin-bottom: 11px
+
+    &__subtitle
+      max-width: 254px
+      height: 93px
+      font-weight: 700
+      font-size: 24px
+      line-height: 31px
+      letter-spacing: 0.02em
+      color: $dark_blue
+      margin-bottom: 20px
+      +md 
+        font-size: 20px
+        margin-bottom: 10px
+      +sm 
+        font-size: 16px
+        line-height: 20px
+        max-width: 156px
+        height: 64px
+
+    &__line
+      border: 1px solid $dark_blue
+      margin: 0
+      margin-bottom: 20px
+      +sm 
+        margin-bottom: 13px
+
+    &__date
+      +sm 
+        font-size: 11px
+        line-height: 13px
+
