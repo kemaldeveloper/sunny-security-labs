@@ -85,47 +85,60 @@
     right: -9px
 
 .main-screen__title
-  position: absolute
-  top: 152px
-  left: 247px
+  display: block
+  margin-bottom: 50px
   color: $dark_blue
-  max-width: 802px
   animation: title-anim 0.8s ease 1
+  transition: all 0.3s ease
+  &:hover
+    color: $hover
 
 @keyframes title-anim
   0%
+    transform: translateX(-129%)
     opacity: 0
     left: -100%
+
   50%
     opacity: 0.3
 
   100%
+    transform: translateX(0)
     opacity: 1
     left: 247px
 
 .main-screen__link
-  position: absolute
-  left: 247px
-  top: 425px
+  display: inline-block
+  position: relative
   color: $mid_blue
+  padding-right: 70px
+  transition: all 0.5s ease
   animation: link-anim 0.8s ease 1
   &::after
     content: ''
     position: absolute
     top: 50%
-    right: -68px
+    right: 0
     width: 50px
     height: 1px
     background: $mid_blue
+  &:hover
+    color: $hover
+    padding: 0 0 0 70px
+    &::after
+      content: ''
+      background: $hover
+      right: 0
+      left: 0
 
 @keyframes link-anim
   0%
+    transform: translateY(150px)
     opacity: 0
-    top: 600px
 
   50%
-    opacity: 0.8
+    opacity: 0.3
 
   100%
+    transform: translateY(0)
     opacity: 1
-    top: 425px

@@ -15,9 +15,11 @@
     &:hover
       color: $mid_blue
 
-  // TODO: НАДО УБРАТЬ ШИРИНУ С &__content
-  &__content
-    width: 690px
+  &__box
+    &:hover
+      .blog__content-title
+        color: $hover
+        margin-left: 44px
 
   &__content-wrap
     display: flex
@@ -26,14 +28,33 @@
   &__content-wrap:first-child
     margin-bottom: 42px
 
+  &__content-wrap
+    &:hover
+      .blog__content-subtitle
+        margin-left: 22px
+        color: $hover
+
   &__content-wrap--bordered
     padding-bottom: 25px
     margin-bottom: 26px
-    border-bottom: 1px solid #D0D0D0
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      height: 1px
+      background: #D0D0D0
+    &:hover
+      &::after
+        content: ''
+        height: 2px
 
   &__content-title
     color: $dark
     max-width: 439px
+    transition: all 0.3s linear
 
   &__date
     color: $dark_blue
@@ -48,25 +69,32 @@
     line-height: 34px
     max-width: 391px
     color: $dark_blue
+    transition: all 0.4s ease
 
   &__text-wrap
     display: flex
     flex-direction: column
     position: relative
-    min-height: 198px
-    margin-bottom: 72px
-
-  &__text-icon
-    position: absolute
-    z-index: -1
-    top: 8px
-    left: 0
-
-  &__text-icon
-    svg
-      display: block
+    min-height: 191px
+    margin-bottom: 78px
+    &::before
+      content: ''
+      transition: all 0.3s linear
+      position: absolute
+      left: 0
+      bottom: 0
+      height: 182px
+      width: 2px
+      background: $gradient_plate
+    &::after
+      content: ''
+      transition: all 0.3s linear
+      position: absolute
+      left: 0
+      bottom: 0
+      height: 2px
       width: 560px
-      height: 182.5px
+      background: $gradient_plate
 
   &__text-text
     max-width: 570px
@@ -76,13 +104,30 @@
   &__text-link
     align-self: flex-end
     transform: translateY(27px)
+    transition: all 0.3s linear
     color: $mid_blue
     &:hover
       color: $mid_blue
 
+  &__box
+    &:hover
+      .blog__text-link
+        margin-right: 40px
+        color: $hover
+
+      .blog__text-wrap
+        &::before
+          content: ''
+          background: $hover
+        &::after
+          content: ''
+          background: $hover
+          width: 525px
+
   &__quote
-    width: 600px
-    height: 672px
+    max-width: 600px
+    max-height: 672px
+    margin-left: auto
     background: $mid_blue
     padding: 32px 47px 46px 49px
 
