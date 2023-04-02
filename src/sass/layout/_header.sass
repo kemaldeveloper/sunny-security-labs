@@ -1,5 +1,7 @@
 .header
+  position: relative
   padding: 33px 0 0
+  z-index: 50
 
   &__wrap
     display: flex
@@ -10,32 +12,83 @@
     display: block
     width: 154px
     height: 83.19px
+    +lg
+      width: 100px
+      height: 56px
 
   &__logo
-    width: 154px
-    height: 83.19px
     object-fit: cover
 
   &__menu
-    position: relative
-    z-index: 5
     min-width: 631px
+    +lg
+      min-width: 540px
 
   &__list
     display: flex
     justify-content: space-between
+
+  &__item
+    +lg
+      font-size: 14px
 
   &__link
     display: flex
     align-items: center
     color: $dark_blue
     &:hover
-      color: $dark_blue
+      color: $deep_blue
+
+  // TODO: надо подравнять стрелки
 
   &__link--first
+    transition: all 0.4s ease
     svg
-      transform: translate(6px, -1px)
+      transition: all 0.4s ease
+      margin-left: 6px
+      // transform: translate(6px, -1px)
 
   &__link--second
+    transition: all 0.4s ease
     svg
-      transform: translate(5px, -1px)
+      transition: all 0.4s ease
+      margin-left: 5px
+      // transform: translate(5px, -1px)
+
+  &__sub-list
+    display: flex
+    position: absolute
+    bottom: -40px
+    opacity: 0
+    visibility: hidden
+    transition: all 0.4s ease
+
+  &__item
+    position: relative
+    &:hover
+      .header__link--first
+        color: $deep_blue
+        svg
+          fill: $deep_blue
+          transform: rotate(-180deg)
+      .header__link--second
+        color: $deep_blue
+        svg
+          fill: $deep_blue
+          transform: rotate(-180deg)
+      .header__sub-list
+        opacity: 1
+        visibility: visible
+
+  &__sub-item
+    font-weight: 400
+    font-size: 14px
+    line-height: 30px
+    letter-spacing: 0.04em
+    margin-right: 22px
+
+  &__sub-link
+    white-space: nowrap
+    color: $dark_blue
+    &:hover
+      color: $deep_blue

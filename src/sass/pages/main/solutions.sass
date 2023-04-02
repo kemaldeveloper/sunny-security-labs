@@ -39,25 +39,55 @@
       width: 100%
       background: $white
 
+  &__item
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+      height: 100%
+      background: rgba($dark_blue, 0.15)
+      opacity: 0
+      visibility: hidden
+      transition: all 0.3s ease
+      pointer-events: none
+
+  &__item:hover
+    &::after
+      opacity: 1
+      visibility: visible
+
+  &__item:hover
+    .solutions__item-link
+      padding-left: 70px
+      padding-right: 0
+      &::after
+        left: 0
+
+  &__item:hover
+
   &__item--web3
     background: $ocean
-    transition: all 0.5s
+    transition: all 0.3s ease
     &:hover
-      background: darken($ocean, 3%)
+      margin-left: 20px
 
   &__item--blockchain
     background: $mid_blue
     margin-left: 172px
-    transition: all 0.5s
+    transition: all 0.3s ease
     &:hover
-      background: darken($mid_blue, 3%)
+      margin-left: 192px
 
   &__item--aisolutions
     background: $deep_blue
     margin-left: 345px
-    transition: all 0.5s
+    transition: all 0.3s ease
     &:hover
-      background: darken($deep_blue, 3%)
+      margin-left: 365px
 
   &__item-wrap--left
     padding: 4px 0 0 42px
@@ -79,17 +109,19 @@
     margin-bottom: 32px
 
   &__item-link
-    color: $white
     position: relative
+    padding-right: 70px
+    color: $white
     &::after
       content: ''
       position: absolute
-      right: -70px
+      right: 0
       top: 50%
       transform: translateY(-50%)
       height: 1px
       width: 50px
       background: $white
+      transition: all 0.3s ease
     &:hover
       color: $white
 
