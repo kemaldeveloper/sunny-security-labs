@@ -9,18 +9,32 @@
     padding-top: 177px
 
   &__title
+    display: inline-block
+    margin-bottom: 49px
     color: $mid_blue
     &:hover
       color: $mid_blue
 
-  &__content-wrap
-    margin-top: 46px
-    display: flex
-    justify-content: space-between
+  &__content
 
   &__rental
-    width: 690px
     height: 600px
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+      height: 100%
+      background: rgba($dark_blue, 0.15)
+      pointer-events: none
+      opacity: 0
+      transition: all 0.3s ease
+    &:hover
+      &::after
+        opacity: 1
 
     &-content
       background: $gradient_plate
@@ -45,15 +59,11 @@
         background: $white
         top: 50%
         transform: translateY(-50%)
-      &:hover
-        &::after
-          content: ''
-          transition: all 0.5s ease
-          width: 643px
-        .icon--rental-icon
-          visibility: hidden
-        .icon--rental-icon2
-          visibility: visible
+        transition: all 0.5s ease
+
+    &-icon-wrap
+      .icon--rental-icon2
+        opacity: 0
 
     &-date
       color: $white
@@ -64,22 +74,63 @@
       height: 366px
       object-fit: cover
 
-  &__right-wrap
-    display: flex
+  &__rental:hover
+    .portfolio__rental-icon-wrap
+      &::after
+        content: ''
+        width: 643px
+      .icon--rental-icon
+        transition: all 0.6s ease
+        opacity: 0
+        animation: rental-anim 0.3s ease 1
+      .icon--rental-icon2
+        transition: all 0.6s ease
+        opacity: 1
+  &__box
+    max-height: 548px
 
-  &__inner-wrap
+  &__box:hover
+    .portfolio__right-title
+      color: $hover
+
+  &__box:hover
+    .portfolio__img-box
+      &::after
+        content: ''
+        opacity: 1
+        visibility: visible
+
+  &__box:hover
+    .portfolio__right-date
+      &::before
+        content: ''
+        width: 270px
+
+  &__right-box
     display: flex
     flex-direction: column
 
-  &__right-item
-    width: 330px
-    margin-left: 30px
-
-  &__right-img
+  &__img-box
+    position: relative
     width: 330px
     height: 285px
-    object-fit: cover
     margin-bottom: 16px
+    &::after
+      content: ''
+      transition: all 0.3s linear
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+      height: 100%
+      background: rgba($dark_blue , 0.15)
+      z-index: 3
+      opacity: 0
+      visibility: hidden
+
+  &__right-img
+    object-fit: cover
 
   &__right-title
     font-weight: 700
@@ -96,9 +147,18 @@
     margin-bottom: 49px
 
   &__right-date
+    position: relative
     color: $dark_blue
-    border-top: 1px solid $dark_blue
     padding-top: 22.44px
+    &::before
+      content: ''
+      transition: all 0.3s ease
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background: $dark_blue
 
   &__right-link
     align-self: flex-end
@@ -115,3 +175,9 @@
       height: 1px
       width: 50px
       background: $mid_blue
+
+@keyframes rental-anim
+  0%
+    transform: rotate(-90deg)
+
+  100%

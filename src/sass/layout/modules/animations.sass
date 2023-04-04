@@ -3,25 +3,32 @@
   right: 0
   top: 0
   animation: img1 0.8s ease 1
+  +xxxl
+    right: -150px
 
 @keyframes img1
   0%
     transform: rotate(90deg)
-    top: 100%
-    right: -50%
+    transform: translate(100%, 50%)
+    // top: 100%
+    // right: -50%
     opacity: 0
 
   100%
+    transform: translate(0)
     opacity: 1
     transform: rotate(0)
-    top: 0
-    right: 0
+    // top: 0
+    // right: 0
 
 .main-screen__img-2
   position: absolute
   right: 425px
   bottom: -27px
   animation: img2 0.8s ease 1
+  +xxxl
+    right: 281px
+    bottom: -134px
 
 @keyframes img2
   0%
@@ -42,6 +49,8 @@
   top: 1px
   right: 561px
   animation: img3 0.8s ease 1
+  +xxxl
+    right: 420px
 
 @keyframes img3
   0%
@@ -57,6 +66,8 @@
   right: 0
   top: 0
   animation: img4 0.8s ease 1
+  +xxxl
+    right: -144px
 
 @keyframes img4
   0%
@@ -72,6 +83,8 @@
   top: 48px
   right: -9px
   animation: img5 0.8s ease 1
+  +xxxl
+    right: -151px
 
 @keyframes img5
   0%
@@ -85,47 +98,62 @@
     right: -9px
 
 .main-screen__title
-  position: absolute
-  top: 152px
-  left: 247px
+  display: block
+  margin-bottom: 50px
   color: $dark_blue
-  max-width: 802px
   animation: title-anim 0.8s ease 1
+  transition: all 0.3s ease
+  position: relative
+  z-index: 1
+  &:hover
+    color: $hover
 
 @keyframes title-anim
   0%
+    transform: translateX(-129%)
     opacity: 0
-    left: -100%
+    // left: -100%
+
   50%
     opacity: 0.3
 
   100%
+    transform: translateX(0)
     opacity: 1
-    left: 247px
+    // left: 247px
 
 .main-screen__link
-  position: absolute
-  left: 247px
-  top: 425px
+  display: inline-block
+  position: relative
   color: $mid_blue
+  padding-right: 70px
+  transition: all 0.5s ease
   animation: link-anim 0.8s ease 1
   &::after
     content: ''
     position: absolute
     top: 50%
-    right: -68px
+    right: 0
     width: 50px
     height: 1px
     background: $mid_blue
+  &:hover
+    color: $hover
+    padding: 0 0 0 70px
+    &::after
+      content: ''
+      background: $hover
+      right: 0
+      left: 0
 
 @keyframes link-anim
   0%
+    transform: translateY(150px)
     opacity: 0
-    top: 600px
 
   50%
-    opacity: 0.8
+    opacity: 0.3
 
   100%
+    transform: translateY(0)
     opacity: 1
-    top: 425px

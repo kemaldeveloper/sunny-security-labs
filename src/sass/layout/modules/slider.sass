@@ -12,7 +12,7 @@
     margin-right: 30px
     transition: all 0.3s ease
     z-index: 1
-    &:after
+    &::after
       content: ''
       position: absolute
       top: 50%
@@ -21,13 +21,13 @@
       height: 100%
       background: $gradient_plate
       transform: translate(-50%, -50%)
-      transition: all 0.3s ease
+      transition: all 0.6s ease
       opacity: 0
       visibility: hidden
       pointer-events: none
       z-index: -1
     &:hover
-      &:after
+      &::after
         opacity: 1
         visibility: visible
       .slider__title
