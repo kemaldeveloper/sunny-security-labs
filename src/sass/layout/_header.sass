@@ -23,6 +23,8 @@
     min-width: 631px
     +lg
       min-width: 540px
+    +md
+      display: none
 
   &__list
     display: flex
@@ -45,15 +47,13 @@
     transition: all 0.4s ease
     svg
       transition: all 0.4s ease
-      margin-left: 6px
-      // transform: translate(6px, -1px)
+      margin-left: 5px
 
   &__link--second
     transition: all 0.4s ease
     svg
       transition: all 0.4s ease
       margin-left: 5px
-      // transform: translate(5px, -1px)
 
   &__sub-list
     display: flex
@@ -92,3 +92,40 @@
     color: $dark_blue
     &:hover
       color: $deep_blue
+
+  &__social-link
+    margin-right: 24px
+    +min_md
+      display: none
+
+  &__btn-wrap
+    display: flex
+    align-items: center
+    +min_md
+      display: none
+
+  &__hamburger-btn
+    cursor: pointer
+    position: relative
+    width: 30px
+    span
+      display: block
+      width: 30px
+      height: 3px
+      background: $dark_blue
+      &:not(:last-child)
+        margin-bottom: 5px
+    +min_md
+      display: none
+
+  &__hamburger-btn.active
+    span:nth-child(1)
+      position: absolute
+      transform: rotate(45deg)
+      border-radius: 25px
+      transition: all 0.3s linear
+    span:nth-child(2)
+      position: absolute
+      transform: rotate(-45deg)
+      border-radius: 25px
+      transition: all 0.3s linear
