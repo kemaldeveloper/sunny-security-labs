@@ -5,21 +5,19 @@
   animation: img1 0.8s ease 1
   +xxxl
     right: -150px
+  +xl
+    max-width: 878px
 
 @keyframes img1
   0%
     transform: rotate(90deg)
     transform: translate(100%, 50%)
-    // top: 100%
-    // right: -50%
     opacity: 0
 
   100%
     transform: translate(0)
     opacity: 1
     transform: rotate(0)
-    // top: 0
-    // right: 0
 
 .main-screen__img-2
   position: absolute
@@ -29,18 +27,20 @@
   +xxxl
     right: 281px
     bottom: -134px
+  +xl
+    max-width: 545px
 
 @keyframes img2
   0%
-    bottom: -50%
-    opacity: 0
+    transform: translateY(100%)
     transform: rotate(-90deg)
+    opacity: 0
 
   50%
     opacity: 0.2
 
   100%
-    bottom: -27px
+    transform: translateY(0)
     transform: rotate(0)
     opacity: 0.8
 
@@ -51,15 +51,16 @@
   animation: img3 0.8s ease 1
   +xxxl
     right: 420px
+  +xl
+    max-width: 419px
 
 @keyframes img3
   0%
-    top: -50%
-    transform: rotate(45deg)
+    transform: translateY(-100%) rotate(45deg)
+    opacity:
 
   100%
-    top: 1px
-    transform: rotate(0)
+    transform: none
 
 .main-screen__img-4
   position: absolute
@@ -68,15 +69,20 @@
   animation: img4 0.8s ease 1
   +xxxl
     right: -144px
+  +xl
+    max-width: 525px
 
 @keyframes img4
   0%
-    right: -100%
-    transform: rotate(-90deg)
+    transform: translateX(100%) rotate(-90deg)
+    opacity: 0.3
+
+  50%
+    opacity: 0.8
 
   100%
-    right: 0
-    transform: rotate(0)
+    transform: none
+    opacity: 1
 
 .main-screen__img-5
   position: absolute
@@ -85,17 +91,16 @@
   animation: img5 0.8s ease 1
   +xxxl
     right: -151px
+  +xl
+    top: 25px
+    max-width: 620px
 
 @keyframes img5
   0%
-    transform: rotate(90deg)
-    top: 100%
-    right: -100%
+    transform: translate(100%, 100%) rotate(45deg)
 
   100%
-    transform: rotate(0)
-    top: 48px
-    right: -9px
+    transform: none
 
 .main-screen__title
   display: block
@@ -107,20 +112,24 @@
   z-index: 1
   &:hover
     color: $hover
+  +xl
+    font-size: 50px
+    line-height: 65px
+  +sm
+    font-size: 36px
+    line-height: 42px
 
 @keyframes title-anim
   0%
     transform: translateX(-129%)
     opacity: 0
-    // left: -100%
 
   50%
     opacity: 0.3
 
   100%
-    transform: translateX(0)
+    transform: none
     opacity: 1
-    // left: 247px
 
 .main-screen__link
   display: inline-block
@@ -128,6 +137,7 @@
   color: $mid_blue
   padding-right: 70px
   transition: all 0.5s ease
+  z-index: 1
   animation: link-anim 0.8s ease 1
   &::after
     content: ''
