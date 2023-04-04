@@ -51,10 +51,15 @@ $('.js-popup').on('click', function (event) {
 });
 
 // Mobile menu toggle
-$('.js-menu').on('click', function () {
-  $(this).toggleClass('is-active');
-  $('.menu').toggleClass('is-opened');
+$('.header__hamburger-btn, .mobile-menu__close-btn').on('click', function () {
+  $(this).toggleClass('active');
+  $('.mobile-menu').toggleClass('is-opened');
 });
+
+// $('.mobile-menu__close-btn').on('click', () => {
+//   $(this).toggleClass('active');
+//   $('.mobile-menu').toggleClass('is-opened');
+// });
 
 // Phone input mask
 $('input[type="tel"]').inputmask({
@@ -167,13 +172,11 @@ $('.quote-form__spoiler-btn').click(function (event) {
   $('.quote-form__spoiler-wrap').toggleClass('active');
 });
 
-
-
 const buttons = document.querySelectorAll('.main-portfolio__link');
 
-buttons.forEach(button => {
+buttons.forEach((button) => {
   button.addEventListener('click', () => {
-    buttons.forEach(button => {
+    buttons.forEach((button) => {
       button.classList.remove('main-portfolio__link--active');
     });
 
@@ -181,7 +184,7 @@ buttons.forEach(button => {
 
     button.style.backgroundColor = '#01AFF3';
 
-    buttons.forEach(otherButton => {
+    buttons.forEach((otherButton) => {
       if (otherButton !== button) {
         otherButton.style.backgroundColor = 'transparent';
       }
