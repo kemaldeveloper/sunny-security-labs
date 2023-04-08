@@ -208,26 +208,48 @@ $('.quote-form__spoiler-btn').click(function (event) {
   $('.quote-form__spoiler-wrap').toggleClass('active');
 });
 
-const buttons = document.querySelectorAll('.main-portfolio__link');
+const tabNavItems = document.querySelectorAll('.tab-nav__link');
+const tabContentItems = document.querySelectorAll('.tab-content__item');
 
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    buttons.forEach((button) => {
-      button.classList.remove('main-portfolio__link--active');
+tabNavItems.forEach((tab, index) => {
+  tab.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    tabNavItems.forEach((tab) => tab.classList.remove('active'));
+    tab.classList.add('active');
+
+    tabContentItems.forEach((content) => {
+      content.style.opacity = 0;
+      content.style.display = 'none';
     });
-
-    button.classList.add('main-portfolio__link--active');
-
-    button.style.backgroundColor = '#01AFF3';
-
-    buttons.forEach((otherButton) => {
-      if (otherButton !== button) {
-        otherButton.style.backgroundColor = 'transparent';
-      }
-    });
+    tabContentItems[index].style.display = 'block';
+    fadeIn(tabContentItems[index]);
   });
-
-  if (button.classList.contains('main-portfolio__link--active')) {
-    button.style.backgroundColor = '#01AFF3';
-  }
 });
+
+function fadeIn(element) {
+  let op = 0.1;
+  element.style.opacity = op;
+  let timer = setInterval(function() {
+    if (op >= 1) {
+      clearInterval(timer);
+    }
+    element.style.opacity = op;
+    op += op * 0.1;
+  }, 10);
+}
+
+function fadeOut(element) {
+  let op = 1;
+  let timer = setInterval(function() {
+    if (op <= 0.1) {
+      clearInterval(timer);
+      element.style.display = 'none';
+    }
+    element.style.opacity = op;
+    op -= op * 0.1;
+  }, 10);
+}
+
+
+
