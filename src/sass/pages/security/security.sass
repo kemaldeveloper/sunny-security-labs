@@ -1,0 +1,131 @@
+.security
+  padding-top: 58px
+
+  &__row--mb-60
+    margin-bottom: 60px
+
+  &__row--mb-73
+    margin-bottom: 73px
+
+  &__text
+    color: $dark_blue
+    margin-bottom: 0
+    max-width: 811px
+
+  &__subtext-wrap
+    max-width: 600px
+    margin: 76px 0 0 auto
+
+  &__subtext
+    color: $dark_blue
+    margin-bottom: 0
+
+  &__package
+    display: flex
+
+  &__package-title
+    color: $dark_blue
+    margin-bottom: 26px
+
+  &__package-icon
+    width: 62px
+    height: 77px
+    margin-right: 35px
+    transform: translateY(6px)
+
+  &__package-box
+    flex: 1 1 auto
+
+  &__package-list
+
+  &__package-item
+    display: flex
+    align-items: center
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background: $mid_blue
+
+  &__package-subtitle
+    font-weight: 400
+    font-size: 20px
+    line-height: 50px
+    letter-spacing: 0.01em
+    color: $dark_blue
+    margin-left: 17px
+
+.resume
+  display: flex
+  justify-content: space-between
+
+  &--mt
+    margin-top: 62px
+
+  &__avatar
+    max-width: 148px
+
+  &__avatar-img
+    width: 148px
+    height: 148px
+    object-fit: cover
+    margin-bottom: 18px
+
+  &__person-name
+    font-weight: 700
+    font-size: 26px
+    line-height: 32px
+    letter-spacing: 0.02em
+    color: $dark_blue
+    position: relative
+    padding-bottom: 16px
+    margin-bottom: 12px
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 146px
+      height: 1px
+      background: $grey_color
+
+  &__person-job
+    font-weight: 400
+    font-size: 15px
+    line-height: 21px
+    letter-spacing: 0.02em
+    color: $dark_blue
+    max-width: 104px
+
+  &__review
+    max-height: 266px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      right: 0
+      bottom: 0
+      width: 2px
+      height: 261px
+      background: $gradient_plate
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      height: 2px
+      width: 189px
+      background: $gradient_plate
+
+  &__review-text
+    font-style: italic
+    font-weight: 400
+    font-size: 16px
+    line-height: 28px
+    letter-spacing: 0.02em
+    max-width: 439px
+    padding: 0 39px 42px 0
