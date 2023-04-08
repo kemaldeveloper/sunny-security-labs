@@ -51,10 +51,77 @@ $('.js-popup').on('click', function (event) {
 });
 
 // Mobile menu toggle
-$('.header__hamburger-btn, .mobile-menu__close-btn').on('click', function () {
-  $(this).toggleClass('active');
-  $('.mobile-menu').toggleClass('is-opened');
-});
+// $('.header__hamburger-btn, .mobile-menu__close-btn').on('click', function (e) {
+//   e.stopPropagation();
+
+//   $('.header__hamburger-btn').removeClass('active');
+//   $('.mobile-menu').removeClass('is-opened');
+
+//   $(this).addClass('active');
+//   $('.mobile-menu').addClass('is-opened');
+// });
+
+// console.log($('.header__hamburger-btn, .mobile-menu__close-btn'));
+
+// // window.addEventListener('click', function (e) {
+// //   if (!s.is(e.target) && s.has(e.target).length === 0) e.target.removeClass('active');
+// // });
+
+// $(document).click(function (event) {
+//   const target = $(event.target).closest('.header__hamburger-btn, .mobile-menu').length;
+
+//   if (!!target) {
+//     return;
+//   }
+
+//   $('.header__hamburger-btn, .mobile-menu__close-btn').removeClass('active');
+//   $('.mobile-menu').removeClass('is-opened');
+//   event.stopPropagation();
+// });
+
+const toggleMenuClass = () => {
+  const mobileMenu = $('.mobile-menu');
+  const headerHamburgerBtn = $('.header__hamburger-btn');
+  const elements = ['.header__hamburger-btn', '.mobile-menu__close-btn'];
+
+  elements.forEach((element) => {
+    $(element).on('click', function (e) {
+      e.stopPropagation();
+
+      if (headerHamburgerBtn.hasClass('active')) {
+        headerHamburgerBtn.removeClass('active');
+      } else {
+        $(this).addClass('active');
+      }
+
+      if (mobileMenu.hasClass('is-opened')) {
+        mobileMenu.removeClass('active');
+      } else {
+        $('.mobile-menu').addClass('is-opened');
+      }
+    });
+  });
+
+  $(document).on('click', function (event) {
+    const elements = $('.header__hamburger-btn, .mobile-menu__close-btn');
+    const target = $(event.target).closest(elements).length;
+
+    if (!!target) {
+      return;
+    }
+
+    elements.removeClass('active');
+    $('.mobile-menu').removeClass('is-opened');
+    event.stopPropagation();
+  });
+};
+
+toggleMenuClass();
+
+// const triggerJs = document.querySelector('.menu-burger');
+// triggerJs.addEventListener('click', function(e){
+//   e.stopPropagation();
+// });
 
 // $('.mobile-menu__close-btn').on('click', () => {
 //   $(this).toggleClass('active');
