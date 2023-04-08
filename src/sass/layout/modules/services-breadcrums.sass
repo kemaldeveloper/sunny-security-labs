@@ -1,0 +1,26 @@
+.services-breadcrumbs
+  padding-top: 98px
+
+  &__wrapper
+    display: flex
+    align-items: flex-end
+
+  &__title
+    display: flex
+    align-items: center
+    position: relative
+    padding-left: 26px
+    margin-left: 24px
+    transform: translateY(7px)
+    color: $dark_blue
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      width: 2px
+      height: 43px
+      transform: rotate(21deg)
+      background: $gradient_plate
+
+  &__subtitle
+    color: $mid_blue
