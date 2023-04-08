@@ -59,6 +59,12 @@
     color: $dark_blue
     margin-left: 17px
 
+  &__services-wrap
+    display: flex
+
+  &__services-wrap--pd
+    padding: 62px 0 68px 0
+
 .resume
   display: flex
   justify-content: space-between
@@ -102,15 +108,16 @@
     max-width: 104px
 
   &__review
-    max-height: 266px
+    height: min-content
     position: relative
+    padding: 0 40px 42px 0
     &::before
       content: ''
       position: absolute
+      top: 0
       right: 0
-      bottom: 0
       width: 2px
-      height: 261px
+      height: 100%
       background: $gradient_plate
     &::after
       content: ''
@@ -118,7 +125,7 @@
       bottom: 0
       right: 0
       height: 2px
-      width: 189px
+      width: 190px
       background: $gradient_plate
 
   &__review-text
@@ -128,4 +135,4 @@
     line-height: 28px
     letter-spacing: 0.02em
     max-width: 439px
-    padding: 0 39px 42px 0
+    margin: -7px 0 0 0

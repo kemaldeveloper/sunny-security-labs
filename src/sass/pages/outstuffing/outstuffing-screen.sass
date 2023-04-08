@@ -1,0 +1,79 @@
+.outstuffing-screen
+  // position: relative
+
+  &__img-1
+    position: absolute
+    top: 0
+    right: 0
+    +min_md
+      animation: security-1 0.8s ease 1
+
+  &__img-2
+    position: absolute
+    top: 177px
+    right: 0
+    z-index: -1
+    +min_md
+      animation: security-2 0.8s ease 1
+
+  &__img-3
+    position: absolute
+    top: 69px
+    right: 0
+    +min_md
+      animation: security-3 0.8s ease 1
+
+  &__img-4
+    position: absolute
+    top: 160px
+    right: 130px
+    +min_md
+      animation: security-4 0.8s ease 1
+
+@keyframes security-1
+  0%
+    transform: translateY(-100%) rotate(45deg)
+    opacity: 0.1
+
+  50%
+    opacity: 0.5
+
+  100%
+    transform: none
+    opacity: 1
+
+@keyframes security-2
+  0%
+    transform: translate(100%, 100%) rotate(45deg)
+    opacity: 0.1
+
+  50%
+    opacity: 0.5
+
+  100%
+    transform: none
+    opacity: 1
+
+@keyframes security-3
+  0%
+    transform: translate(50%, 50%) rotate(23deg)
+    opacity: 0.1
+
+  50%
+    opacity: 0.5
+
+  100%
+    transform: none
+    opacity: 1
+
+@keyframes security-4
+  0%
+    transform: translate(100%, 100%) rotate(75deg)
+    opacity: 0.1
+
+  50%
+    opacity: 0.5
+
+  100%
+    transform: none
+    opacity: 1
