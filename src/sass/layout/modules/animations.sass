@@ -2,11 +2,17 @@
   position: absolute
   right: 0
   top: 0
-  animation: img1 0.8s ease 1
+  +min_md
+    animation: img1 0.8s ease 1
   +xxxl
     right: -150px
   +xl
     max-width: 878px
+  +lg
+    right: -243px
+  +md
+    right: -355px
+    max-width: 849px
 
 @keyframes img1
   0%
@@ -23,12 +29,19 @@
   position: absolute
   right: 425px
   bottom: -27px
-  animation: img2 0.8s ease 1
+  +min_md
+    animation: img2 0.8s ease 1
   +xxxl
     right: 281px
     bottom: -134px
   +xl
     max-width: 545px
+  +lg
+    max-width: 435px
+    bottom: -40px
+  +md
+    right: 235px
+    bottom: 50px
 
 @keyframes img2
   0%
@@ -48,11 +61,20 @@
   position: absolute
   top: 1px
   right: 561px
-  animation: img3 0.8s ease 1
+  +min_md
+    animation: img3 0.8s ease 1
   +xxxl
     right: 420px
   +xl
     max-width: 419px
+  +lg
+    max-width: 370px
+    right: 381px
+  +md
+    max-width: 300px
+    right: 212px
+  +sm
+    display: none
 
 @keyframes img3
   0%
@@ -66,11 +88,18 @@
   position: absolute
   right: 0
   top: 0
-  animation: img4 0.8s ease 1
+  +min_md
+    animation: img4 0.8s ease 1
   +xxxl
     right: -144px
   +xl
     max-width: 525px
+  +lg
+    max-width: 490px
+  +md
+    max-width: 379px
+    right: -191px
+    top: 173px
 
 @keyframes img4
   0%
@@ -88,12 +117,18 @@
   position: absolute
   top: 48px
   right: -9px
-  animation: img5 0.8s ease 1
+  +min_md
+    animation: img5 0.8s ease 1
   +xxxl
     right: -151px
   +xl
     top: 25px
     max-width: 620px
+  +lg
+    max-width: 550px
+  +md
+    max-width: 430px
+    top: 163px
 
 @keyframes img5
   0%
@@ -106,16 +141,20 @@
   display: block
   margin-bottom: 50px
   color: $dark_blue
-  animation: title-anim 0.8s ease 1
   transition: all 0.3s ease
   position: relative
   z-index: 1
+  +min_md
+    animation: title-anim 0.8s ease 1
   &:hover
     color: $hover
   +xl
     font-size: 50px
     line-height: 65px
-  +sm
+  +lg
+    font-size: 40px
+    line-height: 52px
+  +md
     font-size: 36px
     line-height: 42px
 
@@ -138,7 +177,8 @@
   padding-right: 70px
   transition: all 0.5s ease
   z-index: 1
-  animation: link-anim 0.8s ease 1
+  +min_md
+    animation: link-anim 0.8s ease 1
   &::after
     content: ''
     position: absolute

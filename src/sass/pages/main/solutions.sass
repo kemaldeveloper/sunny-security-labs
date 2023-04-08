@@ -74,6 +74,9 @@
     transition: all 0.3s ease
     &:hover
       margin-left: 20px
+      ~ .solutions__bg-wrap svg
+        width: 693px
+        transform: scale(1.05)
 
   &__item--blockchain
     background: $mid_blue
@@ -130,3 +133,5 @@
     right: 0
     top: 0
     z-index: -1
+    svg
+      transition: all 0.3s ease
