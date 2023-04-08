@@ -1,9 +1,13 @@
 .main-portfolio
-  padding: 66px 0 159px 0
+  padding: 66px 0 118px 0
   +lg 
     padding: 66px 0 70px 0
+  +md 
+    padding: 30px 0 43px 0
+
   .tab-nav
     margin-bottom: 40px
+
     .active
       border: none
       background-color: $mid_blue
@@ -15,8 +19,8 @@
       justify-content: flex-end
       align-items: center
       gap: 16px
-
-    &__item
+      +lg 
+        gap: 5px
       
     &__link 
       font-weight: 400
@@ -26,6 +30,8 @@
       border: 1px solid #AFAFAF
       padding: 5px 10.4px
       border-radius: 20px
+      +lg 
+        font-size: 14px
       &:hover
         color: $dark_blue
       span
@@ -40,47 +46,44 @@
     .active
       display: block
 
-
-    &__wrapper
-      display: flex
-      justify-content: space-between
-      padding-top: 40px
-      +lg 
-        flex-wrap: wrap
-        justify-content: center
-      +md 
-        padding: 0
-
     &__inner
-      padding-top: 23px
-      position: relative
+      padding: 23px 0 33px 44px
+      border-left: 2px solid
+      border-image: $gradient_plate 1
+      &--bottom
+        border-bottom: 2px solid
+        border-image: $gradient_plate 1
       +lg 
-        margin-bottom: 80px
+        padding: 10px 0 15px 15px
       +md 
         display: none
 
     &__title
-      margin-left: 45px
-      margin-bottom: 33px
+      margin-bottom: 32px
+      +lg 
+        font-size: 30px
+        margin-bottom: 10px
 
     &__str
-      margin-right: 100px
-      margin-left: 45px
+      max-width: 439px
       font-weight: 400
       font-size: 16px
       line-height: 28px
       letter-spacing: 0.02em
       color: $dark_blue
-
-    &__line
-      border: 1px solid $dark_blue
-      margin: 52px 0px 29px 48px
+      margin-bottom: 53px
+      +lg 
+        font-size: 16px
+        margin-bottom: 20px
 
     &__text
       display: flex
       justify-content: space-between
       align-items: center
-      margin-left: 45px
+      padding-top: 30px
+      border-top: 1px solid $dark_blue
+      +lg
+        padding-top: 20px
 
     &__security
       font-weight: 400
@@ -89,21 +92,23 @@
       text-align: right
       color: $grey-colour
 
-    &__icon
-      position: absolute
-      left: 0
-      top: 2px
-      z-index: -1
     &__images
       width: 100% !important
       height: 366px
       object-fit: cover
+      +xl 
+        height: 100%
 
   .columns
     padding-top: 50px
+    +sm 
+      padding-top: 20px
 
-    &__item
+    &__date
       margin-bottom: 42px
+      +sm 
+        margin-bottom: 20px
+        
 
     &__img 
       width: 100% !important
@@ -121,7 +126,7 @@
       line-height: 31px
       letter-spacing: 0.02em
       color: $dark_blue
-      margin-bottom: 20px
+      margin-bottom: 18px
       margin-right: 14px
       +md 
         font-size: 20px
@@ -135,7 +140,7 @@
     &__line
       border: 1px solid $dark_blue
       margin: 0
-      margin-bottom: 20px
+      margin-bottom: 21px
       +sm 
         margin-bottom: 13px
 
@@ -144,6 +149,43 @@
         font-size: 11px
         line-height: 13px
 
+  &__wrapper
+    display: none
+    +md 
+      display: block
 
+  &__rental
+    background: $gradient_plate
+    padding: 18.83px 17.5px 10.42px 0
+    
+    &-title
+      color: $white
+      margin-left: 21.5px
+      font-size: 22px
+      line-height: 28px
+      margin-bottom: 22px
 
+    &-date
+      color: $white
+      margin-left: 21.5px
+      font-size: 11px
+      line-height: 13px
 
+  &__line
+    border: 1px solid $white
+    margin: 0 68px 13.5px 0
+    opacity: 0.75
+
+  &__icon
+    position: unset
+    height: 35px
+    transform: translate(-7px, 18px)
+
+  &__inner 
+    display: flex
+    align-items: flex-end
+
+  &__title
+    display: block
+    margin-bottom: 18px
+    

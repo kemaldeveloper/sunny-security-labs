@@ -172,22 +172,19 @@ $('.quote-form__spoiler-btn').click(function (event) {
   $('.quote-form__spoiler-wrap').toggleClass('active');
 });
 
-const buttons = document.querySelectorAll('.main-portfolio__link');
+const tabNavItems = document.querySelectorAll('.tab-nav__link');
+const tabContentItems = document.querySelectorAll('.tab-content__item');
 
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    buttons.forEach((button) => {
-      button.classList.remove('main-portfolio__link--active');
-    });
+tabNavItems.forEach((tab, index) => {
+  tab.addEventListener('click', (event) => {
+    event.preventDefault();
 
-    button.classList.add('main-portfolio__link--active');
+    tabNavItems.forEach((tab) => tab.classList.remove('active'));
+    tab.classList.add('active');
 
-    button.style.backgroundColor = '#01AFF3';
-
-    buttons.forEach((otherButton) => {
-      if (otherButton !== button) {
-        otherButton.style.backgroundColor = 'transparent';
-      }
+    tabContentItems.forEach((content) => {
+      content.style.opacity = 0;
+      content.style.display = 'none';
     });
     tabContentItems[index].style.display = 'block';
     fadeIn(tabContentItems[index]);
