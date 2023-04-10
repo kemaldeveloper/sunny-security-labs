@@ -37,9 +37,20 @@
   &__link
     display: flex
     align-items: center
+
+  &__link--dark
     color: $dark_blue
+    svg
+      fill: $dark_blue
     &:hover
       color: $deep_blue
+
+  &__link--light
+    color: $white
+    svg
+      fill: $white
+    &:hover
+      color: $mid_blue
 
   // TODO: надо подравнять стрелки
 
@@ -63,7 +74,7 @@
     visibility: hidden
     transition: all 0.4s ease
 
-  &__item
+  &__item--dark
     position: relative
     &:hover
       .header__link--first
@@ -80,6 +91,23 @@
         opacity: 1
         visibility: visible
 
+  &__item--light
+    position: relative
+    &:hover
+      .header__link--first
+        color: $mid_blue
+        svg
+          fill: $mid_blue
+          transform: rotate(-180deg)
+      .header__link--second
+        color: $mid_blue
+        svg
+          fill: $mid_blue
+          transform: rotate(-180deg)
+      .header__sub-list
+        opacity: 1
+        visibility: visible
+
   &__sub-item
     font-weight: 400
     font-size: 14px
@@ -89,9 +117,51 @@
 
   &__sub-link
     white-space: nowrap
+    line-height: 30px
+
+  &__sub-link--dark
     color: $dark_blue
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      bottom: -7px
+      left: 0
+      width: 0
+      height: 1.5px
+      background: $hover
+      visibility: hidden
+      opacity: 0
+      transition: all 0.3s ease
     &:hover
-      color: $deep_blue
+      color: $hover
+      &::after
+        content: ''
+        width: 100%
+        visibility: visible
+        opacity: 1
+
+  &__sub-link--light
+    color: $white
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      bottom: -7px
+      left: 0
+      width: 0
+      height: 1.5px
+      background: $mid_blue
+      visibility: hidden
+      opacity: 0
+      transition: all 0.3s ease
+    &:hover
+      color: $mid_blue
+      &::after
+        content: ''
+        width: 100%
+        visibility: visible
+        opacity: 1
 
   &__social-link
     margin-right: 24px
@@ -129,3 +199,6 @@
       transform: rotate(-45deg)
       border-radius: 25px
       transition: all 0.3s linear
+
+.header--bg
+  background: $dark_blue
