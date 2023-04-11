@@ -1,0 +1,158 @@
+.blockchain
+  padding: 51px 0 54px
+
+  &--bg
+    background: $dark_blue
+
+  &__row--mb
+    margin-bottom: 53px
+
+  &__text
+    color: $white
+    position: relative
+    z-index: 1
+
+  &__subtext
+    color: $white
+    margin: 154px 0 95px
+    max-width: 627px
+
+  &__other-pages
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 630px
+    max-height: 78px
+    padding: 7px 0 44.18px 31.29px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      height: 100%
+      width: 1px
+
+      background: $gradient_plate
+    &::after
+      content: ''
+      position: absolute
+      height: 1px
+      width: 100%
+      background: $gradient_plate
+      left: 0
+      bottom: 0
+
+  &__other-pages
+    margin-bottom: 60px
+
+  &__other-title
+    color: $white
+
+  &__other-link
+    color: $mid_blue
+    position: relative
+    padding-right: 68px
+    transform: translateY(9px)
+    &::after
+      content: ''
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      background: $mid_blue
+      width: 50px
+      height: 1px
+
+.solutions-resume
+  display: flex
+  position: relative
+
+  &__avatar
+    min-width: 148px
+    max-width: 148px
+    margin-right: 40px
+    padding-top: 6px
+    z-index: 1
+
+  &__avatar-img
+    width: 148px
+    height: 148px
+    object-fit: cover
+    margin-bottom: 18px
+
+  &__avatar-name
+    font-weight: 700
+    font-size: 26px
+    line-height: 32px
+    letter-spacing: 0.02em
+    color: $white
+    padding-bottom: 16px
+    margin-bottom: 12px
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background: $grey_color
+
+  &__avatar-job
+    font-weight: 400
+    font-size: 15px
+    line-height: 21px
+    letter-spacing: 0.02em
+    color: $white
+
+  &__review
+    z-index: 1
+
+  &__review-text
+    color: $white
+    max-width: 432px
+    margin-bottom: 47px
+
+  &__review-btn
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 260px
+    height: 54px
+    border: 1px solid $mid_blue
+    font-weight: 700
+    font-size: 22px
+    line-height: 34px
+    letter-spacing: 0.01em
+    color: $mid_blue
+
+  &__img
+    position: absolute
+    right: -50px
+    bottom: -128px
+    min-width: 1095px
+    min-height: 604px
+
+.solutions-package
+  max-width: 599px
+  margin: 0 0 0 auto
+
+  &__title
+    color: $white
+    margin-bottom: 22px
+
+  &__list
+
+  &__item
+    display: flex
+    align-items: center
+    font-weight: 400
+    font-size: 20px
+    line-height: 50px
+    letter-spacing: 0.01em
+    color: $white
+    border-bottom: 1px solid $mid_blue
+
+  &__item span
+    margin-left: 20px
