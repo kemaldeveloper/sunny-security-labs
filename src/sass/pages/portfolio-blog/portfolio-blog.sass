@@ -1,0 +1,184 @@
+.portfolio-blog
+  padding: 106px 0 162px 0
+  +sm 
+    padding: 30px 0 72.5px 0
+
+  &__mobile-title
+    display: none
+    +sm 
+      display: block
+      margin-bottom: 15px
+
+  &__wrapper
+    margin-bottom: 45px
+    +sm 
+      margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+
+  &__box
+    &:hover
+      .portfolio-blog__content-title
+        color: $hover
+        margin-left: 20px
+        +sm 
+          margin-left: 0
+
+  &__content-wrap
+    display: flex
+    justify-content: space-between
+    margin-bottom: 42px
+    &--indent
+      margin-bottom: 48px
+    &--indent-bottom
+      margin-bottom: 42px
+    +sm 
+      margin-bottom: 18px
+
+  &__content-wrap
+    &:hover
+      .blog__content-subtitle
+        margin-left: 22px
+        color: $hover
+        +sm 
+          margin-left: 0
+
+  &__content-wrap--bordered
+    padding-bottom: 25px
+    margin-bottom: 26px
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      height: 1px
+      background: #D0D0D0
+    &:hover
+      &::after
+        content: ''
+        height: 2px
+
+  &__content-title
+    color: $dark
+    max-width: 439px
+    transition: all 0.3s linear
+    +sm 
+      font-size: 22px
+      line-height: 28px
+      max-width: 275px
+
+  &__date
+    color: $dark_blue
+    margin-right: 26px
+    margin-top: 21px
+    +xl 
+      margin-right: 0
+    +sm 
+      font-size: 11px
+      line-height: 13px
+      margin-top: 15px
+
+  &__content-subtitle
+    font-weight: 700
+    font-size: 26px
+    line-height: 34px
+    max-width: 391px
+    color: $dark_blue
+    transition: all 0.4s ease
+
+  &__text-wrap
+    display: flex
+    flex-direction: column
+    position: relative
+    &::before
+      content: ''
+      transition: all 0.3s linear
+      position: absolute
+      left: 0
+      bottom: 0
+      height: 100%
+      width: 2px
+      background: $gradient_plate
+    &::after
+      content: ''
+      transition: all 0.3s linear
+      position: absolute
+      left: 0
+      bottom: 0
+      height: 2px
+      width: 447px
+      background: $gradient_plate
+      +xl 
+        width: 340px
+      +lg 
+        width: 560px
+      +md
+        width: 400px
+      +sm 
+        width: 75%
+      +xsm 
+        width: 70%
+      
+  &__text-text
+    max-width: 487px
+    color: $dark_blue
+    margin-left: 37px
+    margin-bottom: 8px
+    &--indent
+      margin-bottom: 12px
+    +sm 
+      font-size: 14px
+      line-height: 22px
+      letter-spacing: 0.02em
+      margin-left: 24px
+      margin-bottom: 21px
+
+  &__text-link
+    align-self: flex-end
+    transform: translateY(7px)
+    margin-right: 24px
+    transition: all 0.3s linear
+    color: $mid_blue
+    &:hover
+      color: $mid_blue
+    +xxl 
+      margin-right: 0
+    +sm 
+      font-size: 14px
+      line-height: 16px
+
+  &__box
+    +lg 
+      margin-bottom: 40px
+    +sm 
+      pointer-events: none
+    &:hover
+      .portfolio-blog__text-link
+        margin-right: 40px
+        color: $hover
+      
+      .portfolio-blog__text-wrap
+        &::before
+          content: ''
+          background: $hover
+        &::after
+          content: ''
+          background: $hover
+          width: 460px
+          +xxl
+            width: 410px
+          +xl 
+            width: 310px
+          +lg 
+            width: 550px
+          +md 
+            width: 365px
+
+  &__photo
+    width: 100%
+    height: 366px
+    object-fit: cover
+    +sm 
+      height: 310px

@@ -208,48 +208,55 @@ $('.quote-form__spoiler-btn').click(function (event) {
   $('.quote-form__spoiler-wrap').toggleClass('active');
 });
 
+
+
 const tabNavItems = document.querySelectorAll('.tab-nav__link');
 const tabContentItems = document.querySelectorAll('.tab-content__item');
+const hoverBlock = document.querySelector('.tab-content__item');
 
 tabNavItems.forEach((tab, index) => {
   tab.addEventListener('click', (event) => {
     event.preventDefault();
 
-    tabNavItems.forEach((tab) => tab.classList.remove('active'));
-    tab.classList.add('active');
+    if (!tab.classList.contains('active')) {
+      tabNavItems.forEach((tab) => tab.classList.remove('active'));
+      tab.classList.add('active');
 
-    tabContentItems.forEach((content) => {
-      content.style.opacity = 0;
-      content.style.display = 'none';
-    });
-    tabContentItems[index].style.display = 'block';
-    fadeIn(tabContentItems[index]);
+      tabContentItems.forEach((content) => {
+        content.style.opacity = 0;
+        content.style.display = 'none';
+      });
+
+      tabContentItems[index].style.display = 'block';
+      tabContentItems[index].style.opacity = 1;
+    }
+  });
+
+  tab.addEventListener('mouseover', () => {
+    hoverBlock.classList.add('tab-content__item--hover');
+  });
+
+  tab.addEventListener('mouseout', () => {
+    hoverBlock.classList.remove('tab-content__item--hover');
   });
 });
 
-function fadeIn(element) {
-  let op = 0.1;
-  element.style.opacity = op;
-  let timer = setInterval(function() {
-    if (op >= 1) {
-      clearInterval(timer);
-    }
-    element.style.opacity = op;
-    op += op * 0.1;
-  }, 10);
-}
 
-function fadeOut(element) {
-  let op = 1;
-  let timer = setInterval(function() {
-    if (op <= 0.1) {
-      clearInterval(timer);
-      element.style.display = 'none';
-    }
-    element.style.opacity = op;
-    op -= op * 0.1;
-  }, 10);
-}
 
+
+const tabContentHover = document.querySelector('.tab-content__hover');
+const tabNavLinks = document.querySelectorAll('.tab-nav__link-hover');
+
+if (tabContentHover && tabNavLinks.length > 0) {
+  tabContentHover.addEventListener('mouseover', () => {
+    tabContentHover.classList.add('tab-content__hover--hover');
+    tabNavLinks.forEach(link => link.classList.add('tab-nav__link-hover--hover'));
+  });
+
+  tabContentHover.addEventListener('mouseout', () => {
+    tabContentHover.classList.remove('tab-content__hover--hover');
+    tabNavLinks.forEach(link => link.classList.remove('tab-nav__link-hover--hover'));
+  });
+}
 
 

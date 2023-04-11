@@ -9,7 +9,8 @@
     margin-bottom: 40px
 
     .active
-      border: none
+      border-color: transparent
+      color: $white
       background-color: $mid_blue
     +md 
       display: none
@@ -22,7 +23,7 @@
       +lg 
         gap: 5px
       
-    &__link 
+    &__link
       font-weight: 400
       font-size: 15px
       line-height: 28px
@@ -30,26 +31,64 @@
       border: 1px solid #AFAFAF
       padding: 5px 10.4px
       border-radius: 20px
-      +lg 
-        font-size: 14px
-      &:hover
-        color: $dark_blue
+      transition: all 0.2s ease-in-out
       span
         padding: 5px 10.4px
+      +lg 
+        font-size: 14px
 
-  &__tab-content-wrap
+      &:hover
+        border: 1px solid #ffffff
+        padding: 5px 10.4px
+        color: $white
+        background-color: #61d2ff
+
+    &__link-hover
+      // transition: all 0.1s ease-in-out
+      &--hover
+        border-color: $white
+        background-color: #61d2ff
+        color: $white
 
   .tab-content
 
     &__item
       display: none
+
     .active
       display: block
+
+    &__item
+      transition: all 0.2s ease-in-out 
+
+      &--hover .tab-content__inner
+        width: 90%
+
+      &--hover .tab-content__title
+        color: $hover
+
+      &--hover .tab-content__str
+        color: $hover
+
+      &--hover .tab-content__images
+        animation: blink 0.2s linear
+        filter: brightness(88%)
+
+      @keyframes blink
+        0%
+          opacity: 1
+
+        50%
+          opacity: 0.7
+
+        100%
+          opacity: 1
 
     &__inner
       padding: 23px 0 33px 44px
       border-left: 2px solid
       border-image: $gradient_plate 1
+
       &--bottom
         border-bottom: 2px solid
         border-image: $gradient_plate 1
@@ -58,8 +97,37 @@
       +md 
         display: none
 
+    &__hover
+      transition: all 0.2s ease-in-out
+
+      &--hover .tab-content__inner
+        width: 90%
+        +xl 
+          width: 100%
+
+      &--hover .tab-content__title
+        color: $hover
+
+      &--hover .tab-content__str
+        color: $hover
+
+      &--hover .tab-content__images 
+        animation: blink 0.2s linear
+        filter: brightness(88%)
+        
+      @keyframes blink
+        0%
+          opacity: 1
+
+        50%
+          opacity: 0.7
+
+        100%
+          opacity: 1
+
     &__title
       margin-bottom: 32px
+      max-width: 486px
       +lg 
         font-size: 30px
         margin-bottom: 10px
@@ -89,7 +157,6 @@
       font-weight: 400
       font-size: 15px
       line-height: 18px
-      text-align: right
       color: $grey-color
 
     &__images
@@ -104,11 +171,34 @@
     +sm 
       padding-top: 20px
 
+    &__block-hover:hover .columns__subtitle
+      color: $hover
+
+    &__block-hover:hover .columns__img
+      filter: brightness(88%)
+        
+
+    &__block-hover:hover .columns__date
+      &::before
+        content: ''
+        width: 85%
+
     &__date
+      padding-top: 22.44px
       margin-bottom: 42px
+      color: $dark_blue
+      position: relative
+      &::before
+        content: ''
+        transition: all 0.3s ease
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 1px
+        background: $dark_blue
       +sm 
         margin-bottom: 20px
-        
 
     &__img 
       width: 100% !important
