@@ -1,22 +1,111 @@
 .about
-  height: 100vh
+  padding: 105px 0 0
 
   &__wrapper
+
+  &__row
+    padding-bottom: 112px
+
+  &__col
+    padding-top: 25px
+    z-index: 1
+    animation: about-text 0.8s ease 1
 
   &__img-1
     position: absolute
     top: 73px
     right: 74px
+    animation: about-1 0.8s ease 1
 
   &__img-2
     position: absolute
     top: 159px
     left: 98px
+    animation: about-2 0.9s ease 1
 
   &__img-3
     position: absolute
+    right: 434px
+    bottom: 285px
+    animation: about-3 0.8s ease 1
 
   &__img-4
     position: absolute
     top: 0
     left: 683px
+    animation: about-4 0.8s ease 1
+
+  &__title
+    font-weight: 700
+    font-size: 56px
+    line-height: 65px
+    letter-spacing: 0.01em
+    position: relative
+    z-index: 1
+    animation: about-title 0.8s ease 1
+
+  &__text
+    max-width: 718px
+    margin-left: auto
+    color: $dark_blue
+    position: relative
+    z-index: 1
+
+  &__text--mb
+    margin-bottom: 31px
+
+@keyframes about-1
+  0%
+    transform: translateX(100%) rotate(90deg) scale(0)
+
+  100%
+    transform: none
+
+@keyframes about-2
+  0%
+    transform: translate(-100%, 100%) rotate(45deg) scale(0)
+
+  50%
+    opacity: 0.2
+
+  100%
+    transform: none
+
+@keyframes about-3
+  0%
+    transform: translate(50%, 150%) rotate(45deg)
+
+  50%
+    opacity: 0.2
+
+  100%
+    transform: none
+
+@keyframes about-4
+  0%
+    transform: translate(-50%, -150%) rotate(-90deg)
+
+  100%
+    transform: none
+
+@keyframes about-title
+  0%
+    transform: translateX(-150%) scale(0.8)
+    opacity: 0.3
+
+  50%
+    opacity: 0.5
+
+  100%
+    transform: none
+
+@keyframes about-text
+  0%
+    transform: translateY(100%)
+    opacity: 0.3
+
+  50%
+    opacity: 0.5
+
+  100%
+    transform: none
