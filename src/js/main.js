@@ -197,6 +197,7 @@ $('.slider').slick({
   autoplaySpeed: 2000,
   prevArrow: false,
   nextArrow: $('.next'),
+  autoplay: true,
 });
 
 $('.next').on('click', function () {
@@ -207,8 +208,6 @@ $('.quote-form__spoiler-btn').click(function (event) {
   $(this).toggleClass('active').next().slideToggle(300);
   $('.quote-form__spoiler-wrap').toggleClass('active');
 });
-
-
 
 const tabNavItems = document.querySelectorAll('.tab-nav__link');
 const tabContentItems = document.querySelectorAll('.tab-content__item');
@@ -241,22 +240,26 @@ tabNavItems.forEach((tab, index) => {
   });
 });
 
-
-
-
 const tabContentHover = document.querySelector('.tab-content__hover');
 const tabNavLinks = document.querySelectorAll('.tab-nav__link-hover');
 
 if (tabContentHover && tabNavLinks.length > 0) {
   tabContentHover.addEventListener('mouseover', () => {
     tabContentHover.classList.add('tab-content__hover--hover');
-    tabNavLinks.forEach(link => link.classList.add('tab-nav__link-hover--hover'));
+    tabNavLinks.forEach((link) => link.classList.add('tab-nav__link-hover--hover'));
   });
 
   tabContentHover.addEventListener('mouseout', () => {
     tabContentHover.classList.remove('tab-content__hover--hover');
-    tabNavLinks.forEach(link => link.classList.remove('tab-nav__link-hover--hover'));
+    tabNavLinks.forEach((link) => link.classList.remove('tab-nav__link-hover--hover'));
   });
 }
 
-
+$('.personal').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  variableWidth: true,
+  autoplaySpeed: 2000,
+  prevArrow: false,
+  nextArrow: $('.next'),
+});
