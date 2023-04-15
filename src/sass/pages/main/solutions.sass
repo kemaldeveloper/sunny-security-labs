@@ -9,21 +9,71 @@
     display: block
     margin-bottom: 50px
     color: $mid_blue
+    +md 
+      margin-bottom: 16px
+
+  &__bg-wrap
+    position: absolute
+    right: 0
+    +xxxl
+      display: none
+    
+
+  &__bg-wrap-none
+    display: none
+    +xxxl
+      position: absolute
+      right: 0
+      display: block
+    +xl 
+      display: none
+
+  &__bg-wrap-xl
+    display: none
+    +xxl
+      position: absolute
+      right: 0
+      display: block
+    +lg
+      display: none
 
   &__wrapper
     position: relative
+    +md 
+      display: flex
+      flex-direction: column
+      row-gap: 20px
 
   &__item
-    display: flex
-    position: relative
     width: 887px
     height: 220px
-    padding: 23px 0 21px 23px
-
+    padding: 24px 0 0 22.5px
+    +xxxl
+      width: 810px
+      padding: 23px 0 0 23.5px
+    +xxl
+      width: 914px
+    +xl
+      width: 706px
+    +lg 
+      width: 550px
+      height: 190px
+      padding: 10px 0 0 10px
+    +md 
+      padding: 17px 15.55px 19px 18.72px
+      width: 100%
+      height: 248px
+ 
   &__content-wrap
     position: relative
     display: flex
-    width: 100%
+    // width: 100%
+    padding-bottom: 33px
+    +xxxl
+      padding-bottom: 0
+    +md 
+      display: flex
+      flex-direction: column
     &::before
       content: ''
       position: absolute
@@ -31,6 +81,8 @@
       height: 100%
       width: 2.5px
       background: $white
+      +md 
+        height: 226%
     &::after
       content: ''
       position: absolute
@@ -38,6 +90,9 @@
       height: 2.5px
       width: 100%
       background: $white
+      +md 
+        top: 209px
+        height: 1.5px
 
   &__item
     position: relative
@@ -67,13 +122,15 @@
       &::after
         left: 0
 
-  &__item:hover
-
   &__item--web3
     background: $ocean
     transition: all 0.3s ease
     &:hover
-      margin-left: 20px
+      margin-left: 35px
+      +xl 
+        margin-left: 20px
+      +md 
+        margin-left: 0
       ~ .solutions__bg-wrap svg
         width: 693px
         transform: scale(1.05)
@@ -82,22 +139,68 @@
     background: $mid_blue
     margin-left: 172px
     transition: all 0.3s ease
+    +xxxl
+      margin-left: 157px
+    +xxl
+      margin-left: 70px
+    +xl 
+      margin-left: 50px
+    +md 
+      margin: 0
     &:hover
-      margin-left: 192px
+      margin-left: 190px
+      +xxl 
+        margin-left: 90px
+      +xl 
+        margin-left: 90px
+      +md 
+        margin-left: 0
 
   &__item--aisolutions
     background: $deep_blue
     margin-left: 345px
     transition: all 0.3s ease
+    +xxxl
+      margin-left: 314px
+    +xxl
+      margin-left: 117px
+    +xl 
+      margin-left: 115px
+    +lg 
+      margin-left: 105px
+    +md 
+      margin: 0
     &:hover
       margin-left: 365px
+      +xxxl
+        margin-left: 345px
+      +xxl
+        margin-left: 145px
+      +xl 
+        margin-left: 135px
+      +md 
+        margin-left: 0
 
   &__item-wrap--left
-    padding: 4px 0 0 42px
-    margin-right: 73px
+    padding: 4px 73px 0px 44px
+    +xxxl
+      padding: 4px 0 33px 37px
+      margin-right: 52px
+    +xxl
+      margin-right: 150px
+    +xl
+      margin-right: 25px
+    +lg 
+      margin: 0
+      padding: 0 20px 32px 25px
+    +md 
+      padding: 0
+      margin-bottom: 21px
 
   &__item-wrap--right
-    padding: 12px 0 0 0
+    padding-top: 12px
+    +md 
+      padding: 0
 
   &__item-title
     font-weight: 700
@@ -105,33 +208,84 @@
     line-height: 52px
     letter-spacing: 0.01em
     color: $white
+    +xxl
+      font-size: 43px
+    +lg 
+      font-size: 21px
+    +md 
+      display: inline-block
+      font-size: 26px
+      line-height: 31px
+      padding-left: 23.28px
+      padding-right: 24px
 
-  &__item-text
+  &__item-text 
     color: $dark_blue
-    max-width: 446px
-    margin-bottom: 32px
+    width: 446px
+    transition: all 0.3s ease
+    position: relative
+    &::after 
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      content: "At Sunny Security Labs we specialize in providing cutting-edge solutions for the decentralized web, also known as Web3. Whether you are looking to build ..."
+    +xxxl
+      width: 408px
+    +xxl 
+      width: 430px
+    +xl
+      width: 370px
+    +md 
+      margin-left: 23.28px
+      width: 97%
+      font-size: 14px
+      line-height: 22px
+
+  &__item:hover .solutions__item-text
+    color: $hover
+    
+  &__item:hover .solutions__item-text::after 
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+
+  &__item:hover ~ .solutions__item--blockchain .solutions__item-text::after 
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+
+  &__item:hover ~ .solutions__item--aisolutions .solutions__item-text::after 
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
 
   &__item-link
+    display: block
     position: relative
-    padding-right: 70px
+    top: 107px
     color: $white
+    +xxxl
+      top: 111px
+    +lg 
+      font-size: 16px
+    +md 
+      padding-left: 23.4px
+      top: 91px
+      font-size: 14px
+      line-height: 16px
+    +xsm 
+      top: 100px
     &::after
       content: ''
       position: absolute
-      right: 0
+      left: 28%
       top: 50%
       transform: translateY(-50%)
       height: 1px
       width: 50px
       background: $white
       transition: all 0.3s ease
+      +xl 
+        left: 35%
+      +md 
+        top: 50%
+      +sm 
+        left: 40%
     &:hover
       color: $white
-
-  &__bg-wrap
-    position: absolute
-    right: 0
-    top: 0
-    z-index: -1
-    svg
-      transition: all 0.3s ease
