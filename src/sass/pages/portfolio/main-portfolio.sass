@@ -1,8 +1,8 @@
 .main-portfolio
   padding: 66px 0 118px 0
-  +lg 
+  +lg
     padding: 66px 0 70px 0
-  +md 
+  +md
     padding: 30px 0 43px 0
 
   .tab-nav
@@ -12,7 +12,7 @@
       border-color: transparent
       color: $white
       background-color: $mid_blue
-    +md 
+    +md
       display: none
 
     &__list
@@ -20,9 +20,9 @@
       justify-content: flex-end
       align-items: center
       gap: 16px
-      +lg 
+      +lg
         gap: 5px
-      
+
     &__link
       font-weight: 400
       font-size: 15px
@@ -31,17 +31,17 @@
       border: 1px solid #AFAFAF
       padding: 5px 10.4px
       border-radius: 20px
-      transition: all 0.2s ease-in-out
+      transition: all 0.3s ease
       span
         padding: 5px 10.4px
-      +lg 
+      +lg
         font-size: 14px
 
       &:hover
-        border: 1px solid #ffffff
+        border: 1px solid $white
         padding: 5px 10.4px
         color: $white
-        background-color: #61d2ff
+        background-color: rgba(1, 175, 243, 0.5)
 
     &__link-hover
       // transition: all 0.1s ease-in-out
@@ -59,9 +59,10 @@
       display: block
 
     &__item
-      transition: all 0.2s ease-in-out 
+      transition: all 0.2s ease-in-out
 
       &--hover .tab-content__inner
+        transition: all 0.3s linear
         width: 90%
 
       &--hover .tab-content__title
@@ -92,17 +93,17 @@
       &--bottom
         border-bottom: 2px solid
         border-image: $gradient_plate 1
-      +lg 
+      +lg
         padding: 10px 0 15px 15px
-      +md 
+      +md
         display: none
 
     &__hover
-      transition: all 0.2s ease-in-out
+      transition: all 0.3s ease
 
       &--hover .tab-content__inner
         width: 90%
-        +xl 
+        +xl
           width: 100%
 
       &--hover .tab-content__title
@@ -111,10 +112,10 @@
       &--hover .tab-content__str
         color: $hover
 
-      &--hover .tab-content__images 
+      &--hover .tab-content__images
         animation: blink 0.2s linear
         filter: brightness(88%)
-        
+
       @keyframes blink
         0%
           opacity: 1
@@ -128,7 +129,7 @@
     &__title
       margin-bottom: 32px
       max-width: 486px
-      +lg 
+      +lg
         font-size: 30px
         margin-bottom: 10px
 
@@ -140,7 +141,7 @@
       letter-spacing: 0.02em
       color: $dark_blue
       margin-bottom: 53px
-      +lg 
+      +lg
         font-size: 16px
         margin-bottom: 20px
 
@@ -163,12 +164,12 @@
       width: 100% !important
       height: 366px
       object-fit: cover
-      +xl 
+      +xl
         height: 100%
 
   .columns
     padding-top: 50px
-    +sm 
+    +sm
       padding-top: 20px
 
     &__block-hover:hover .columns__subtitle
@@ -176,7 +177,6 @@
 
     &__block-hover:hover .columns__img
       filter: brightness(88%)
-        
 
     &__block-hover:hover .columns__date
       &::before
@@ -197,10 +197,10 @@
         width: 100%
         height: 1px
         background: $dark_blue
-      +sm 
+      +sm
         margin-bottom: 20px
 
-    &__img 
+    &__img
       width: 100% !important
       height: 285px
       object-fit: cover
@@ -218,7 +218,7 @@
       color: $dark_blue
       margin-bottom: 18px
       margin-right: 14px
-      +md 
+      +md
         font-size: 20px
         margin-bottom: 10px
       +sm
@@ -231,7 +231,7 @@
       border: 1px solid $dark_blue
       margin: 0
       margin-bottom: 21px
-      +sm 
+      +sm
         margin-bottom: 13px
 
     &__date
@@ -241,13 +241,13 @@
 
   &__wrapper
     display: none
-    +md 
+    +md
       display: block
 
   &__rental
     background: $gradient_plate
     padding: 18.83px 17.5px 10.42px 0
-    
+
     &-title
       color: $white
       margin-left: 21.5px
@@ -271,11 +271,10 @@
     height: 35px
     transform: translate(-7px, 18px)
 
-  &__inner 
+  &__inner
     display: flex
     align-items: flex-end
 
   &__title
     display: block
     margin-bottom: 18px
-    
