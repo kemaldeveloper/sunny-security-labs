@@ -211,7 +211,6 @@ $('.quote-form__spoiler-btn').click(function (event) {
 
 const tabNavItems = document.querySelectorAll('.tab-nav__link');
 const tabContentItems = document.querySelectorAll('.tab-content__item');
-const hoverBlock = document.querySelector('.tab-content__item');
 
 tabNavItems.forEach((tab, index) => {
   tab.addEventListener('click', (event) => {
@@ -230,30 +229,8 @@ tabNavItems.forEach((tab, index) => {
       tabContentItems[index].style.opacity = 1;
     }
   });
-
-  tab.addEventListener('mouseover', () => {
-    hoverBlock.classList.add('tab-content__item--hover');
-  });
-
-  tab.addEventListener('mouseout', () => {
-    hoverBlock.classList.remove('tab-content__item--hover');
-  });
 });
 
-const tabContentHover = document.querySelector('.tab-content__hover');
-const tabNavLinks = document.querySelectorAll('.tab-nav__link-hover');
-
-if (tabContentHover && tabNavLinks.length > 0) {
-  tabContentHover.addEventListener('mouseover', () => {
-    tabContentHover.classList.add('tab-content__hover--hover');
-    tabNavLinks.forEach((link) => link.classList.add('tab-nav__link-hover--hover'));
-  });
-
-  tabContentHover.addEventListener('mouseout', () => {
-    tabContentHover.classList.remove('tab-content__hover--hover');
-    tabNavLinks.forEach((link) => link.classList.remove('tab-nav__link-hover--hover'));
-  });
-}
 
 $('.personal').slick({
   slidesToShow: 3,

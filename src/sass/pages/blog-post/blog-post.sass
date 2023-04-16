@@ -232,58 +232,37 @@
       line-height: 24px
       margin-bottom: 54px
 
-  &__back-link
-    display: inline-block
-    position: relative
-    color: $mid_blue
-    padding-right: 64px
-    transition: all 0.5s ease
-    z-index: 1
-    +md 
-      padding: 0
-    &::after
-      content: ''
-      position: absolute
-      top: 50%
-      left: 0
-      width: 50px
-      height: 1px
-      background: $mid_blue
-      +md 
-        width: 0
-    &:hover
-      color: $mid_blue
-      padding: 0 0 0 64px
-      +md 
-        left: 0
-        position: unset
-        padding: 0
-      &::after
-        content: ''
-        background: $mid_blue
-        left: 10%
-        right: 0
-      +md 
-        left: 0
-        right: 0
-        position: unset
-        padding: 0
-
   &__inner
     display: flex
     align-items: center
-    +md 
-      gap: 50px
-    +xsm 
-      gap: 30px
+    gap: 64px
+    +sm 
+      justify-content: space-between
+      gap: 0
 
   &__link
+    padding-left: 73px
     color: $mid_blue
-    margin-left: 73px
-    +md 
+    transition: all .3s ease
+    position: relative
+    +sm 
+      padding-left: 0
       font-size: 14px
       line-height: 16px
-      margin-left: 0
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      top: 12px
+      transform: translateY(-50%)
+      transition: all .3s ease
+      height: 1px
+      width: 50px
+      background: $mid_blue
+      +sm 
+        position: unset
+      &:hover
+        margin-left: 20px
     
   &__quote
     display: flex
