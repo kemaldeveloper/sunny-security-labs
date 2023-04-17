@@ -4,6 +4,7 @@
   top: 0
   +min_md
     animation: img1 0.8s ease 1
+    will-change: transform, opacity
   +xxxl
     right: -150px
   +xxl
@@ -16,6 +17,11 @@
   +md
     right: -280px
     max-width: 752px
+  +sm
+    top: 155px
+    right: -145px
+    max-width: 582px
+    filter: blur(15px)
 
 @keyframes img1
   0%
@@ -32,6 +38,7 @@
   bottom: -26px
   +min_md
     animation: img2 0.8s ease 1
+    will-change: transform, opacity
   +xxxl
     right: 283px
     bottom: -237px
@@ -51,6 +58,10 @@
     max-width: 343px
     right: 217px
     top: 451px
+  +sm
+    max-width: 345px
+    right: 138px
+    top: 422px
 
 @keyframes img2
   0%
@@ -70,6 +81,7 @@
   right: 570px
   +min_md
     animation: img3 0.8s ease 1
+    will-change: transform, opacity
   +xxxl
     right: 419px
   +xxl
@@ -99,6 +111,7 @@
   top: 0
   +min_md
     animation: img4 0.8s ease 1
+    will-change: transform, opacity
   +xxxl
     right: -144px
   +xxl
@@ -112,6 +125,11 @@
     max-width: 379px
     right: -191px
     top: 173px
+  +sm
+    max-width: 386px
+    right: -137px
+    top: 192px
+    filter: blur(6px)
 
 @keyframes img4
   0%
@@ -131,6 +149,7 @@
   right: 0
   +min_md
     animation: img5 0.8s ease 1
+    will-change: transform, opacity
   +xxxl
     right: -151px
   +xxl
@@ -146,6 +165,11 @@
   +md
     max-width: 363px
     top: 192px
+  +sm
+    max-width: 425px
+    top: 212px
+    right: -139px
+    z-index: 2
 
 @keyframes img5
   0%
@@ -160,6 +184,11 @@
   right: 0
   +min_sm
     display: none
+    will-change: transform, opacity
+  +sm
+    top: 29px
+    z-index: 1
+    filter: blur(15px)
 
 .main-screen__title
   display: block
@@ -180,6 +209,9 @@
   +lg
     font-size: 36px
     line-height: 42px
+  +sm
+    z-index: 2
+    margin-bottom: 21px
 
 @keyframes title-anim
   0%
@@ -220,6 +252,9 @@
   +md
     font-size: 14px
     line-height: 16px
+  +sm
+    padding-right: 57px
+    z-index: 2
 
 @keyframes link-anim
   0%

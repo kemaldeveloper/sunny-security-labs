@@ -179,15 +179,7 @@ const mfpPopup = function (popupID, source) {
   });
 };
 
-// const anim = lottie;
-
-// anim.loadAnimation({
-//   container: document.querySelector('#Vector1'),
-//   renderer: 'svg',
-//   loop: true,
-//   autoplay: true,
-//   path: '../json/140433-chat-bot.json',
-// });
+// SLIDERS
 
 $('.slider').slick({
   infinite: true,
@@ -196,8 +188,18 @@ $('.slider').slick({
   variableWidth: true,
   autoplaySpeed: 2000,
   prevArrow: false,
+  adaptiveHeight: true,
   nextArrow: $('.next'),
-  autoplay: true,
+  // autoplay: true,
+});
+
+$('.personal').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  variableWidth: true,
+  autoplaySpeed: 2000,
+  prevArrow: false,
+  nextArrow: $('.next'),
 });
 
 $('.next').on('click', function () {
@@ -229,14 +231,4 @@ tabNavItems.forEach((tab, index) => {
       tabContentItems[index].style.opacity = 1;
     }
   });
-});
-
-
-$('.personal').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  variableWidth: true,
-  autoplaySpeed: 2000,
-  prevArrow: false,
-  nextArrow: $('.next'),
 });
