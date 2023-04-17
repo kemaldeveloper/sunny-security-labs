@@ -223,11 +223,13 @@ tabNavItems.forEach((tab, index) => {
       tab.classList.add('active');
 
       tabContentItems.forEach((content) => {
+        content.classList.remove('animate__animated', 'animate__fadeIn');
         content.style.opacity = 0;
         content.style.display = 'none';
       });
 
       tabContentItems[index].style.display = 'block';
+      tabContentItems[index].classList.add('animate__animated', 'animate__fadeIn');
       tabContentItems[index].style.opacity = 1;
     }
   });
