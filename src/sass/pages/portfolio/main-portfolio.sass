@@ -7,7 +7,7 @@
 
   .tab-nav
     margin-bottom: 40px
-
+  
     .active
       border-color: transparent
       color: $white
@@ -31,7 +31,7 @@
       border: 1px solid #AFAFAF
       padding: 5px 10.4px
       border-radius: 20px
-      transition: all 0.5s ease
+      transition: all 0.3s ease
       span
         padding: 5px 10.4px
       +lg
@@ -42,12 +42,33 @@
         color: $white
         background: rgba($mid_blue, 0.5)
 
-
   .tab-content
+
+    .animate__animated
+      animation-duration: 1.5s
+      animation-name: fadeIn 
+      animation-delay: 0.6s
+      animation-timing-function: ease-in-out
+
+    .animate__fadeIn
+
+      @keyframes fadeIn
+
+        0%
+          filter: brightness(0.9)
+        
+        50%
+          filter: brightness(1.10)
+
+        75%
+          filter: brightness(0.95)
+
+        100%
+          filter: brightness(1)
 
     &__item
       display: none
-
+ 
     .active
       display: block
 
@@ -285,4 +306,3 @@
     display: block
     margin-bottom: 18px
     color: $mid_blue
-    
