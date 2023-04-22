@@ -7,12 +7,17 @@
     padding-top: 63px
 
   &--bg
-    background: #F2F2F2
-    height: 800px
     position: relative
-    top: -100px
-    z-index: 1
     padding-top: 177px
+    z-index: 1
+    +min_lg
+      background: #F2F2F2
+      height: 800px
+      top: -100px
+    +lg
+      padding-top: 100px
+    +sm
+      padding-top: 31px
 
   &__title
     display: inline-block
@@ -20,8 +25,8 @@
     color: $mid_blue
     &:hover
       color: $mid_blue
-
-  &__content
+    +sm
+      margin-bottom: 18px
 
   &__rental
     height: 600px
@@ -37,26 +42,49 @@
       background: rgba($dark_blue, 0.15)
       pointer-events: none
       opacity: 0
+      visibility: hidden
       transition: all 0.3s ease
     &:hover
-      &::after
-        opacity: 1
+      +min_md
+        &::after
+          opacity: 1
+          visibility: visible
+    +sm
+      height: auto
 
     &-content
       background: $gradient_plate
       padding: 34px 30.58px 17px 0
       height: 234px
+      +xl
+        padding: 25px 30px 17px 0
+      +sm
+        padding: 18px 17.5px 10px 0
+        height: auto
 
     &-title
       color: $white
       max-width: 456.6px
       margin-left: 41.79px
+      +xxl
+        font-size: 35px
+      +xl
+        font-size: 30px
+        margin-left: 35px
+      +sm
+        font-size: 22px
+        line-height: 28px
+        margin-left: 21.5px
 
     &-icon-wrap
       position: relative
       height: 60px
       width: 100%
       transform: translateY(6px)
+      +xl
+        height: 50px
+      +sm
+        height: 35px
       &::after
         content: ''
         position: absolute
@@ -66,6 +94,18 @@
         top: 50%
         transform: translateY(-50%)
         transition: all 0.5s ease
+        +xxxl
+          width: 484px
+        +xxl
+          width: 430px
+        +xl
+          width: 335px
+        +lg
+          width: 580px
+        +md
+          width: 400px
+        +sm
+          width: 80%
 
     &-icon-wrap
       .icon--rental-icon2
@@ -74,24 +114,43 @@
     &-date
       color: $white
       margin-left: 41.79px
+      +xl
+        margin-left: 35px
+      +sm
+        font-size: 11px
+        line-height: 13px
+        margin-left: 21.5px
+
+    &-img-wrap
+      height: 366px
 
     &-img
-      width: 690px
-      height: 366px
-      object-fit: cover
+      width: 100%
+      height: 100%
+      // object-fit: cover
 
   &__rental:hover
-    .portfolio__rental-icon-wrap
-      &::after
-        content: ''
-        width: 643px
+    +min_md
+      .portfolio__rental-icon-wrap
+        &::after
+          content: ''
+          width: 643px
+          +xxxl
+            width: 550px
+          +xxl
+            width: 505px
+          +xl
+            width: 400px
+          +lg
+            width: 642px
       .icon--rental-icon
         transition: all 0.6s ease
         opacity: 0
-        animation: rental-anim 0.3s ease 1
+        animation: rental-anim 0.3s linear 1
       .icon--rental-icon2
         transition: all 0.6s ease
         opacity: 1
+
   &__box
     max-height: 548px
 
@@ -107,10 +166,17 @@
         visibility: visible
 
   &__box:hover
-    .portfolio__right-date
-      &::before
-        content: ''
-        width: 270px
+    +min_md
+      .portfolio__right-date
+        &::before
+          content: ''
+          width: 270px
+          +xxl
+            width: 240px
+          +xl
+            width: 180px
+          +lg
+            width: 270px
 
   &__right-box
     display: flex
@@ -118,7 +184,6 @@
 
   &__img-box
     position: relative
-    width: 330px
     height: 285px
     margin-bottom: 16px
     &::after
@@ -134,8 +199,14 @@
       z-index: 3
       opacity: 0
       visibility: hidden
+    +xl
+      height: 265px
+    +sm
+      height: 165px
 
   &__right-img
+    width: 100%
+    height: 100%
     object-fit: cover
 
   &__right-title
@@ -145,12 +216,22 @@
     letter-spacing: 0.02em
     color: $dark_blue
     max-width: 254px
+    +xl
+      font-size: 20px
+    +lg
+      font-size: 22px
+    +sm
+      font-size: 16px
+      line-height: 20px
+      max-width: 184px
 
   &__right-title--first
     margin-bottom: 18px
 
   &__right-title--second
     margin-bottom: 49px
+    +sm
+      margin-bottom: 37px
 
   &__right-date
     position: relative
@@ -165,22 +246,54 @@
       width: 100%
       height: 1px
       background: $dark_blue
+    +sm
+      font-size: 11px
+      line-height: 13px
+      padding-top: 13px
 
   &__right-link
     align-self: flex-end
     position: relative
     margin-top: 33.46px
+    padding-left: 67px
     color: $mid_blue
-    &:hover
-      color: $mid_blue
+    transition: all 0.3s ease
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      height: 1px
+      width: 50px
+      background: $mid_blue
     &::after
       content: ''
       position: absolute
       top: 50%
-      left: -65px
+      right: 0
       height: 1px
       width: 50px
       background: $mid_blue
+      opacity: 0
+      visibility: hidden
+      transition: all 0.3s ease
+    +lg
+      display: none
+
+  &__right-link:hover
+    color: $mid_blue
+    +min_md
+      padding-left: 0
+      padding-right: 67px
+      &::before
+        content: ''
+        opacity: 0
+        visibility: hidden
+      &::after
+        content: ''
+        right: 0
+        opacity: 1
+        visibility: visible
 
 @keyframes rental-anim
   0%
