@@ -3,23 +3,30 @@
   &--padding
     padding-top: 28px
     padding-bottom: 84px
+    +lg
+      padding-top: 50px
+    +sm
+      padding-bottom: 72px
 
   &__wrapper
     display: flex
     justify-content: space-between
 
   &__title
-    display: block
+    display: inline-block
     margin-bottom: 49px
     color: $mid_blue
     &:hover
       color: $mid_blue
+    +sm
+      margin-bottom: 30px
 
   &__box
-    &:hover
-      .blog__content-title
-        color: $hover
-        margin-left: 44px
+    +min_md
+      &:hover
+        .blog__content-title
+          color: $hover
+          margin-left: 44px
 
   &__content-wrap
     display: flex
@@ -27,12 +34,15 @@
 
   &__content-wrap:first-child
     margin-bottom: 42px
+    +sm
+      margin-bottom: 27px
 
   &__content-wrap
-    &:hover
-      .blog__content-subtitle
-        margin-left: 22px
-        color: $hover
+    +min_md
+      &:hover
+        .blog__content-subtitle
+          margin-left: 22px
+          color: $hover
 
   &__content-wrap--bordered
     padding-bottom: 25px
@@ -46,22 +56,40 @@
       width: 100%
       height: 1px
       background: #D0D0D0
-    &:hover
-      &::after
-        content: ''
-        height: 2px
+    +sm
+      padding-bottom: 19px
+      margin-bottom: 18px
+    +min_md
+      &:hover
+        &::after
+          content: ''
+          height: 2px
 
   &__content-title
     color: $dark
     max-width: 439px
     transition: all 0.3s linear
+    +xl
+      font-size: 30px
+      line-height: 40px
+    +lg
+      font-size: 38px
+    +sm
+      font-size: 22px
+      line-height: 28px
+      max-width: 215px
 
   &__date
     color: $dark_blue
     margin-top: 12px
+    +sm
+      font-size: 11px
+      line-height: 13px
 
   &__date--mt
     margin-top: 21px
+    +sm
+      margin-top: 12px
 
   &__content-subtitle
     font-weight: 700
@@ -70,6 +98,12 @@
     max-width: 391px
     color: $dark_blue
     transition: all 0.4s ease
+    +xl
+      font-size: 22px
+    +sm
+      font-size: 18px
+      line-height: 24px
+      max-width: 247px
 
   &__text-wrap
     display: flex
@@ -77,6 +111,9 @@
     position: relative
     min-height: 191px
     margin-bottom: 78px
+    +sm
+      min-height: auto
+      margin-bottom: 38px
     &::before
       content: ''
       transition: all 0.3s linear
@@ -86,6 +123,10 @@
       height: 182px
       width: 2px
       background: $gradient_plate
+      +sm
+        top: 0
+        bottom: auto
+        height: 100%
     &::after
       content: ''
       transition: all 0.3s linear
@@ -95,11 +136,41 @@
       height: 2px
       width: 560px
       background: $gradient_plate
+      +xxxl
+        width: 473px
+      +xxl
+        width: 435px
+      +xl
+        width: 345px
+      +lg
+        width: 570px
+      +md
+        width: 395px
+      +sm
+        width: 75%
 
   &__text-text
     max-width: 570px
     color: $dark_blue
     margin: 0 0 0 48.25px
+    +xxxl
+      max-width: 507px
+    +xl
+      max-width: 376px
+      font-size: 16px
+      margin-left: 25px
+    +lg
+      max-width: 473px
+      font-size: 18px
+    +sm
+      font-size: 14px
+      line-height: 22px
+      max-width: 279px
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 5
+      -webkit-box-orient: vertical
+      margin-left: 24px
 
   &__text-link
     align-self: flex-end
@@ -108,21 +179,39 @@
     color: $mid_blue
     &:hover
       color: $mid_blue
+    +xl
+      transform: translateY(9px)
+      font-size: 16px
+    +lg
+      font-size: 18px
+      transform: translateY(27px)
+    +sm
+      transform: translateY(6px)
+      font-size: 14px
+      line-height: 16px
 
   &__box
-    &:hover
-      .blog__text-link
-        margin-right: 40px
-        color: $hover
-
-      .blog__text-wrap
-        &::before
-          content: ''
-          background: $hover
-        &::after
-          content: ''
-          background: $hover
-          width: 525px
+    +min_md
+      &:hover
+        .blog__text-link
+          margin-right: 40px
+          color: $hover
+        .blog__text-wrap
+          &::before
+            content: ''
+            background: $hover
+          &::after
+            content: ''
+            background: $hover
+            width: 525px
+            +xxxl
+              width: 434px
+            +xxl
+              width: 400px
+            +xl
+              width: 285px
+            +lg
+              width: 530px
 
   &__quote
     max-width: 600px
@@ -130,6 +219,18 @@
     margin-left: auto
     background: $mid_blue
     padding: 32px 47px 46px 49px
+    +xxxl
+      max-width: 525px
+      padding: 32px 41px 46px 43px
+    +xxl
+      max-width: 500px
+    +xl
+      max-width: 400px
+      padding: 30px
+
+  &__quote--dn
+    +lg
+      display: none
 
   &__quote--mt
     margin-top: -4px

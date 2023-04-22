@@ -3,6 +3,8 @@
 
   &__row--mb-60
     margin-bottom: 60px
+    +xxxl
+      margin-bottom: 56px
 
   &__row--mb-73
     margin-bottom: 73px
@@ -11,10 +13,14 @@
     color: $dark_blue
     margin-bottom: 0
     max-width: 811px
+    +xxxl
+      max-width: 708px
 
   &__subtext-wrap
     max-width: 600px
     margin: 76px 0 0 auto
+    +xxxl
+      max-width: 525px
 
   &__subtext
     color: $dark_blue
@@ -63,7 +69,7 @@
     display: flex
 
   &__services-wrap--pd
-    padding: 62px 0 68px 0
+    padding: 62px 0 66px 0
 
 .resume
   display: flex
@@ -111,6 +117,8 @@
     height: min-content
     position: relative
     padding: 0 40px 42px 0
+    +xxxl
+      padding: 0 0 41px
     &::before
       content: ''
       position: absolute
@@ -119,6 +127,8 @@
       width: 2px
       height: 100%
       background: $gradient_plate
+      +xxxl
+        right: -34px
     &::after
       content: ''
       position: absolute
@@ -127,6 +137,9 @@
       height: 2px
       width: 190px
       background: $gradient_plate
+      +xxxl
+        right: -32px
+        width: 165px
 
   &__review-text
     font-style: italic
@@ -136,3 +149,5 @@
     letter-spacing: 0.02em
     max-width: 439px
     margin: -7px 0 0 0
+    +xxxl
+      max-width: 387px
