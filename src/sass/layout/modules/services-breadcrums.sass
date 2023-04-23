@@ -2,6 +2,8 @@
   padding-top: 98px
   +xxxl
     padding-top: 88px
+  +xl
+    padding-top: 35px
 
   &__wrapper
     display: flex
@@ -15,6 +17,13 @@
     margin-left: 24px
     transform: translateY(7px)
     color: $dark_blue
+    +xl
+      font-size: 45px
+      transform: translateY(10px)
+    +lg
+      font-size: 40px
+      transform: translateY(12px)
+
     &::before
       content: ''
       position: absolute
@@ -23,6 +32,10 @@
       height: 43px
       transform: rotate(21deg)
       background: $gradient_plate
+      +xl
+        height: 40px
+      +lg
+        height: 33px
 
   &__subtitle
     color: $mid_blue
