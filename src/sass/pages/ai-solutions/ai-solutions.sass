@@ -1,28 +1,58 @@
 .ai-solutions
   padding: 51px 0 54px
+  +xxxl
+    padding: 58px 0 55px 0
+  +lg
+    padding: 50px 0 0 0
+  +md
+    padding: 0 0 170px 0
 
   &--bg
     background: $dark_blue
 
   &__row--mb
     margin-bottom: 53px
+    +lg
+      margin-bottom: 110px
+    +sm 
+      margin-bottom: 160px
 
   &__text
     color: $white
+    +lg
+      margin: 0
+    +md
+      font-size: 18px
+      line-height: 24px
+      position: relative
+      z-index: 51
+    +sm
+      font-size: 16px
 
   &__subtext
     color: $white
     margin: 154px 0 95px
-    max-width: 627px
+    width: 627px
+    +xxl
+      width: 100%
+    +lg
+      margin: 0
+      margin-bottom: 45px
+    +md
+      position: relative
+      top: 190px
+      font-size: 16px
 
   &__other-pages
     display: flex
     align-items: center
     justify-content: space-between
-    max-width: 630px
+    width: 630px
     max-height: 78px
     padding: 7px 0 44.18px 31.29px
     position: relative
+    +lg
+      padding: 5px 0 14px 17px
     &::before
       content: ''
       position: absolute
@@ -30,7 +60,6 @@
       top: 0
       height: 100%
       width: 1px
-
       background: $gradient_plate
     &::after
       content: ''
@@ -43,15 +72,28 @@
 
   &__other-pages
     margin-bottom: 60px
+    +xxl
+      width: 100%
+    +lg
+      align-items: flex-start
+    +md
+      position: relative
+      top: 180px
 
   &__other-title
     color: $white
+    +lg
+      font-size: 26px
+      line-height: 31px
 
   &__other-link
     color: $mid_blue
     position: relative
     padding-right: 68px
     transform: translateY(9px)
+    +lg
+      font-size: 14px
+      line-height: 16px
     &::after
       content: ''
       position: absolute
@@ -61,11 +103,28 @@
       background: $mid_blue
       width: 50px
       height: 1px
+      +lg
+        width: 46.8px
 
 .solutions-resume
   display: flex
   position: relative
-
+  +xxxl
+    width: 620px
+  +xxl
+    max-width: 560px
+  +lg
+    max-width: 100%
+    width: auto
+  &__reverse-md
+    +md
+      display: flex
+      flex-direction: column-reverse
+      position: relative
+      top: 150px
+    +sm
+      margin-bottom: 30px
+      top: 153px
   &__avatar
     min-width: 148px
     max-width: 148px
@@ -131,10 +190,16 @@
     bottom: -128px
     min-width: 1095px
     min-height: 604px
+    
 
 .solutions-package
   max-width: 599px
   margin: 0 0 0 auto
+  +xxxl
+    width: 525px
+  +xxl
+    width: 100%
+    margin: 0 auto
 
   &__title
     color: $white

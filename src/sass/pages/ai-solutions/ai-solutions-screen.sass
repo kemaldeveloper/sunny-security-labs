@@ -1,4 +1,6 @@
 .ai-solutions-screen
+  +md
+    position: relative
 
   &__img-1
     pointer-events: none
@@ -6,7 +8,22 @@
     position: absolute
     top: 0
     right: 0
-    animation: ai-solutions-1 0.8s ease 1
+    +min_md
+      animation: ai-solutions-1 0.8s ease 1
+    +xxxl
+      right: -140px
+    +xxl
+      right: -200px
+    +lg
+      right: -250px
+    +md
+      max-width: 840px
+      top: 30px
+      right: 0
+      filter: blur(15px)
+    +sm
+      opacity: 0.65
+      top: 20px
 
   &__img-2
     pointer-events: none
@@ -14,7 +31,24 @@
     position: absolute
     top: 39px
     right: 0
-    animation: ai-solutions-2 0.8s ease 1
+    +min_md
+      animation: ai-solutions-2 0.8s ease 1
+    +xxxl
+      right: -144px
+    +xxl
+      right: -180px
+    +lg
+      top: -95px
+      right: -220px
+    +md
+      max-width: 37%
+      top: 205px
+      right: 0
+      z-index: 0
+    +sm
+      height: auto
+      max-width: 200px
+      top: 280px
 
   &__img-3
     pointer-events: none
@@ -22,7 +56,24 @@
     position: absolute
     top: 100px
     right: 177px
-    animation: ai-solutions-3 0.8s ease 1
+    +min_md
+      animation: ai-solutions-3 0.8s ease 1
+    +xxxl
+      right: 30px
+    +xxl
+      right: -40px
+    +lg 
+      right: 0
+      width: 360px
+      top: 40px
+    +md
+      top: 250px
+      right: 70px
+      animation: none
+    +sm
+      top: 270px
+      right: 0
+
 
 @keyframes ai-solutions-1
   0%
