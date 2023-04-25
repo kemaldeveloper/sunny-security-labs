@@ -1,24 +1,62 @@
 .consulting
   padding-top: 58px
+  +sm
+    padding-top: 23px
 
   &__row--mb-60
     margin-bottom: 60px
+    +xxxl
+      margin-bottom: 56px
+    +md
+      margin-bottom: 450px
 
   &__row--mb-73
     margin-bottom: 73px
+    +md
+      margin-bottom: 30px
 
   &__text
     color: $dark_blue
     margin-bottom: 0
     max-width: 811px
+    +xxxl
+      max-width: 708px
+    +xl
+      font-size: 18px
+      line-height: 28px
+      max-width: 449px
+    +lg
+      font-size: 16px
+      line-height: 24px
+    +md
+      position: relative
+      z-index: 1
+      max-width: 100%
 
   &__subtext-wrap
     max-width: 600px
     margin: 76px 0 0 auto
+    +xxxl
+      max-width: 525px
+    +xl
+      max-width: 424px
+      margin: 55px 0 0 auto
+    +lg
+      max-width: 315px
+    +md
+      max-width: 100%
+    +sm
+      margin-top: 29.5px
 
   &__subtext
     color: $dark_blue
     margin-bottom: 0
+    +min_md
+      +lg
+        font-size: 14px
+    +sm
+      font-size: 16px
+      line-height: 24px
 
   &__package
     display: flex
@@ -26,12 +64,38 @@
   &__package-title
     color: $dark_blue
     margin-bottom: 26px
+    +xl
+      font-size: 30px
+      margin-bottom: 10px
+    +lg
+      font-size: 23px
+    +md
+      font-size: 32px
+    +sm
+      font-size: 20px
+      line-height: 23px
 
   &__package-icon
-    width: 62px
-    height: 77px
+    max-width: 65px
+    max-height: 68px
     margin-right: 35px
     transform: translateY(6px)
+    +min_md
+      +xl
+        width: 55px
+        height: 68px
+      +lg
+        width: 40px
+        height: 50px
+        margin-right: 21px
+    +sm
+      width: 36px
+      height: 44px
+      transform: none
+      margin-right: 22px
+    svg
+      width: 100%
+      height: 100%
 
   &__package-box
     flex: 1 1 auto
@@ -58,6 +122,14 @@
     letter-spacing: 0.01em
     color: $dark_blue
     margin-left: 17px
+    +min_md
+      +xl
+        font-size: 18px
+      +lg
+        font-size: 14px
+    +sm
+      font-size: 15px
+      line-height: 40px
 
   &__services-wrap
     display: flex

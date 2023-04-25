@@ -7,18 +7,22 @@
     right: 0
     +min_md
       animation: security-1 0.8s ease 1
-    // +xxxl
-    //   top: -13px
-    //   right: -140px
-    // +lg
-    //   right: -279px
-    // +md
-    //   right: -209px
-    // +sm
-    //   top: 262px
-    //   right: -286px
-    //   min-width: 689px
-    //   filter: blur(7px)
+    +xxxl
+      width: 100%
+      height: 100%
+      max-width: 946px
+      max-height: 672px
+      right: -256px
+      top: -57px
+    +lg
+      right: -279px
+    +md
+      right: -209px
+    +sm
+      top: 262px
+      right: -235px
+      min-width: 689px
+      filter: blur(7px)
 
   &__img-2
     position: absolute
@@ -27,6 +31,19 @@
     z-index: -1
     +min_md
       animation: security-2 0.8s ease 1
+    +xxxl
+      top: 165.5px
+      right: -139px
+    +lg
+      top: 139px
+      right: -215px
+    +md
+      top: 251px
+      right: -169px
+    +sm
+      top: 470px
+      right: -169px
+      max-width: 405px
 
   &__img-3
     position: absolute
@@ -34,6 +51,22 @@
     right: 0
     +min_md
       animation: security-3 0.8s ease 1
+    +xxxl
+      width: 100%
+      height: 100%
+      max-width: 660px
+      max-height: 405px
+      top: 99px
+      right: -85px
+    +lg
+      max-width: 450px
+    +md
+      top: 158px
+      right: 0
+    +sm
+      top: 345px
+      right: -187px
+      max-width: 409px
 
   &__img-4
     position: absolute
@@ -41,6 +74,29 @@
     right: 130px
     +min_md
       animation: security-4 0.8s ease 1
+    +xxxl
+      top: 148px
+      right: -10px
+    +lg
+      top: 155px
+      right: -57px
+      max-width: 470px
+    +md
+      top: 396px
+      right: -10px
+    +sm
+      top: 442px
+      right: -80px
+      max-width: 408px
+
+  &__img-5
+    position: absolute
+    +sm
+      top: 51px
+      right: 0
+      min-width: 525px
+    +min_sm
+      display: none
 
 @keyframes security-1
   0%

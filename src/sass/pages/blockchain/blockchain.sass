@@ -5,7 +5,7 @@
   +lg
     padding: 50px 0 0 0
   +md
-    padding: 0 
+    padding: 0
 
   &--bg
     background: $dark_blue
@@ -14,7 +14,7 @@
     margin-bottom: 53px
     +lg
       margin-bottom: 85px
-    +sm 
+    +sm
       margin-bottom: 30px
 
   &__text
@@ -95,9 +95,22 @@
     position: relative
     padding-right: 68px
     transform: translateY(9px)
+    transition: all 0.3s ease
     +lg
       font-size: 14px
       line-height: 16px
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      background: $mid_blue
+      width: 50px
+      height: 1px
+      opacity: 0
+      visibility: hidden
+      transition: all 0.3s ease
     &::after
       content: ''
       position: absolute
@@ -109,6 +122,19 @@
       height: 1px
       +lg
         width: 46.8px
+    &:hover
+      color: $mid_blue
+      +min_md
+        padding-right: 0
+        padding-left: 68px
+        &::before
+          content: ''
+          opacity: 1
+          visibility: visible
+        &::after
+          content: ''
+          opacity: o
+          visibility: hidden
 
 .solutions-resume
   display: flex
@@ -124,7 +150,7 @@
     z-index: 1
     +md
       margin-right: 25px
-    +sm 
+    +sm
       min-width: 90px
       max-width: 90px
       margin-right: 24.5px
@@ -180,7 +206,7 @@
     color: $white
     max-width: 432px
     margin-bottom: 47px
-    +lg 
+    +lg
       max-width: 100%
     +md
       font-size: 16px
@@ -208,7 +234,7 @@
     +sm
       display: none
     &:hover
-      color: $deep_blue
+      color: $mid_blue
 
   &__consultation-btn
     display: none
@@ -225,7 +251,7 @@
     letter-spacing: 0.01em
     color: $mid_blue
     &:hover
-      color: $deep_blue
+      color: $mid_blue
 
   &__img
     position: absolute
@@ -239,7 +265,7 @@
       right: -100px
     +xl
       right: -180px
-    +lg 
+    +lg
       right: 0
     +md
       display: none
@@ -250,7 +276,7 @@
   margin: 0 0 0 auto
   +xxxl
     position: relative
-  +lg 
+  +lg
     max-width: 100%
     padding: 140px 0 75px 0
   +md
@@ -278,10 +304,10 @@
     letter-spacing: 0.01em
     color: $white
     border-bottom: 1px solid $mid_blue
-    +md 
+    +md
       font-size: 18px
       line-height: 40px
-    +sm 
+    +sm
       font-size: 15px
 
   &__item span
