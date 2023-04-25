@@ -1,7 +1,7 @@
 .portfolio-blog
   padding: 106px 0 162px 0
   +sm 
-    padding: 30px 0 72.5px 0
+    padding: 26px 0 72.5px 0
 
   &__title
     display: none
@@ -9,13 +9,6 @@
       display: block
       margin-bottom: 15px
       color: $mid_blue
-
-  // &__wrapper
-  //   margin-bottom: 45px
-  //   +sm 
-  //     margin-bottom: 25px
-  //   &:last-child
-  //     margin-bottom: 0
 
   &__wrapper
     margin-bottom: 45px
@@ -51,9 +44,11 @@
       max-width: 275px
 
   &__date
+    margin-right: 43px
     color: $dark_blue
-    margin-right: 26px
     margin-top: 21px
+    +xxxl
+      margin-right: 26px
     +xl 
       margin-right: 0
     +sm 
@@ -71,7 +66,7 @@
       position: absolute
       left: 0
       bottom: 0
-      height: 100%
+      height: 97%
       width: 2px
       background: $gradient_plate
     &::after
@@ -81,7 +76,7 @@
       left: 0
       bottom: 0
       height: 2px
-      width: 540px
+      width: 512px
       background: $gradient_plate
       +xxxl
         width: 447px
@@ -97,10 +92,14 @@
         width: 70%
       
   &__text-text
-    max-width: 487px
+    max-width: 558px
+    margin-left: 42px
+    margin-bottom: 37px
     color: $dark_blue
-    margin-left: 37px
-    margin-bottom: 8px
+    +xxxl
+      max-width: 487px
+      margin-left: 38px
+      margin-bottom: 8px
     &--indent
       margin-bottom: 12px
     +sm 
@@ -112,12 +111,14 @@
 
   &__text-link
     align-self: flex-end
+    margin-right: 45px
     transform: translateY(7px)
-    margin-right: 24px
     transition: all 0.3s linear
     color: $mid_blue
     &:hover
       color: $mid_blue
+    +xxxl
+      margin-right: 24px
     +xxl 
       margin-right: 0
     +sm 
@@ -127,7 +128,8 @@
   &__box
     +lg 
       margin-bottom: 40px
-    +sm 
+    +sm
+      margin-bottom: 24px
       pointer-events: none
   &__wrapper
     &:hover

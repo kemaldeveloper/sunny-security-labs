@@ -77,9 +77,11 @@
         pointer-events: none
 
     &__inner
-      padding: 23px 0 33px 44px
+      padding: 23px 0 33px 50px
       border-left: 2.5px solid
       border-image: $gradient_plate 1
+      +xxxl
+        padding: 23px 0 33px 43px
       +xl 
         padding: 23px 0 33px 25px
 
@@ -237,6 +239,7 @@
         margin-bottom: 20px
 
     &__subtitle
+      max-width: 254px
       height: 93px
       font-weight: 700
       font-size: 24px
