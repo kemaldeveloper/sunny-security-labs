@@ -1,34 +1,96 @@
 .outstuffing-screen
-  // position: relative
 
   &__img-1
     position: absolute
     top: 0
     right: 0
+    will-change: transform, opacity
     +min_md
       animation: security-1 0.8s ease 1
+    +xxxl
+      right: -141px
+    +lg
+      right: -279px
+    +md
+      right: -209px
+    +sm
+      top: 262px
+      right: -286px
+      min-width: 689px
+      filter: blur(7px)
 
   &__img-2
     position: absolute
-    top: 177px
+    top: 178px
     right: 0
     z-index: -1
+    will-change: transform, opacity
     +min_md
       animation: security-2 0.8s ease 1
+    +xxxl
+      top: 165px
+      right: -138px
+    +lg
+      top: 139px
+      right: -215px
+    +md
+      top: 251px
+      right: -169px
+    +sm
+      top: 494px
+      right: -169px
+      max-width: 440px
 
   &__img-3
     position: absolute
-    top: 69px
+    top: 50px
     right: 0
+    will-change: transform, opacity
     +min_md
       animation: security-3 0.8s ease 1
+    +xxxl
+      top: 54px
+      right: -88px
+    +lg
+      max-width: 450px
+    +md
+      top: 158px
+      right: 0
+    +sm
+      top: 345px
+      right: -187px
+      max-width: 409px
 
   &__img-4
     position: absolute
     top: 160px
     right: 130px
+    will-change: transform, opacity
     +min_md
       animation: security-4 0.8s ease 1
+    +xxxl
+      top: 149px
+      right: -10px
+    +lg
+      top: 155px
+      right: -57px
+      max-width: 470px
+    +md
+      top: 396px
+      right: -10px
+    +sm
+      top: 442px
+      right: -80px
+      max-width: 408px
+
+  &__img-5
+    position: absolute
+    +sm
+      top: 51px
+      right: 0
+      min-width: 525px
+    +min_sm
+      display: none
 
 @keyframes security-1
   0%

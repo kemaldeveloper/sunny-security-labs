@@ -202,6 +202,24 @@ $('.personal').slick({
   nextArrow: $('.next'),
 });
 
+$('.service').slick({
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  variableWidth: true,
+  autoplaySpeed: 2000,
+  autoplay: true,
+  infinite: true,
+  arrows: false,
+  // touchMove: true,
+  // mobileFirst: true,
+  // responsive: [
+  //   {
+  //     breakpoint: 992,
+  //     settings: 'unslick',
+  //   },
+  // ],
+});
+
 $('.next').on('click', function () {
   $(this).closest('.slider-block').find('.slider').slick('slickNext');
 });
