@@ -1,8 +1,6 @@
 .service
-
-  &__wrapper
-    display: flex
-    column-gap: 30px
+  display: flex
+  column-gap: 30px
 
   &__item
     position: relative
@@ -10,6 +8,13 @@
     padding: 24px 0 26px 25px
     background: $light_grey
     max-width: 390px
+    +xxl
+      max-width: 360px
+    +xl
+      max-width: 290px
+      padding: 20px 0 20px 20px
+    +lg
+      margin-right: 30px
 
   &__item:hover
     +min_md
@@ -58,22 +63,36 @@
       transition: all 0.3s ease
 
   &__content
-    padding: 8px 41px 27px 32px
+    padding: 8px 41px 27px 27px
 
   &__title
     color: $dark_blue
     margin-bottom: 20px
     transition: all 0.3s ease
+    +xl
+      font-size: 26px
 
   &__text
     color: $dark_blue
     margin-bottom: 35px
     transition: all 0.3s ease
+    +xl
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 5
+      -webkit-box-orient: vertical
+      font-size: 14px
+      line-height: 22px
 
   &__link
     color: $mid_blue
     position: relative
     padding-right: 67px
+    +xl
+      font-size: 16px
+    +sm
+      font-size: 14px
+      line-height: 16px
     &::before
       content: ''
       position: absolute
@@ -95,9 +114,6 @@
       background: $mid_blue
       +sm
         width: 40px
-    +sm
-      font-size: 14px
-      line-height: 16px
 
   &__mask
     position: absolute
