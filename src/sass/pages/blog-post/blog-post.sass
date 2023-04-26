@@ -65,7 +65,7 @@
       max-width: 360px
     +md
       font-size: 35px
-      margin-bottom: 22.5px
+      margin-bottom: 19.5px
     +sm
       max-width: 261px
       font-size: 22px
@@ -142,7 +142,7 @@
       margin-bottom: 30px
 
   &__aside
-    padding: 0 0 15px 39px
+    padding: 0 0 18px 39px
     margin-left: 48px
 
     border-left: 2px solid
@@ -152,20 +152,16 @@
       border-bottom: 2px solid
       border-image: $gradient_plate 1
     +xxxl
-      padding: 0 0 7px 33px
+      padding: 0 0 9px 33px
       margin-left: 53px
     +xl 
       margin-left: 0
     +md 
-      padding: 0 30px 37px 28px
+      padding: 0 30px 17px 28px
       margin-top: 0
       margin-bottom: 31px
 
   &__aside-item
-    &--sm 
-      +md
-        float: right
-        transform: translate(0px,-20px)
     h5
       font-weight: 400
       font-size: 18px
@@ -191,11 +187,15 @@
       font-size: 15px
       line-height: 20px
       color: $dark-blue
-      margin-bottom: 18.5px
       +lg 
         font-size: 13px
       +md 
         margin-bottom: 0
+
+  &__aside-list
+    +md
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
 
 .infectious
   &__title
@@ -289,8 +289,6 @@
       padding-left: 0
       font-size: 14px
       line-height: 16px
-    &:hover
-      color: $deep_blue
     &::after
       content: ''
       position: absolute
@@ -322,5 +320,3 @@
     +md 
       font-size: 16px
       line-height: 34px
-    &:hover
-      color: $deep_blue

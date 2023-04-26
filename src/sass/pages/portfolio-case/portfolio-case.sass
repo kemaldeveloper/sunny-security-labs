@@ -63,7 +63,7 @@
     +lg 
       font-size: 30px
     +md 
-      margin-bottom: 22.5px
+      margin-bottom: 19.5px
     +sm
       font-size: 22px
       line-height: 28px
@@ -150,24 +150,7 @@
       margin-bottom: 31px
       margin-top: 0
 
-
   &__aside-item
-    &--sm 
-      +md
-        float: right
-        transform: translate(-40px, -119px)
-      +xsm 
-        transform: translate(-30px, -119px)
-
-    h5
-      font-weight: 400
-      font-size: 18px
-      line-height: 20px
-      letter-spacing: 0.02em
-      color: $dark-blue
-      margin-bottom: 20px
-      +lg 
-        font-size: 16px
     h6
       font-weight: 700
       font-size: 18px
@@ -186,6 +169,29 @@
       +lg 
         font-size: 13px
 
+  &__aside
+    span
+      display: block
+      font-weight: 400
+      font-size: 18px
+      line-height: 20px
+      letter-spacing: 0.02em
+      color: $dark-blue
+      margin-bottom: 20px
+      +lg 
+        font-size: 16px
+
+  &__aside-list
+    +md
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+
+  &__aside-item
+    +md
+      &:nth-child(3)
+        grid-row: 1 / 1
+        grid-column: 2
+
 .client-task
   &__title
     color: $dark-blue
@@ -196,6 +202,10 @@
       margin-bottom: 27px
     +xl 
       margin-left: 0
+    +sm
+      font-size: 20px
+      line-height: 23px
+      letter-spacing: 0.01em
 
   &__text-info
     margin-left: 90px
