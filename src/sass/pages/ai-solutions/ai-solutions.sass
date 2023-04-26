@@ -89,9 +89,22 @@
     position: relative
     padding-right: 68px
     transform: translateY(9px)
+    transition: all 0.3s ease
     +lg
       font-size: 14px
       line-height: 16px
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      background: $mid_blue
+      width: 50px
+      height: 1px
+      opacity: 0
+      visibility: hidden
+      transition: all 0.3s ease
     &::after
       content: ''
       position: absolute
@@ -103,6 +116,19 @@
       height: 1px
       +lg
         width: 46.8px
+    &:hover
+      color: $mid_blue
+      +min_md
+        padding-right: 0
+        padding-left: 68px
+        &::before
+          content: ''
+          opacity: 1
+          visibility: visible
+        &::after
+          content: ''
+          opacity: o
+          visibility: hidden
 
 .solutions-resume
   display: flex
