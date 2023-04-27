@@ -158,7 +158,6 @@ $('form').on('submit', function (e) {
 });
 
 const mfpPopup = function (popupID, source) {
-  // https://dimsemenov.com/plugins/magnific-popup/
   $.magnificPopup.open({
     items: { src: popupID },
     type: 'inline',
