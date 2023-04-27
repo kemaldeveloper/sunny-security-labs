@@ -168,7 +168,7 @@ const mfpPopup = function (popupID, source) {
     preloader: false,
     midClick: true,
     removalDelay: 300,
-    closeMarkup: '<button type="button" class="mfp-close">&times;</button>',
+    closeMarkup: '<button type="button" class="mfp-close"></button>',
     mainClass: 'mfp-fade-zoom',
     // callbacks: {
     // 	open: function() {
