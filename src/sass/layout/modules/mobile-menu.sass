@@ -6,10 +6,11 @@
   transform: translateX(-100%)
   background: $white
   width: 390px
-  height: 100vh
+  height: 100%
   padding: 18px 20px 0
   z-index: 100
   transition: all 0.4s linear
+  overflow: auto
 
   &__logo-link
     width: 100px
@@ -70,6 +71,8 @@
 
   &__link
     color: $dark_blue
+    &:hover
+      color: $dark_blue
 
   &__link--iconed
     position: relative
