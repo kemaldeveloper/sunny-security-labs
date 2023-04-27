@@ -1,39 +1,97 @@
 .about
   padding: 105px 0 0
+  +xxxl
+    padding-top: 118px
+  +xl
+    padding-top: 85px
+  +lg
+    padding-top: 58px
 
   &__wrapper
 
   &__row
     padding-bottom: 112px
+    +xxxl
+      padding-bottom: 123px
 
   &__col
     padding-top: 25px
     z-index: 1
     animation: about-text 0.8s ease 1
+    +xxxl
+      padding-top: 12px
 
   &__img-1
     position: absolute
     top: 73px
     right: 74px
-    animation: about-1 0.8s ease 1
+    +min_md
+      animation: about-1 0.8s ease 1
+    +xxxl
+      top: 96px
+      right: -100px
+    +xxl
+      top: 122px
+      max-width: 940px
+    +xl
+      top: 115px
+      max-width: 860px
+    +lg
+      top: 77px
+      max-width: 840px
+      right: -258px
 
   &__img-2
     position: absolute
     top: 159px
     left: 98px
-    animation: about-2 0.9s ease 1
+    +min_md
+      animation: about-2 0.9s ease 1
+    +xxxl
+      left: -54px
+    +xxl
+      max-width: 410px
+    +xl
+      max-width: 325px
+      left: -75px
+    +lg
+      max-width: 290px
+      top: 100px
 
   &__img-3
     position: absolute
     right: 434px
-    bottom: 285px
-    animation: about-3 0.8s ease 1
+    top: 434px
+    +min_md
+      animation: about-3 0.8s ease 1
+    +xxxl
+      right: 194px
+      top: 482px
+    +xxl
+      top: 525px
+    +xl
+      top: 485px
+      max-width: 270px
+      right: 205px
+    +lg
+      top: 419px
+      max-width: 235px
 
   &__img-4
     position: absolute
     top: 0
     left: 683px
-    animation: about-4 0.8s ease 1
+    +min_md
+      animation: about-4 0.8s ease 1
+    +xxxl
+      left: 442px
+    +xxl
+      max-width: 495px
+    +xl
+      left: 260px
+    +lg
+      left: 215px
+      max-width: 380px
 
   &__title
     font-weight: 700
@@ -43,6 +101,12 @@
     position: relative
     z-index: 1
     animation: about-title 0.8s ease 1
+    +xl
+      font-size: 43px
+      line-height: 60px
+    +lg
+      font-size: 32px
+      line-height: 38px
 
   &__text
     max-width: 718px
@@ -50,9 +114,17 @@
     color: $dark_blue
     position: relative
     z-index: 1
+    +xxxl
+      max-width: 630px
+    +xl
+      font-size: 16px
+    +lg
+      font-size: 14px
 
   &__text--mb
     margin-bottom: 31px
+    +xl
+      margin-bottom: 20px
 
 @keyframes about-1
   0%

@@ -6,9 +6,12 @@
   "license": "ISC",
   "type": "module",
   "main": "gulpfile.js",
+  "homepage": "https://kemaldeveloper.github.io/sunny-security-labs/",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "devDependencies": {
     "@babel/core": "7.20.12",
@@ -35,6 +38,7 @@
   },
   "dependencies": {
     "bootstrap": "5.2.3",
+    "gh-pages": "5.0.0",
     "inputmask": "5.0.8",
     "jquery": "3.6.4",
     "slick-carousel": "1.8.1"
