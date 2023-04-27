@@ -199,7 +199,25 @@ $('.personal').slick({
   variableWidth: true,
   autoplaySpeed: 2000,
   prevArrow: false,
-  nextArrow: $('.next'),
+  nextArrow: $('.personal-next'),
+});
+
+$('.service').slick({
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  variableWidth: true,
+  autoplaySpeed: 2000,
+  autoplay: true,
+  infinite: true,
+  arrows: false,
+  // touchMove: true,
+  // mobileFirst: true,
+  // responsive: [
+  //   {
+  //     breakpoint: 992,
+  //     settings: 'unslick',
+  //   },
+  // ],
 });
 
 $('.next').on('click', function () {
