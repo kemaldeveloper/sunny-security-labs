@@ -10,7 +10,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
   "devDependencies": {

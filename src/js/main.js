@@ -199,7 +199,7 @@ $('.personal').slick({
   variableWidth: true,
   autoplaySpeed: 2000,
   prevArrow: false,
-  nextArrow: $('.next'),
+  nextArrow: $('.personal-next'),
 });
 
 $('.service').slick({
