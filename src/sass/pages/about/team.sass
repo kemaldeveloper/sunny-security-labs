@@ -3,20 +3,31 @@
   &__row
     display: flex
     justify-content: space-between
+    +xl
+      flex-wrap: wrap-reverse
 
   &__text-box
     max-width: 568px
     +xxxl
       max-width: 493px
+  &__text
+    +md
+      font-size: 16px
+      line-height: 24px
+      margin: 0
 
   &__text--mb
     margin-bottom: 29px
+    +sm
+      margin-bottom: 46px
 
 .team-slider
   position: relative
   min-width: 720px
   +xxxl
     min-width: auto
+  +xxl
+    margin-bottom: 30px
 
   &__title
     font-weight: 700
@@ -25,6 +36,10 @@
     letter-spacing: 0.02em
     color: $dark_blue
     margin-bottom: 34px
+    +sm
+      font-size: 16px
+      line-height: 24px
+      margin-bottom: 15px
 
   &__mask
     +min_xxxl
