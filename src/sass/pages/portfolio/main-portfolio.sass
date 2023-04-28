@@ -3,7 +3,7 @@
   +lg
     padding: 66px 0 70px 0
   +md
-    padding: 30px 0 43px 0
+    padding: 26px 0 43px 0
 
   .tab-nav
     margin-bottom: 40px
@@ -279,11 +279,11 @@
     padding: 18.83px 17.5px 10.42px 0
 
     &-title
+      max-width: 261px
       color: $white
       margin-left: 21.5px
       font-size: 22px
       line-height: 28px
-      margin-bottom: 22px
 
     &-date
       color: $white
@@ -292,6 +292,10 @@
       line-height: 13px
 
   &__line
+    position: absolute
+    top: 95px
+    left: 0
+    width: 80%
     border: 1px solid $white
     margin: 0 68px 13.5px 0
     opacity: 0.75
@@ -299,11 +303,21 @@
   &__icon
     position: unset
     height: 35px
-    transform: translate(-7px, 18px)
+    width: 35px
 
   &__inner
     display: flex
-    align-items: flex-end
+    justify-content: flex-end
+    align-items: center
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      top: 17px
+      left: 0
+      height: 1px
+      width: 85%
+      background: $white
 
   &__title
     display: block
