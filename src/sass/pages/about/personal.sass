@@ -5,12 +5,20 @@
   &__item
     margin-right: 35px
     max-width: 186px
+    +md
+      margin-right: 18px
+      max-width: 128px
 
   &__avatar
     width: 186px
     height: 186px
     object-fit: cover
     margin-bottom: 18px
+    +md
+      width: 128px
+      height: 128px
+    +sm
+      margin-bottom: 15px
 
   &__name
     font-weight: 700
@@ -21,6 +29,13 @@
     position: relative
     padding-bottom: 16px
     margin-bottom: 12px
+    +md
+      font-size: 16px
+      line-height: 20px
+      padding-bottom: 14px
+      margin-bottom: 4px
+    +md
+      max-width: 123px
     &::after
       content: ''
       position: absolute
@@ -38,3 +53,6 @@
     color: $dark_blue
     display: inline-block
     max-width: 154px
+    +md
+      font-size: 13px
+      line-height: 18px

@@ -2,12 +2,24 @@
   padding-top: 7px
   +xxxl
     padding-top: 38px
+  +md
+    padding-top: 32px
 
   &__col
     display: flex
     align-items: center
     justify-content: space-between
+    +xl
+      overflow: auto
+      max-width: 100%
+      gap: 10px
 
   &__title
     color: $dark_blue
     margin-bottom: 56px
+    +xl
+      margin-bottom: 8px
+
+  &__item
+    +xl
+      transform: scale(0.7)

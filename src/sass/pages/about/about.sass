@@ -6,13 +6,19 @@
     padding-top: 85px
   +lg
     padding-top: 58px
+  +md 
+    padding-top: 38px
 
   &__wrapper
+    +md
+      position: relative
 
   &__row
     padding-bottom: 112px
     +xxxl
       padding-bottom: 123px
+    +md
+      padding: 0
 
   &__col
     padding-top: 25px
@@ -20,6 +26,10 @@
     animation: about-text 0.8s ease 1
     +xxxl
       padding-top: 12px
+    +md
+      font-size: 16px
+      line-height: 24px
+      margin-bottom: 54px
 
   &__img-1
     position: absolute
@@ -40,6 +50,15 @@
       top: 77px
       max-width: 840px
       right: -258px
+    +md
+      right: 0
+      filter: blur(12.5px)
+      max-width: 770px
+      top: 115px
+    +sm
+      right: -120px
+      max-width: 840px
+      top: 145px
 
   &__img-2
     position: absolute
@@ -57,6 +76,12 @@
     +lg
       max-width: 290px
       top: 100px
+    +md
+      top: -25px
+    +sm
+      max-width: 204px
+      top: -21px
+      left: -52px
 
   &__img-3
     position: absolute
@@ -76,6 +101,12 @@
     +lg
       top: 419px
       max-width: 235px
+    +md
+      top: 425px
+      max-width: 227px
+    +sm
+      right: 47px
+      top: 490px
 
   &__img-4
     position: absolute
@@ -92,6 +123,8 @@
     +lg
       left: 215px
       max-width: 380px
+    +md
+      display: none
 
   &__title
     font-weight: 700
@@ -107,6 +140,9 @@
     +lg
       font-size: 32px
       line-height: 38px
+      margin-bottom: 50px
+    +sm
+      margin-bottom: 40px
 
   &__text
     max-width: 718px
@@ -118,13 +154,16 @@
       max-width: 630px
     +xl
       font-size: 16px
-    +lg
-      font-size: 14px
+    +sm
+      line-height: 24px
+      margin: 0
 
   &__text--mb
     margin-bottom: 31px
     +xl
       margin-bottom: 20px
+    +md
+      margin-bottom: 23px
 
 @keyframes about-1
   0%
