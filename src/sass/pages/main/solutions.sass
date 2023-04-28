@@ -15,6 +15,8 @@
       font-size: 16px
       line-height: 19px
       margin-bottom: 18px
+    &:hover
+      color: $mid_blue
 
   &__bg-wrap
     position: absolute
@@ -69,8 +71,12 @@
       .solutions__item-link
         padding-left: 70px
         padding-right: 0
+        &::before
+          opacity: 1
+          visibility: visible
         &::after
-          left: 0
+          opacity: 0
+          visibility: hidden
 
   &__content-wrap
     position: relative
@@ -241,6 +247,22 @@
     position: relative
     color: $white
     padding-right: 70px
+    transition: all 0.3s ease
+    &::before
+      content: ''
+      position: absolute
+      left: 24px
+      top: 50%
+      transform: translate(-50%)
+      height: 1px
+      width: 50px
+      background: $white
+      transition: all 0.3s ease
+      opacity: 0
+      visibility: hidden
+      +sm
+        font-size: 14px
+        line-height: 16px
     &::after
       content: ''
       position: absolute

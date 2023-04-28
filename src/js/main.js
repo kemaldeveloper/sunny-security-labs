@@ -168,7 +168,7 @@ const mfpPopup = function (popupID, source) {
     preloader: false,
     midClick: true,
     removalDelay: 300,
-    closeMarkup: '<button type="button" class="mfp-close">&times;</button>',
+    closeMarkup: '<button type="button" class="mfp-close"></button>',
     mainClass: 'mfp-fade-zoom',
     // callbacks: {
     // 	open: function() {
@@ -192,6 +192,24 @@ $('.slider').slick({
   // autoplay: true,
 });
 
+$('.service').slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  variableWidth: true,
+  autoplaySpeed: 2000,
+  // autoplay: true,
+  draggable: true,
+  arrows: false,
+  mobileFirst: true,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: 'unslick',
+    },
+  ],
+});
+
 $('.personal').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -199,24 +217,6 @@ $('.personal').slick({
   autoplaySpeed: 2000,
   prevArrow: false,
   nextArrow: $('.personal-next'),
-});
-
-$('.service').slick({
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  variableWidth: true,
-  autoplaySpeed: 2000,
-  autoplay: true,
-  infinite: true,
-  arrows: false,
-  // touchMove: true,
-  // mobileFirst: true,
-  // responsive: [
-  //   {
-  //     breakpoint: 992,
-  //     settings: 'unslick',
-  //   },
-  // ],
 });
 
 $('.next').on('click', function () {

@@ -1,8 +1,10 @@
 .service
   display: flex
-  column-gap: 30px
+  +min_lg
+    column-gap: 30px
 
   &__item
+    display: block
     position: relative
     z-index: 1
     padding: 24px 0 26px 25px
@@ -15,6 +17,10 @@
       padding: 20px 0 20px 20px
     +lg
       margin-right: 30px
+    +sm
+      margin-right: 20px
+      max-width: 247px
+      padding: 17px 0 18px 16px
 
   &__item:hover
     +min_md
@@ -64,6 +70,8 @@
 
   &__content
     padding: 8px 41px 27px 27px
+    +sm
+      padding: 5px 26px 16px 21px
 
   &__title
     color: $dark_blue
@@ -71,6 +79,10 @@
     transition: all 0.3s ease
     +xl
       font-size: 26px
+    +sm
+      font-size: 20px
+      line-height: 23px
+      margin-bottom: 14px
 
   &__text
     color: $dark_blue
@@ -83,16 +95,20 @@
       -webkit-box-orient: vertical
       font-size: 14px
       line-height: 22px
+    +sm
+      margin-bottom: 21px
 
   &__link
     color: $mid_blue
     position: relative
     padding-right: 67px
+    transition: all 0.3s ease
     +xl
       font-size: 16px
     +sm
       font-size: 14px
       line-height: 16px
+      padding-right: 50px
     &::before
       content: ''
       position: absolute
