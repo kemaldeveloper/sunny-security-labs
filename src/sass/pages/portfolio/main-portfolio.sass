@@ -74,7 +74,7 @@
 
     &__hover
       +md 
-        pointer-events: none
+        // pointer-events: none
 
     &__inner
       padding: 23px 0 33px 50px
@@ -94,8 +94,10 @@
         display: none
 
     &__title
+      display: inline-block
       margin-bottom: 32px
       max-width: 486px
+      color: $dark_blue
       +xl 
         font-size: 33px
       +lg 
@@ -103,6 +105,7 @@
         margin-bottom: 10px
 
     &__str
+      display: inline-block
       max-width: 439px
       font-weight: 400
       font-size: 16px
