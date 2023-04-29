@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "bootstrap": "5.2.3",
+    "choices.js": "10.2.0",
     "gh-pages": "5.0.0",
     "inputmask": "5.0.8",
     "jquery": "3.6.4",

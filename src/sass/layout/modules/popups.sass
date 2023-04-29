@@ -1,14 +1,8 @@
 // Popup
 .mfp
   position: relative
-  max-width: 525px
-  min-height: 672px
   text-align: left
-  padding: 32px 31.86px 46px 41.54px
   margin: 2.5rem auto
-  background: $mid_blue
-  +md
-    max-width: 450px
 
   &-close
     top: 5px
@@ -34,6 +28,19 @@
       background: $white
       transform: rotate(-45deg)
 
+  &--request-popup
+    max-width: 525px
+    min-height: 672px
+    padding: 32px 31.86px 46px 41.54px
+    background: $mid_blue
+
+  &--book-consultation
+    max-width: 525px
+    min-height: 522px
+    padding: 32px 31.86px 50px 41.54px
+    background: $mid_blue
+
+.quote
   &__title
     font-weight: 700
     font-size: 26px
@@ -62,34 +69,34 @@
       letter-spacing: 0.01em
       color: $light_grey
 
-  &__select
-    background: transparent
-    border: none
-    font-weight: 400
-    font-size: 20px
-    line-height: 36px
-    letter-spacing: 0.01em
-    color: $white
-    width: 100%
-    transition: all 3s ease
-    border-bottom: 1px solid $white
-    margin-bottom: 23.5px
-    appearance: none
-    &:focus
-      outline: none
+  // &__select
+  //   background: transparent
+  //   border: none
+  //   font-weight: 400
+  //   font-size: 20px
+  //   line-height: 36px
+  //   letter-spacing: 0.01em
+  //   color: $white
+  //   width: 100%
+  //   transition: all 3s ease
+  //   border-bottom: 1px solid $white
+  //   margin-bottom: 23.5px
+  //   appearance: none
+  //   &:focus
+  //     outline: none
 
-  &__option
-    background: $mid_blue
-    font-weight: 400
-    font-size: 20px
-    line-height: 36px
-    letter-spacing: 0.01em
-    color: $white
-    border: none
-    transition: all 3s ease
-    appearance: none
-    &:hover
-      background: $mid_blue
+  // &__option
+  //   background: $mid_blue
+  //   font-weight: 400
+  //   font-size: 20px
+  //   line-height: 36px
+  //   letter-spacing: 0.01em
+  //   color: $white
+  //   border: none
+  //   transition: all 3s ease
+  //   appearance: none
+  //   &:hover
+  //     background: $mid_blue
 
   &__textarea
     font-weight: 400
@@ -134,6 +141,76 @@
     &:hover
       color: $mid_blue
       background: $white
+
+.choices
+
+  &__inner
+    background: $mid_blue
+    border: none
+    border-bottom: 1px solid $light_grey
+    padding: 0
+
+  &__item--selectable
+    font-weight: 400
+    font-size: 20px
+    line-height: 36px
+    letter-spacing: 0.01em
+    color: $white
+
+.is-focused .choices__inner, .is-open .choices__inner
+  border-color: $light_grey
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted
+  background: $mid_blue
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable,
+.choices__list--dropdown, .choices__list[aria-expanded]
+  background: $mid_blue
+
+.choices__list--dropdown.is-active
+  top: calc( 100% - 48px )
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
+  font-weight: 400
+  font-size: 20px
+  line-height: 36px
+  letter-spacing: 0.01em
+  color: $white
+  padding: 0 0 0 19px
+  transition: all 0.3s ease
+  &:first-child
+    padding-top: 5px
+  &:last-child
+    padding-bottom: 10px
+  &:hover
+    padding-left: 24px
+
+.choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list
+  overflow: hidden
+
+.is-open .choices__list--dropdown, .is-open .choices__list[aria-expanded]
+  width: 480px
+  margin-right: -19px
+  margin-left: -19px
+  border: 2px solid $white
+
+.choices[data-type*=select-one]::after
+  width: 12px
+  height: 12px
+  border: 2px solid $white
+  top: 40%
+  border-width: 0 0 2px 2px
+  transform: rotate(-45deg)
+  z-index: 100
+  transition: all 0.3s ease
+
+.choices[data-type*=select-one].is-open::after
+  margin-top: 0
+  border: 2px solid $white
+  border-width: 0 0 2px 2px
+  transform: rotate(135deg)
+
+.consultation
 
 .form-result
   position: absolute
