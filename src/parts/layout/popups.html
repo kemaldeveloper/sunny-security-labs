@@ -1,29 +1,35 @@
 <!-- Request popup -->
 <div class="mfp mfp--request-popup zoom-anim-dialog mfp-hide" id="request">
-  <div class="mfp__title">Request a quote</div>
-  <form class="mfp__form" method="get" enctype="multipart/form-data">
-    <div class="mfp__input-wrap">
-      <input class="mfp__input" type="text" name="name" placeholder="Full Name" required="required" />
-    </div>
-    <div class="mfp__input-wrap">
-      <input class="mfp__input" type="text" name="company" placeholder="Company" required="required" />
-    </div>
-    <select name="select" class="mfp__select">
-      <option class="mfp__option" value="general" class="option">General Requests</option>
-      <option class="mfp__option" value="web-3" class="option">Web 3.0</option>
-      <option class="mfp__option" value="blockchain" class="option">Blockchain</option>
-      <option class="mfp__option" value="ai-solutions" class="option">AI Solutions</option>
-      <option class="mfp__option" value="security-audit" class="option">Security Audit</option>
-      <option class="mfp__option" value="development" class="option">Development</option>
-      <option class="mfp__option" value="consulting" class="option">Consulting</option>
-      <option class="mfp__option" value="oustuffing" class="option">Outstuffing</option>
-    </select>
-    <div class="mfp__input-wrap">
-      <input class="mfp__input" type="email" name="email" placeholder="E-mail" required="required" />
-    </div>
-    <textarea class="mfp__textarea" name="textarea" placeholder="Request"></textarea>
-    <button class="mfp__btn" type="submit">Submit</button>
-  </form>
+  <div class="quote">
+    <div class="quote__title">Request a quote</div>
+    <form class="quote__form" method="get" enctype="multipart/form-data">
+      <div class="quote__input-wrap">
+        <input class="quote__input" type="text" name="name" placeholder="Full Name" required="required" />
+      </div>
+      <div class="quote__input-wrap">
+        <input class="quote__input" type="text" name="company" placeholder="Company" required="required" />
+      </div>
+      <select name="select" class="quote__select js-choice">
+        <option class="quote__option" value="general" class="option">General Requests</option>
+        <option class="quote__option" value="web-3" class="option">Web 3.0</option>
+        <option class="quote__option" value="blockchain" class="option">Blockchain</option>
+        <option class="quote__option" value="ai-solutions" class="option">AI Solutions</option>
+        <option class="quote__option" value="security-audit" class="option">Security Audit</option>
+        <option class="quote__option" value="development" class="option">Development</option>
+        <option class="quote__option" value="consulting" class="option">Consulting</option>
+        <option class="quote__option" value="oustuffing" class="option">Outstuffing</option>
+      </select>
+      <div class="quote__input-wrap">
+        <input class="quote__input" type="email" name="email" placeholder="E-mail" required="required" />
+      </div>
+      <textarea class="quote__textarea" name="textarea" placeholder="Request"></textarea>
+      <button class="quote__btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="mfp mfp--book-consultation zoom-anim-dialog mfp-hide" id="consultation">
+  <div class="consultation"></div>
 </div>
 
 <!-- Success popup-->
