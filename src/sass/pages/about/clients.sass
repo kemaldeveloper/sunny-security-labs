@@ -8,21 +8,33 @@
   &--about-pb
     padding-bottom: 72px
 
-  &__col
-    display: flex
-    align-items: center
-    justify-content: space-between
-    +xl
-      overflow: auto
-      max-width: 100%
-      gap: 10px
-
   &__title
     color: $dark_blue
     margin-bottom: 56px
     +xl
-      margin-bottom: 8px
+      margin-bottom: 10px
+
+  &__wrapper
+    +xl
+      overflow: auto
+
+  &__list
+      display: flex
+      justify-content: space-between
+      align-items: center
+      +xl
+        margin: 0 auto
+        width: 930px
+      +sm
+        width: 769px
 
   &__item
-    +xl
-      transform: scale(0.7)
+    display: flex
+    justify-content: space-around
+    align-items: center
+    max-width: 100%
+    +lg
+      // flex: 1
+      height: 72px
+    +sm
+      flex: 0
