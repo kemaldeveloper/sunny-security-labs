@@ -27,6 +27,7 @@ const watchFileTypes = 'html,json,woff,woff2'; // List of files extensions for w
 const cssLibsPaths = [
   'node_modules/magnific-popup/dist/magnific-popup.css',
   'node_modules/slick-carousel/slick/slick.css',
+  'node_modules/choices.js/public/assets/styles/choices.css',
 ];
 
 const jsLibsPaths = [
@@ -34,6 +35,7 @@ const jsLibsPaths = [
   'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
   'node_modules/inputmask/dist/jquery.inputmask.min.js',
   'node_modules/slick-carousel/slick/slick.min.js',
+  'node_modules/choices.js/public/assets/scripts/choices.min.js',
 ];
 
 // Tasks
