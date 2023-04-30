@@ -254,10 +254,30 @@ tabNavItems.forEach((tab, index) => {
 
 // Custom select
 const element = document.querySelector('.js-choice');
-
-console.log(element);
+const consultationSelect = document.querySelector('.js-select');
 
 const choices = new Choices(element, {
   searchEnabled: false,
   itemSelectText: '',
+  allowHTML: true,
 });
+
+// const select = new Choices(consultationSelect, {
+//   searchEnabled: false,
+//   itemSelectText: '',
+//   // classNames: {
+//   //   containerOuter: 'consultation',
+//   //   containerInner: 'consultation__inner',
+//   //   input: 'consultation__input',
+//   //   inputCloned: 'consultation__input--cloned',
+//   //   list: 'consultation__list',
+//   //   listItems: 'consultation__list--multiple',
+//   //   listSingle: 'consultation__list--single',
+//   //   listDropdown: 'consultation__list--dropdown',
+//   //   item: 'consultation__item',
+//   // },
+// });
+
+setTimeout(function () {
+  $('.js-select').styler({});
+}, 100);

@@ -2,42 +2,66 @@
 <div class="mfp mfp--request-popup zoom-anim-dialog mfp-hide" id="request">
   <div class="quote">
     <div class="quote__title">Request a quote</div>
-    <form class="quote__form" method="get" enctype="multipart/form-data">
-      <div class="quote__input-wrap">
-        <input class="quote__input" type="text" name="name" placeholder="Full Name" required="required" />
+    <form class="quote__form" method="post" enctype="multipart/form-data">
+      <div class="input-wrap">
+        <input class="input" type="text" name="name" placeholder="Full Name" required="required" />
       </div>
-      <div class="quote__input-wrap">
-        <input class="quote__input" type="text" name="company" placeholder="Company" required="required" />
+      <div class="input-wrap">
+        <input class="input" type="text" name="company" placeholder="Company" required="required" />
       </div>
-      <select name="select" class="quote__select js-choice">
-        <option class="quote__option" value="general" class="option">General Requests</option>
-        <option class="quote__option" value="web-3" class="option">Web 3.0</option>
-        <option class="quote__option" value="blockchain" class="option">Blockchain</option>
-        <option class="quote__option" value="ai-solutions" class="option">AI Solutions</option>
-        <option class="quote__option" value="security-audit" class="option">Security Audit</option>
-        <option class="quote__option" value="development" class="option">Development</option>
-        <option class="quote__option" value="consulting" class="option">Consulting</option>
-        <option class="quote__option" value="oustuffing" class="option">Outstuffing</option>
+      <select name="select" class="select js-choice">
+        <option class="option" value="general" class="option">General Requests</option>
+        <option class="option" value="web-3" class="option">Web 3.0</option>
+        <option class="option" value="blockchain" class="option">Blockchain</option>
+        <option class="option" value="ai-solutions" class="option">AI Solutions</option>
+        <option class="option" value="security-audit" class="option">Security Audit</option>
+        <option class="option" value="development" class="option">Development</option>
+        <option class="option" value="consulting" class="option">Consulting</option>
+        <option class="option" value="oustuffing" class="option">Outstuffing</option>
       </select>
-      <div class="quote__input-wrap">
-        <input class="quote__input" type="email" name="email" placeholder="E-mail" required="required" />
+      <div class="input-wrap">
+        <input class="input" type="email" name="email" placeholder="E-mail" required="required" />
       </div>
-      <textarea class="quote__textarea" name="textarea" placeholder="Request"></textarea>
-      <button class="quote__btn" type="submit">Submit</button>
+      <textarea class="textarea" name="textarea" placeholder="Request"></textarea>
+      <button class="btn" type="submit">Submit</button>
     </form>
   </div>
 </div>
 
 <div class="mfp mfp--book-consultation zoom-anim-dialog mfp-hide" id="consultation">
-  <div class="consultation"></div>
+  <div class="consultation">
+    <div class="consultation__title">Book a consultation</div>
+    <form action="#" method="get" class="consultation__form">
+      <div class="input-wrap">
+        <input name="username" type="text" class="input" placeholder="Full Name" />
+      </div>
+      <div class="input-wrap">
+        <input name="usercompany" type="text" class="input" placeholder="Company" />
+      </div>
+      <select name="select" class="select js-select">
+        <option class="option" value="general" class="option">General Requests</option>
+        <option class="option" value="web-3" class="option">Web 3.0</option>
+        <option class="option" value="blockchain" class="option">Blockchain</option>
+        <option class="option" value="ai-solutions" class="option">AI Solutions</option>
+        <option class="option" value="security-audit" class="option">Security Audit</option>
+        <option class="option" value="development" class="option">Development</option>
+        <option class="option" value="consulting" class="option">Consulting</option>
+        <option class="option" value="oustuffing" class="option">Outstuffing</option>
+      </select>
+      <div class="input-wrap">
+        <input name="useremail" type="email" class="input" placeholder="E-mail" />
+      </div>
+      <button class="btn" type="submit">submit</button>
+    </form>
+  </div>
 </div>
 
 <!-- Success popup-->
-<!-- <div class="mfp mfp--succes-popup zoom-anim-dialog mfp-hide" id="success">
+<div class="mfp mfp--succes-popup zoom-anim-dialog mfp-hide" id="success">
   <div class="form-result form-result--success">
     <div class="mess">
       <div class="mess__title">Success!</div>
       <div class="mess__desc">We will contact with you soon</div>
     </div>
   </div>
-</div> -->
+</div>
