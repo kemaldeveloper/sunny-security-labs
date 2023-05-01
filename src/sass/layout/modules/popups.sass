@@ -62,14 +62,13 @@
     width: 100%
     height: 1px
     background: $light_grey
-    transition: all 0.3s ease
-    &:hover
-      &::after
-        height: 2px
-        background: $white
-      .quote__input
-        &::placeholder
-          color: $white
+  &:hover
+    &::after
+      content: ''
+      height: 2px
+      background: $white
+    .input::placeholder
+      color: $white
 
 .input
   font-weight: 400
@@ -86,45 +85,47 @@
     line-height: 34px
     letter-spacing: 0.01em
     color: $light_grey
-    transition: all 0.3s ease
 
 .textarea
   font-weight: 400
   font-size: 20px
   line-height: 34px
   letter-spacing: 0.01em
-
   width: 100%
   min-height: 119px
-
   color: $light_grey
   background: $mid_blue
   border: 1px solid $light_grey
-
   padding: 8px 16.23px
   cursor: pointer
   resize: none
-  transition: border 0.2s ease-in-out
-
   &::placeholder
     font-weight: 400
     font-size: 20px
     line-height: 34px
     letter-spacing: 0.01em
     color: $light_grey
-
-    &:hover
-      border: 2px solid $white
-
-  &__btn
+  &:hover
+    border: 2px solid $white
 
 .choices
 
   &__inner
     background: $mid_blue
     border: none
-    border-bottom: 1px solid $light_grey
     padding: 0
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background: $light_grey
+    &:hover
+      &::after
+        height: 2px
+        background: $white
 
   &__item--selectable
     font-weight: 400
@@ -149,7 +150,7 @@
 .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item
   font-weight: 400
   font-size: 20px
-  line-height: 36px
+  line-height: 34px
   letter-spacing: 0.01em
   color: $white
   padding: 0 0 0 19px
@@ -185,6 +186,9 @@
   border: 2px solid $white
   border-width: 0 0 2px 2px
   transform: rotate(135deg)
+
+.choices__placeholder
+  opacity: 1
 
 .consultation
 
@@ -248,134 +252,3 @@
       transition-delay: .2s
     .mess__desc
       transition-delay: .3s
-
-// родительский контейнер
-.jq-selectbox
-  display: block
-  transition: all 0.3s ease
-
-// выпадающий список селекта раскрыт
-.jq-selectbox.opened
-  transition: all 0.3s ease
-
-// выпадающий список селекта раскрыт вверх
-.jq-selectbox.dropup
-
-// выпадающий список селекта раскрыт вниз
-.jq-selectbox.dropdown
-
-// выбрано значение, отличное от заданного по умолчанию
-.jq-selectbox.changed
-
-// селект в свернутом состоянии
-.jq-selectbox__select
-  position: relative
-
-  font-family: $deff
-  font-weight: 400
-  font-size: 20px
-  line-height: 36px
-
-  width: 100%
-  height: auto
-  padding: 0
-
-  background: $mid_blue
-  border: none
-  box-shadow: none
-  &:focus
-    outline: none
-  &::after
-    content: ''
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 100%
-    height: 1px
-    background: $light_grey
-    transition: all 0.3s ease
-  &:hover
-    background: $mid_blue
-    &::after
-      height: 2px
-      background: $white
-
-.jq-selectbox__select:active
-  background: $mid_blue
-  box-shadow: none
-
-// фокус на селекте, когда нажата клавиша Tab
-.focused .jq-selectbox__select
-  border: none !important
-
-// неактивный (недоступный для выбора) селект
-.disabled .jq-selectbox__select
-
-// дополнительный вложенный тег для свернутого селекта
-.jq-selectbox__select-text
-  font-family: $deff
-  font-weight: 400
-  font-size: 20px
-  line-height: 36px
-  letter-spacing: 0.01em
-  color: $white
-  &:focus-visible
-    outline: none
-
-// замещающий текст
-.jq-selectbox .placeholder
-  font-family: $deff
-  font-weight: 400
-  font-size: 20px
-  line-height: 36px
-  letter-spacing: 0.01em
-  color: $white
-
-// правая часть свернутого селекта (условный переключатель)
-.jq-selectbox__trigger
-  border: none
-  width: auto
-
-// вложенный тег для переключателя (стрелка)
-.jq-selectbox__trigger-arrow
-  width: 12px
-  height: 12px
-  border: 2px solid $white
-  top: 25%
-  border-width: 0 0 2px 2px
-  transform: rotate(-45deg)
-  z-index: 100
-  transition: all 0.3s ease
-
-// обертка для выпадающего списка
-.jq-selectbox__dropdown
-  border: 1px solid $light_grey
-  box-shadow: none
-  border-radius: 0
-  width: 480px
-  margin: 0 -20px 0 -20px
-
-// выпадающий список
-.jq-selectbox ul
-
-// пункт (опция) селекта
-.jq-selectbox li
-
-// выбранный пункт селекта
-.jq-selectbox li.selected
-
-// неактивный (недоступный для выбора) пункт селекта
-.jq-selectbox li.disabled
-
-// заголовок для группы пунктов
-.jq-selectbox li.optgroup
-
-// пункт списка в группе
-.jq-selectbox li.option
-  font-family: $deff
-  font-weight: 400
-  font-size: 20px
-  line-height: 36px
-  letter-spacing: 0.01em
-  color: $white
-  background: $mid_blue

@@ -28,8 +28,6 @@ const cssLibsPaths = [
   'node_modules/magnific-popup/dist/magnific-popup.css',
   'node_modules/slick-carousel/slick/slick.css',
   'node_modules/choices.js/public/assets/styles/choices.css',
-  'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
-  'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
 ];
 
 const jsLibsPaths = [
@@ -38,7 +36,6 @@ const jsLibsPaths = [
   'node_modules/inputmask/dist/jquery.inputmask.min.js',
   'node_modules/slick-carousel/slick/slick.min.js',
   'node_modules/choices.js/public/assets/scripts/choices.min.js',
-  'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
 ];
 
 // Tasks

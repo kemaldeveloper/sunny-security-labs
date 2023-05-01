@@ -2,20 +2,20 @@
   padding: 64px 0 164px 0
   +xxxl
     padding: 64px 0 158px 0
-  +md 
+  +md
     padding: 30px 0 72px 0
 
   &__wrapper
     position: relative
     margin-bottom: 106px
-    +lg 
+    +lg
       margin-bottom: 40px
-    +md 
+    +md
       margin-bottom: 0
 
   &__wrap
     margin-right: -71px
-    +md 
+    +md
       margin-right: 0
 
   &__item
@@ -38,7 +38,7 @@
       padding: 37px 90px 42px 153px
       margin-left: -153px
       margin-top: 15px
-    +md 
+    +md
       margin-top: 0
       padding: 20px 20px 42px 153px
     +sm
@@ -48,7 +48,7 @@
     margin-bottom: 38px
     +sm
       width: 22.66px
-      height: 10px 
+      height: 10px
       margin-bottom: 17px
 
   &__title
@@ -57,10 +57,10 @@
     color: $white
     +xxxl
       max-width: 526px
-    +xl 
+    +xl
       max-width: 415px
       margin-bottom: 65px
-    +lg 
+    +lg
       font-size: 34px
       max-width: 360px
     +md
@@ -99,15 +99,15 @@
     font-size: 15px
     line-height: 18px
     color: $white
-    +sm 
+    +sm
       display: none
 
   &__image
     position: relative
     margin-left: -30px
-    +lg 
+    +lg
       margin-left: 0
-    +md 
+    +md
       margin-top: -19px
       margin-bottom: 30px
 
@@ -115,16 +115,16 @@
     width: 100%
     height: 400px
     object-fit: cover
-    +xl 
+    +xl
       height: 335px
-    +md 
+    +md
       height: 225px
 
   &__advantages
     margin-bottom: 65px
     +xxxl
       margin-bottom: 66px
-    +md 
+    +md
       margin-bottom: 0
 
   &__text-info
@@ -134,11 +134,11 @@
     letter-spacing: 0.02em
     color: $dark-blue
     margin-right: -27px
-    +lg 
+    +lg
       margin-right: 0
       font-size: 16px
       line-height: 24px
-    +md 
+    +md
       margin-bottom: 30px
 
   &__aside
@@ -154,9 +154,9 @@
     +xxxl
       padding: 0 0 9px 33px
       margin-left: 53px
-    +xl 
+    +xl
       margin-left: 0
-    +md 
+    +md
       padding: 0 30px 17px 28px
       margin-top: 0
       margin-bottom: 31px
@@ -169,9 +169,9 @@
       letter-spacing: 0.02em
       color: $dark-blue
       margin-bottom: 20px
-      +lg 
+      +lg
         font-size: 16px
-      +md 
+      +md
         margin-bottom: 0
     h6
       font-weight: 700
@@ -180,16 +180,16 @@
       letter-spacing: 0.02em
       color: $dark-blue
       margin-bottom: 1px
-      +lg 
+      +lg
         font-size: 16px
     p
       font-weight: 400
       font-size: 15px
       line-height: 20px
       color: $dark-blue
-      +lg 
+      +lg
         font-size: 13px
-      +md 
+      +md
         margin-bottom: 0
 
   &__aside-list
@@ -204,9 +204,9 @@
     +xxxl
       margin-bottom: 27px
       margin-left: 75px
-    +xl 
+    +xl
       margin-left: 0
-    +md 
+    +md
       font-size: 20px
       line-height: 23px
       margin-bottom: 30px
@@ -219,10 +219,10 @@
       margin-bottom: 65px
     +xxxl
       margin-left: 74px
-    +xl 
+    +xl
       margin-left: 0
       margin-right: 0
-    +md 
+    +md
       font-size: 16px
       line-height: 24px
       margin-bottom: 30px
@@ -237,12 +237,12 @@
       margin-left: 75px
       max-width: 1080px
       height: 564px
-    +xl 
+    +xl
       margin-left: 0
       max-width: 100%
-    +lg 
+    +lg
       height: auto
-    +md 
+    +md
       margin-bottom: 15px
 
   &__text
@@ -251,10 +251,10 @@
     +xxxl
       margin-bottom: 25px
       margin-left: 74px
-    +xl 
+    +xl
       margin-left: 0
       margin-right: 0
-    +md 
+    +md
       font-size: 16px
       line-height: 24px
       margin-bottom: 15px
@@ -264,10 +264,10 @@
     margin-bottom: 81px
     +xxxl
       margin-left: 74px
-    +xl 
+    +xl
       margin-left: 0
       margin-right: 0
-    +md 
+    +md
       font-size: 16px
       line-height: 24px
       margin-bottom: 54px
@@ -276,7 +276,7 @@
     display: flex
     align-items: center
     gap: 64px
-    +sm 
+    +sm
       justify-content: space-between
       gap: 0
 
@@ -287,7 +287,7 @@
     position: relative
     &:hover
       color: $hover
-    +sm 
+    +sm
       padding-left: 0
       font-size: 14px
       line-height: 16px
@@ -301,17 +301,21 @@
       height: 1px
       width: 50px
       background: $mid_blue
-      +sm 
+      +sm
         position: unset
 
   &__quote
     display: flex
     align-items: center
-    color: $mid_blue
-    border: 2px solid
+    border: 2px solid $mid_blue
     padding: 4px 20px 12px
-    +md 
+    transition: all 0.3s ease
+    +md
       padding: 0 13px 0 11px
+    &:hover
+      background: $mid_blue
+      .infectious__request
+        color: $white
 
   &__request
     font-weight: 700
@@ -319,7 +323,8 @@
     line-height: 34px
     letter-spacing: 0.01em
     color: $mid_blue
-    +md 
+    transition: all 0.3s ease
+    +md
       font-size: 16px
       line-height: 34px
       margin-right: 3px

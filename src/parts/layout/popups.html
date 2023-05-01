@@ -2,7 +2,7 @@
 <div class="mfp mfp--request-popup zoom-anim-dialog mfp-hide" id="request">
   <div class="quote">
     <div class="quote__title">Request a quote</div>
-    <form class="quote__form" method="post" enctype="multipart/form-data">
+    <form class="quote__form">
       <div class="input-wrap">
         <input class="input" type="text" name="name" placeholder="Full Name" required="required" />
       </div>
@@ -10,7 +10,7 @@
         <input class="input" type="text" name="company" placeholder="Company" required="required" />
       </div>
       <select name="select" class="select js-choice">
-        <option class="option" value="general" class="option">General Requests</option>
+        <option class="option" value="General-requests" class="option" placeholder></option>
         <option class="option" value="web-3" class="option">Web 3.0</option>
         <option class="option" value="blockchain" class="option">Blockchain</option>
         <option class="option" value="ai-solutions" class="option">AI Solutions</option>
@@ -31,7 +31,7 @@
 <div class="mfp mfp--book-consultation zoom-anim-dialog mfp-hide" id="consultation">
   <div class="consultation">
     <div class="consultation__title">Book a consultation</div>
-    <form action="#" method="get" class="consultation__form">
+    <form action="#" class="consultation__form">
       <div class="input-wrap">
         <input name="username" type="text" class="input" placeholder="Full Name" />
       </div>
@@ -39,14 +39,10 @@
         <input name="usercompany" type="text" class="input" placeholder="Company" />
       </div>
       <select name="select" class="select js-select">
-        <option class="option" value="general" class="option">General Requests</option>
+        <option class="option" value="General requests" class="option" placeholder></option>
         <option class="option" value="web-3" class="option">Web 3.0</option>
         <option class="option" value="blockchain" class="option">Blockchain</option>
         <option class="option" value="ai-solutions" class="option">AI Solutions</option>
-        <option class="option" value="security-audit" class="option">Security Audit</option>
-        <option class="option" value="development" class="option">Development</option>
-        <option class="option" value="consulting" class="option">Consulting</option>
-        <option class="option" value="oustuffing" class="option">Outstuffing</option>
       </select>
       <div class="input-wrap">
         <input name="useremail" type="email" class="input" placeholder="E-mail" />
