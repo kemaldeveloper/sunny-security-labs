@@ -253,17 +253,38 @@ tabNavItems.forEach((tab, index) => {
 });
 
 // Custom select
-const element = document.querySelector('.js-choice');
-const consultationSelect = document.querySelector('.js-select');
 
-const choices = new Choices(element, {
-  searchEnabled: false,
-  itemSelectText: '',
-  allowHTML: true,
-});
+const multiSelect = () => {
+  const selects = document.querySelectorAll('.js-choice');
+  selects.forEach((item) => {
+    const choices = new Choices(item, {
+      searchEnabled: false,
+      itemSelectText: '',
+      allowHTML: false,
+    });
+  });
+};
 
-const choicesSecond = new Choices(consultationSelect, {
-  searchEnabled: false,
-  itemSelectText: '',
-  allowHTML: true,
-});
+multiSelect();
+
+// const requestPopup = document.querySelector('.js-choice');
+// const consultationPopup = document.querySelector('.js-select');
+// const mainRequest = document.querySelector('.main-request');
+
+// const requestChoice = new Choices(requestPopup, {
+//   searchEnabled: false,
+//   itemSelectText: '',
+//   allowHTML: true,
+// });
+
+// const consultationChoice = new Choices(consultationPopup, {
+//   searchEnabled: false,
+//   itemSelectText: '',
+//   allowHTML: true,
+// });
+
+// const mainChoice = new Choices(mainRequest, {
+//   searchEnabled: false,
+//   itemSelectText: '',
+//   allowHTML: false,
+// });
