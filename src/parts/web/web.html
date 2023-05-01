@@ -92,53 +92,34 @@
           <a href="ai-solutions.html" class="web__other-link more-link">learn more</a>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-6 blog__quote--dn">
         <div class="blog__quote blog__quote--web-mt">
-          <h4 class="blog__quote-title">Request a quote</h4>
-          <form action="#" class="quote-form">
-            <label class="quote-form__label">
-              <input class="quote-form__input" type="text" name="name" placeholder="Full Name" />
-            </label>
-            <label class="quote-form__label">
-              <input class="quote-form__input" type="text" name="company" placeholder="Company" />
-            </label>
-            <div class="quote-form__spoiler">
-              <div class="quote-form__spoiler-wrap">
-                <button class="quote-form__spoiler-btn">
-                  <span>General requests</span>
-                  <svg class="icon icon--quote-arrow"><use xlink:href="assets/svg-sprite.svg#quote-arrow"></use></svg>
-                </button>
-                <ul class="quote-form__spoiler-list">
-                  <li class="quote-form__spoiler-item">
-                    <a href="№" class="quote-form__spoiler-link">Web 3.0</a>
-                  </li>
-                  <li class="quote-form__spoiler-item">
-                    <a href="№" class="quote-form__spoiler-link">Blockchain</a>
-                  </li>
-                  <li class="quote-form__spoiler-item">
-                    <a href="№" class="quote-form__spoiler-link">AI Solutions</a>
-                  </li>
-                  <li class="quote-form__spoiler-item">
-                    <a href="№" class="quote-form__spoiler-link">Security Audit</a>
-                  </li>
-                  <li class="quote-form__spoiler-item">
-                    <a href="№" class="quote-form__spoiler-link">Development</a>
-                  </li>
-                  <li class="quote-form__spoiler-item">
-                    <a href="№" class="quote-form__spoiler-link">Consulting</a>
-                  </li>
-                  <li class="quote-form__spoiler-item">
-                    <a href="№" class="quote-form__spoiler-link">Outstuffing</a>
-                  </li>
-                </ul>
+          <div class="quote">
+            <div class="quote__title">Request a quote</div>
+            <form class="quote__form">
+              <div class="input-wrap">
+                <input class="input" type="text" name="name" placeholder="Full Name" required="required" />
               </div>
-            </div>
-            <label class="quote-form__label quote-form__label--mb35">
-              <input class="quote-form__input" type="email" name="email" placeholder="E-mail" />
-            </label>
-            <textarea class="quote-form__textarea" name="request" cols="30" rows="10" placeholder="Request"></textarea>
-            <button class="quote-form__btn">submit</button>
-          </form>
+              <div class="input-wrap">
+                <input class="input" type="text" name="company" placeholder="Company" required="required" />
+              </div>
+              <select name="select" class="select js-choice">
+                <option class="option" value="">General Requests</option>
+                <option class="option" value="web-3">Web 3.0</option>
+                <option class="option" value="blockchain">Blockchain</option>
+                <option class="option" value="ai-solutions">AI Solutions</option>
+                <option class="option" value="security-audit">Security Audit</option>
+                <option class="option" value="development">Development</option>
+                <option class="option" value="consulting">Consulting</option>
+                <option class="option" value="oustuffing">Outstuffing</option>
+              </select>
+              <div class="input-wrap">
+                <input class="input" type="email" name="email" placeholder="E-mail" required="required" />
+              </div>
+              <textarea class="textarea" name="textarea" placeholder="Request"></textarea>
+              <button class="btn" type="submit">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
