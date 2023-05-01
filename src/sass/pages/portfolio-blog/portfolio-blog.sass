@@ -87,9 +87,9 @@
       +md
         width: 400px
       +sm 
-        width: 75%
+        width: 275px
       +xsm 
-        width: 70%
+        width: 220px
       
   &__text-text
     max-width: 558px
@@ -136,6 +136,8 @@
       .portfolio-blog__text-link
         margin-right: 40px
         color: $hover
+        +sm
+          margin-right: 0
       
       .portfolio-blog__text-wrap
 
@@ -154,14 +156,13 @@
           +xl 
             width: 310px
           +lg 
-            width: 550px
+            width: 540px
           +md 
             width: 365px
-          
-
-  // &__wrapper
-  //   +md 
-  //     pointer-events: none
+          +sm
+            width: 275px
+          +xsm
+            width: 220px
 
   &__image
     position: relative
