@@ -267,24 +267,25 @@ const multiSelect = () => {
 
 multiSelect();
 
-// const requestPopup = document.querySelector('.js-choice');
-// const consultationPopup = document.querySelector('.js-select');
-// const mainRequest = document.querySelector('.main-request');
+// menu links active class toggler
+const menuLinks = () => {
+  const pageHref = window.location.href.split('/').slice(3).join('/');
+  const currentElement = $(`.header__sub-link[href='${pageHref}']`);
+  const subList = currentElement.closest('.header__sub-list');
 
-// const requestChoice = new Choices(requestPopup, {
-//   searchEnabled: false,
-//   itemSelectText: '',
-//   allowHTML: true,
-// });
+  currentElement.addClass('active');
+  subList.addClass('active');
+  subList.siblings('.header__link').addClass('active');
+};
 
-// const consultationChoice = new Choices(consultationPopup, {
-//   searchEnabled: false,
-//   itemSelectText: '',
-//   allowHTML: true,
-// });
+menuLinks();
+//
 
-// const mainChoice = new Choices(mainRequest, {
-//   searchEnabled: false,
-//   itemSelectText: '',
-//   allowHTML: false,
+$('.header__link').on('mouseenter', (e) => {
+  // $('.header__link').removeClass('active');
+  $('.header__sub-list').removeClass('active');
+});
+
+// $('.header__link').on('mouseleave', (e) => {
+//   menuLinks();
 // });

@@ -76,6 +76,10 @@
     visibility: hidden
     transition: all 0.4s ease
 
+  &__sub-list.active
+    opacity: 1
+    visibility: visible
+
   &__item--dark
     position: relative
     &:hover
@@ -126,13 +130,21 @@
       height: 50px
       z-index: -1
       background: transparent
+
   &__sub-link
     white-space: nowrap
     line-height: 30px
+    &.active
 
   &__sub-link--dark
     color: $dark_blue
     position: relative
+    &.active
+      &::after
+        content: ''
+        width: 100%
+        visibility: visible
+        opacity: 1
     &::after
       content: ''
       position: absolute
@@ -155,6 +167,13 @@
   &__sub-link--light
     color: $white
     position: relative
+    &.active
+      color: $mid_blue
+      &::after
+        content: ''
+        width: 100%
+        visibility: visible
+        opacity: 1
     &::after
       content: ''
       position: absolute
