@@ -1,6 +1,7 @@
 .header
   position: relative
   padding: 33px 0 0
+  z-index: 50
   +sm
     padding: 20px 0 0
 
@@ -21,16 +22,15 @@
     object-fit: cover
 
   &__menu
+    min-width: 631px
+    +lg
+      min-width: 540px
     +md
       display: none
 
   &__list
-    position: relative
-    z-index: 52
     display: flex
-    gap: 30.5px
-    +lg
-      gap: 20px
+    justify-content: space-between
 
   &__item
     +lg
