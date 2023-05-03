@@ -63,20 +63,21 @@
       padding: 17px 0 0 18px
       height: 248px
     &:hover
-      .solutions__item-text
-        color: $hover
-      &::after
-        opacity: 1
-        visibility: visible
-      .solutions__item-link
-        padding-left: 70px
-        padding-right: 0
-        &::before
+      +min_md
+        .solutions__item-text
+          color: $hover
+        &::after
           opacity: 1
           visibility: visible
-        &::after
-          opacity: 0
-          visibility: hidden
+        .solutions__item-link
+          padding-left: 70px
+          padding-right: 0
+          &::before
+            opacity: 1
+            visibility: visible
+          &::after
+            opacity: 0
+            visibility: hidden
 
   &__content-wrap
     position: relative
@@ -243,6 +244,10 @@
       margin-bottom: 22px
     +sm
       max-width: 273px
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 5
+      -webkit-box-orient: vertical
 
   &__item-link
     display: inline-block
