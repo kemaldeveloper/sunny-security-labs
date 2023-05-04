@@ -269,7 +269,7 @@ multiSelect();
 
 // menu links active class toggler
 const menuLinks = () => {
-  const pageHref = window.location.href.split('/').slice(3).join('/');
+  const pageHref = window.location.href.split('/').slice('-1').join('/');
   const currentElement = $(`.header__sub-link[href='${pageHref}']`);
   const subList = currentElement.closest('.header__sub-list');
 
