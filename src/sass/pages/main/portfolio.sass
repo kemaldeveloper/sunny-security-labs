@@ -113,7 +113,10 @@
           width: 80%
 
     &-icon-wrap
+      .icon--rental-icon
+        transition: opacity 0.8s ease, transform 0.5s ease
       .icon--rental-icon2
+        transition: all 0.4s ease
         opacity: 0
 
     &-date
@@ -152,11 +155,9 @@
           +lg
             width: 642px
       .icon--rental-icon
-        transition: all 0.6s ease
+        transform: rotate(90deg)
         opacity: 0
-        animation: rental-anim 0.3s linear 1
       .icon--rental-icon2
-        transition: all 0.6s ease
         opacity: 1
 
   &__box
@@ -302,9 +303,3 @@
         right: 0
         opacity: 1
         visibility: visible
-
-@keyframes rental-anim
-  0%
-    transform: rotate(-90deg)
-
-  100%
