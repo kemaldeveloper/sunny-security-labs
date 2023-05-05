@@ -32,6 +32,8 @@
     height: 600px
     position: relative
     display: block
+    +md
+      height: auto
     &::after
       content: ''
       position: absolute
@@ -133,12 +135,16 @@
 
     &-img-wrap
       height: 366px
+      +md
+        height: auto
 
     &-img
       width: 100%
       height: 100%
       +xxxl
         height: 366px
+      +md
+        height: auto
 
   &__rental:hover
     +min_md
