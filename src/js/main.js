@@ -185,11 +185,17 @@ $('.slider').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   variableWidth: true,
-  autoplaySpeed: 2000,
   prevArrow: false,
-  adaptiveHeight: true,
   nextArrow: $('.next'),
-  // autoplay: true,
+  responsive: [
+    {
+      breakpoint: 575,
+      settings: {
+        infinite: false,
+        slidesToShow: 2,
+      },
+    },
+  ],
 });
 
 $('.service').slick({
@@ -221,11 +227,6 @@ $('.personal').slick({
 
 $('.next').on('click', function () {
   $(this).closest('.slider-block').find('.slider').slick('slickNext');
-});
-
-$('.quote-form__spoiler-btn').click(function (event) {
-  $(this).toggleClass('active').next().slideToggle(300);
-  $('.quote-form__spoiler-wrap').toggleClass('active');
 });
 
 const tabNavItems = document.querySelectorAll('.tab-nav__link');

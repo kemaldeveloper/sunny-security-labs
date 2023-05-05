@@ -1,5 +1,4 @@
 .slider
-  // display: flex
 
   &__wrapper
     position: relative
@@ -17,32 +16,33 @@
       padding: 17px 0 19px 16px
       margin-right: 20px
     &:hover
-      .slider__item-content
-        &::before
-          content: ''
-          background: $white
-        &::after
-          content: ''
-          background: $white
-      .slider__item-mask
-        opacity: 1
-        visibility: visible
-      .slider__title
-        color: $white
-        transition: all 0.5s ease
-      .slider__text
-        color: $white
-        transition: all 0.5s ease
-      .slider__link
-        transition: all 0.5s ease
-        color: $white
-        padding-left: 67px
-        padding-right: 0
-        &::after
-          content: ''
-          background: $white
-          right: 0
-          left: 0
+      +min_md
+        .slider__item-content
+          &::before
+            content: ''
+            background: $white
+          &::after
+            content: ''
+            background: $white
+        .slider__item-mask
+          opacity: 1
+          visibility: visible
+        .slider__title
+          color: $white
+          transition: all 0.5s ease
+        .slider__text
+          color: $white
+          transition: all 0.5s ease
+        .slider__link
+          transition: all 0.5s ease
+          color: $white
+          padding-left: 67px
+          padding-right: 0
+          &::after
+            content: ''
+            background: $white
+            right: 0
+            left: 0
 
   &__item-content
     position: relative
@@ -143,3 +143,7 @@
       width: 80px
     +sm
       display: none
+
+.container--slider
+  +sm
+    padding: 0
