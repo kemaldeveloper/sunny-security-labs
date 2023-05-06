@@ -150,8 +150,6 @@
         opacity: 0
       +xl 
         height: 100%
-      +sm 
-        height: 213px
 
     &__images
       width: 100%
@@ -163,6 +161,8 @@
     &__hover:hover .tab-content__box::after
       content: ''
       opacity: 1
+      +md
+        opacity: 0
 
     &__inner
       transition: all 0.5s ease
