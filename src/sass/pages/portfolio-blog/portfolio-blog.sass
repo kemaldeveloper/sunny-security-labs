@@ -20,8 +20,9 @@
       .portfolio-blog__content-title
         color: $hover
         margin-left: 20px
-        +sm 
+        +md 
           margin-left: 0
+          color: $dark
 
   &__content-wrap
     display: flex
@@ -86,10 +87,8 @@
         width: 560px
       +md
         width: 400px
-      +sm 
+      +sm
         width: 75%
-      +xsm 
-        width: 240px
       
   &__text-text
     max-width: 558px
@@ -130,14 +129,14 @@
       margin-bottom: 40px
     +sm
       margin-bottom: 24px
-      // pointer-events: none
   &__wrapper
     &:hover
       .portfolio-blog__text-link
         margin-right: 40px
         color: $hover
-        +sm
+        +md
           margin-right: 0
+          color: $mid_blue
       
       .portfolio-blog__text-wrap
 
@@ -145,6 +144,8 @@
         &::before
           content: ''
           background: linear-gradient(90deg, #002865 0%, #002865 59.42%)
+          +md
+            background: $gradient_plate
         &::after
           content: ''
           background: linear-gradient(90deg, #002865 0%, #002865 59.42%)
@@ -158,14 +159,15 @@
           +lg 
             width: 540px
           +md 
-            width: 370px
-          // +sm
-          //   width: 420px
-          +xsm
-            width: 220px
+            width: 400px
+            background: $gradient_plate
+          +sm
+            width: 75%
 
   &__image
     position: relative
+    // +md
+    //   position: unset
     &::after
       content: ''
       transition: all 0.3s linear
@@ -177,6 +179,8 @@
       height: 100%
       background: rgba($dark_blue , 0.15)
       opacity: 0
+      +md
+        position: unset
 
   &__photo
     width: 100%
