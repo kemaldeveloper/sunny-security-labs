@@ -37,8 +37,7 @@
   &__item
     display: block
     width: 887px
-    height: 220px
-    padding: 22px 0 0 22.5px
+    padding: 22px 0 20px 22.5px
     transition: all 0.3s ease
     position: relative
     &::after
@@ -58,10 +57,8 @@
       width: 810px
     +xl
       width: 745px
-      height: 200px
     +sm
-      padding: 17px 0 0 18px
-      height: 248px
+      padding: 17px 15px 19px 18px
     &:hover
       +min_md
         .solutions__item-text
@@ -82,7 +79,7 @@
   &__content-wrap
     position: relative
     display: flex
-    padding-bottom: 33px
+    padding-bottom: 31px
     z-index: 1
     &::before
       content: ''
@@ -91,6 +88,8 @@
       height: 100%
       width: 2.5px
       background: $white
+      +sm
+        width: 1.5px
     &::after
       content: ''
       position: absolute
@@ -100,13 +99,13 @@
       width: 100%
       background: $white
     +xxxl
-      padding-bottom: 32px
+      padding-bottom: 30px
     +md
       justify-content: space-between
       padding-right: 7px
     +sm
       flex-direction: column
-      padding: 0 19px 20px 23px
+      padding: 0 19px 15px 23px
 
   &__item--web3
     background: $ocean
@@ -255,6 +254,10 @@
     color: $white
     padding-right: 70px
     transition: all 0.3s ease
+    +sm
+      font-size: 14px
+      line-height: 16px
+      padding-right: 65px
     &::before
       content: ''
       position: absolute
@@ -267,9 +270,6 @@
       transition: all 0.3s ease
       opacity: 0
       visibility: hidden
-      +sm
-        font-size: 14px
-        line-height: 16px
     &::after
       content: ''
       position: absolute
@@ -280,8 +280,7 @@
       width: 50px
       background: $white
       transition: all 0.3s ease
+      +sm
+        width: 46px
     &:hover
       color: $white
-    +sm
-      font-size: 14px
-      line-height: 16px
