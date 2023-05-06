@@ -192,7 +192,8 @@ $('.slider').slick({
       breakpoint: 575,
       settings: {
         infinite: false,
-        slidesToShow: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
     },
   ],
@@ -203,15 +204,25 @@ $('.service').slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   variableWidth: true,
-  autoplaySpeed: 2000,
-  // autoplay: true,
   draggable: true,
   arrows: false,
-  mobileFirst: true,
+  // mobileFirst: true,
   responsive: [
     {
-      breakpoint: 992,
+      breakpoint: 3000,
       settings: 'unslick',
+    },
+    {
+      breakpoint: 992,
+      settings: 'slick',
+    },
+    {
+      breakpoint: 575,
+      settings: {
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
     },
   ],
 });
@@ -223,6 +234,15 @@ $('.personal').slick({
   autoplaySpeed: 2000,
   prevArrow: false,
   nextArrow: $('.personal-next'),
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        infinite: false,
+        slidesToShow: 2,
+      },
+    },
+  ],
 });
 
 $('.next').on('click', function () {

@@ -22,8 +22,8 @@
       margin-bottom: 30px
 
   &__box
-    +min_md
-      &:hover
+    &:hover
+      +min_md
         .blog__content-title
           color: $hover
           margin-left: 44px
@@ -74,6 +74,10 @@
       line-height: 40px
     +lg
       font-size: 38px
+    +md
+      font-size: 33px
+      &:hover
+        color: $dark
     +sm
       font-size: 22px
       line-height: 28px
