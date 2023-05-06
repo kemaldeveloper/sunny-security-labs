@@ -59,8 +59,14 @@
       max-width: 820px
       top: 135px
     +sm
+      display: none
       right: -120px
       top: 135px
+      max-width: 890px
+    +xsm
+      top: 125px
+      max-width: 930px
+
 
   &__img-2
     position: absolute
@@ -110,8 +116,8 @@
       top: 450px
       max-width: 227px
     +sm
-      right: 47px
-      top: 485px
+      right: 50px
+      top: 460px
 
   &__img-4
     position: absolute
@@ -158,6 +164,21 @@
       top: 475px
     +xxl
       display: none
+
+  &__bg-color
+    display: none
+    +sm
+      display: block
+      position: absolute
+      width: 565px
+      height: 375px
+      left: 0
+      top: 193px
+      background: rgba(1, 213, 255, 0.8)
+      filter: blur(12.5px)
+      z-index: -1
+    +xsm
+      height: 380px
 
   &__title
     font-weight: 700
