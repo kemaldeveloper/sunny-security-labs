@@ -111,23 +111,29 @@
       line-height: 23px
       margin-bottom: 17px
 
-  &__text
-    color: $dark_blue
+  &__text-wrap
     margin-bottom: 36px
-    max-width: 292px
-    transition: all 0.3s linear
-    overflow: hidden
     display: -webkit-box
+    -webkit-box-orient: vertical
     -webkit-line-clamp: 5
     text-overflow: ellipsis
-    -webkit-box-orient: vertical
+    overflow: hidden
+    +xl
+      margin-bottom: 21px
+    +sm
+      margin-bottom: 24px
+
+  &__text
+    color: $dark_blue
+    max-width: 292px
+    transition: all 0.3s linear
+    margin-bottom: 0
+
     +xl
       font-size: 15px
-      margin-bottom: 21px
     +sm
       font-size: 14px
       line-height: 22px
-      margin-bottom: 24px
       max-width: 193px
 
   &__link
