@@ -346,7 +346,7 @@ $('.header__link').on('mouseenter', (e) => {
 // }
 
 function setValidSliderTextHeight() {
-  $('.slider__text-wrap').height(getSliderTextLineHeight * 5);
+  $('.slider__text-wrap').height(getSliderTextLineHeight() * 5);
 }
 
 function getSliderTextLineHeight() {
