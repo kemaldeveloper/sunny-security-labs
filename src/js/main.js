@@ -182,10 +182,6 @@ const mfpPopup = function (popupID, source) {
 // SLIDERS
 
 $('.slider').on('init', function (event, slick, currentSlide, nextSlide) {
-  // const currentSlider = $(event.currentTarget);
-  // const sliderTextList = currentSlider.find('.slider__text');
-
-  // textLineClamp(sliderTextList);
   setValidSliderTextHeight();
 });
 

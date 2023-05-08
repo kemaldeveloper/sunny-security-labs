@@ -104,6 +104,9 @@
     display: flex
     align-items: center
     position: relative
+    +xxxl
+      padding-bottom: 12px
+      margin-bottom: 12px
     &::after
       content: ''
       position: absolute
@@ -120,6 +123,8 @@
     letter-spacing: 0.01em
     color: $dark_blue
     margin-left: 17px
+    +xxxl
+      line-height: 24px
     +min_md
       +xl
         font-size: 18px
@@ -127,7 +132,6 @@
         font-size: 14px
     +sm
       font-size: 15px
-      line-height: 40px
 
   &__services-wrap--pd
     padding: 62px 0 68px 0
