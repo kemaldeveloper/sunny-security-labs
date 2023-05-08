@@ -113,6 +113,11 @@
 
   &__text-wrap
     margin-bottom: 36px
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 5
+    text-overflow: ellipsis
+    overflow: hidden
     +xl
       margin-bottom: 21px
     +sm
@@ -122,12 +127,7 @@
     color: $dark_blue
     max-width: 292px
     transition: all 0.3s linear
-    overflow: hidden
-    // display: -webkit-box
-    display: inline
-    -webkit-line-clamp: 5
-    text-overflow: ellipsis
-    -webkit-box-orient: vertical
+
     +xl
       font-size: 15px
     +sm
