@@ -38,6 +38,7 @@ $(window).on('load', function () {
 
 $(window).on('resize', function () {
   MQ.updateState();
+  headValidSliderTextHeight();
 });
 
 // COMMON FUNCTIONS
@@ -180,6 +181,13 @@ const mfpPopup = function (popupID, source) {
 
 // SLIDERS
 
+// $('.slider').on('init', function (event, slick, currentSlide, nextSlide) {
+//   const currentSlider = $(event.currentTarget);
+//   const sliderTextList = currentSlider.find('.slider__text');
+
+//   textLineClamp(sliderTextList);
+// });
+
 $('.slider').slick({
   infinite: true,
   slidesToShow: 3,
@@ -310,3 +318,43 @@ $('.header__link').on('mouseenter', (e) => {
 // $('.header__link').on('mouseleave', (e) => {
 //   menuLinks();
 // });
+
+// function reduceText(itemText, maxLengthOfLink = 120) {
+//   const itemTextArray = itemText.trim().split(' '); // splitting the string into an array
+//   let reducedFlag = -1; // using a flag to identify if we have acquired the correct length and then to add the ellipsis
+
+//   return itemTextArray.reduce((accumulator, currentVal) => {
+//     if (accumulator.length + currentVal.length > maxLengthOfLink) {
+//       reducedFlag++;
+//       return reducedFlag ? accumulator : `${accumulator}...`;
+//     } else {
+//       return `${accumulator} ${currentVal}`;
+//     }
+//   });
+//   //you can read more about the reduce function on mozilla.org
+// }
+
+// function textLineClamp(element) {
+//   element.each((_, item) => {
+//     const currentItem = $(item);
+//     const itemText = currentItem.text();
+//     const splicedItemText = reduceText(itemText, 180);
+
+//     currentItem.text(splicedItemText);
+//   });
+// }
+
+function headValidSliderTextHeight() {
+  $('.slider__text-wrap').height(getSliderTextLineHeight * 5);
+}
+
+headValidSliderTextHeight();
+
+function getSliderTextLineHeight() {
+  const windowWidth = $(window).width();
+
+  if (windowWidth <= breakpoint.sm) {
+    return 22;
+  }
+  return 26;
+}
