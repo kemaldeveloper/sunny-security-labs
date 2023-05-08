@@ -38,7 +38,7 @@ $(window).on('load', function () {
 
 $(window).on('resize', function () {
   MQ.updateState();
-  headValidSliderTextHeight();
+  setValidSliderTextHeight();
 });
 
 // COMMON FUNCTIONS
@@ -181,12 +181,13 @@ const mfpPopup = function (popupID, source) {
 
 // SLIDERS
 
-// $('.slider').on('init', function (event, slick, currentSlide, nextSlide) {
-//   const currentSlider = $(event.currentTarget);
-//   const sliderTextList = currentSlider.find('.slider__text');
+$('.slider').on('init', function (event, slick, currentSlide, nextSlide) {
+  // const currentSlider = $(event.currentTarget);
+  // const sliderTextList = currentSlider.find('.slider__text');
 
-//   textLineClamp(sliderTextList);
-// });
+  // textLineClamp(sliderTextList);
+  setValidSliderTextHeight();
+});
 
 $('.slider').slick({
   infinite: true,
@@ -344,16 +345,14 @@ $('.header__link').on('mouseenter', (e) => {
 //   });
 // }
 
-function headValidSliderTextHeight() {
-  $('.slider__text-wrap').height(getSliderTextLineHeight * 5);
+function setValidSliderTextHeight() {
+  $('.slider__text-wrap').height(getSliderTextLineHeight() * 5);
 }
-
-headValidSliderTextHeight();
 
 function getSliderTextLineHeight() {
   const windowWidth = $(window).width();
 
-  if (windowWidth <= breakpoint.sm) {
+  if (windowWidth <= breakpoints.sm) {
     return 22;
   }
   return 26;
