@@ -3,16 +3,23 @@
   &__row
     display: flex
     justify-content: space-between
-    +xl
-      flex-wrap: wrap-reverse
+    +lg
+      flex-direction: column-reverse
 
   &__text-box
     max-width: 568px
     +xxxl
       max-width: 493px
+    +xl
+      max-width: 360px
+    +lg
+      max-width: 100%
+
   &__text
-    +md
+    +xl
       font-size: 16px
+      line-height: 30px
+    +md
       line-height: 24px
       margin: 0
 
@@ -28,6 +35,8 @@
     min-width: auto
   +xxl
     margin-bottom: 30px
+  +sm
+    margin-right: -15px
 
   &__title
     font-weight: 700
@@ -51,3 +60,5 @@
       height: 100%
       width: 30px
       background: $white
+    +xxl
+      display: none
