@@ -1,20 +1,29 @@
 body
   min-width: 320px
   font-family: $deff
-  overflow-x: hidden
   -webkit-font-smoothing: antialiased
 
 *
   box-sizing: border-box
 
-::-webkit-scrollbar
-  width: 0
-  -ms-overflow-style: none
-  overflow: -moz-scrollbars-none
+// ::-webkit-scrollbar
+//   width: 0
+//   -ms-overflow-style: none
+//   overflow: -moz-scrollbars-none
 
 html,
 body
   font-size: 16px
+  overflow-x: hidden
+
+.main
+  overflow: hidden
+
+.wrapper
+  width: 100%
+  min-height: 100%
+  overflow: hidden
+  position: relative
 
 // Modules
 @import modules/buttons
