@@ -171,7 +171,8 @@
     max-width: 363px
     top: 192px
   +sm
-    max-width: 425px
+    max-width: 432px
+    width: 432px
     top: 210px
     right: -126px
     z-index: 2
@@ -239,6 +240,13 @@
   z-index: 1
   +min_md
     animation: link-anim 0.8s ease 1
+    &:hover
+      color: $hover
+      padding: 0 0 0 70px
+      &::after
+        content: ''
+        background: $hover
+        left: 0
   &::after
     content: ''
     position: absolute
@@ -247,16 +255,13 @@
     width: 50px
     height: 1px
     background: $mid_blue
-  &:hover
-    color: $hover
-    padding: 0 0 0 70px
-    &::after
-      content: ''
-      background: $hover
-      left: 0
+    +md
+      width: 40px
   +md
     font-size: 14px
     line-height: 16px
+    &:hover
+      color: $mid_blue
   +sm
     padding-right: 57px
     z-index: 2
