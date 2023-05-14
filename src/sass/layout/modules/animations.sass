@@ -34,14 +34,14 @@
 
 .main-screen__img-2
   position: absolute
-  right: 434px
-  bottom: -26px
+  right: 417px
+  top: 516px
   +min_md
     animation: img2 0.8s ease 1
     will-change: transform, opacity
   +xxxl
     right: 283px
-    bottom: -237px
+
   +xxl
     max-width: 574px
     right: 350px
@@ -78,7 +78,7 @@
 .main-screen__img-3
   position: absolute
   top: 0
-  right: 570px
+  right: 553px
   +min_md
     animation: img3 0.8s ease 1
     will-change: transform, opacity
@@ -113,7 +113,7 @@
     animation: img4 0.8s ease 1
     will-change: transform, opacity
   +xxxl
-    right: -144px
+    right: -151px
   +xxl
     right: -127px
     max-width: 582px
@@ -146,7 +146,7 @@
 .main-screen__img-5
   position: absolute
   top: 47px
-  right: 0
+  right: -19px
   width: 100%
   height: 100%
   max-width: 688px
@@ -171,11 +171,15 @@
     max-width: 363px
     top: 192px
   +sm
-    max-width: 432px
-    width: 432px
-    top: 210px
-    right: -126px
+    max-width: 429px
+    width: 429px
+    top: 212px
+    right: -138px
     z-index: 2
+  +xsm
+    max-width: 427px
+    width: 427px
+    right: -152px
 
 @keyframes img5
   0%
@@ -195,6 +199,8 @@
     top: 27px
     z-index: 1
     width: 496px
+  +xsm
+    top: 40px
 
 .main-screen__title
   display: block
@@ -203,6 +209,10 @@
   transition: all 0.3s ease
   position: relative
   z-index: 1
+  br
+    display: none
+    +sm
+      display: block
   +min_md
     animation: title-anim 0.8s ease 1
   &:hover
@@ -218,6 +228,7 @@
   +sm
     z-index: 2
     margin-bottom: 21px
+    width: 300px
 
 @keyframes title-anim
   0%

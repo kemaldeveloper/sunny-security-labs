@@ -6,13 +6,17 @@
     padding-top: 32px
 
   &--about-pb
-    padding-bottom: 72px
+    padding-bottom: 85px
+    +sm
+      padding-bottom: 50px
 
   &__title
     color: $dark_blue
-    margin-bottom: 56px
+    margin-bottom: 60px
+    // margin-bottom: 56px
     +xl
-      margin-bottom: 10px
+      margin-bottom: 30px
+    
 
   &__wrapper
     +xl
@@ -22,11 +26,13 @@
       display: flex
       justify-content: space-between
       align-items: center
+      +xxxl
+        max-width: 1189px
       +xl
         margin: 0 auto
-        width: 930px
-      +sm
-        width: 769px
+        width: 1189px
+      // +sm
+      //   width: 769px
 
   &__item
     display: flex
