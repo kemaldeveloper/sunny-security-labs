@@ -2,6 +2,7 @@
   padding: 95px 0 135px
   +lg
     padding-top: 40px
+    padding-bottom: 50px
 
   &__title
     margin-bottom: 27px
@@ -13,7 +14,11 @@
 
   &__table
     margin-bottom: 2rem
+    min-width: 825px
     th
       padding-bottom: 30px
     td
-      padding: 0 10px 20px 0
+      padding-bottom: 20px
+      vertical-align: baseline
+    td:not(:last-child)
+      padding-right: 15px
