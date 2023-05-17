@@ -316,31 +316,6 @@ $('.header__link').on('mouseenter', (e) => {
 //   menuLinks();
 // });
 
-// function reduceText(itemText, maxLengthOfLink = 120) {
-//   const itemTextArray = itemText.trim().split(' '); // splitting the string into an array
-//   let reducedFlag = -1; // using a flag to identify if we have acquired the correct length and then to add the ellipsis
-
-//   return itemTextArray.reduce((accumulator, currentVal) => {
-//     if (accumulator.length + currentVal.length > maxLengthOfLink) {
-//       reducedFlag++;
-//       return reducedFlag ? accumulator : `${accumulator}...`;
-//     } else {
-//       return `${accumulator} ${currentVal}`;
-//     }
-//   });
-//   //you can read more about the reduce function on mozilla.org
-// }
-
-// function textLineClamp(element) {
-//   element.each((_, item) => {
-//     const currentItem = $(item);
-//     const itemText = currentItem.text();
-//     const splicedItemText = reduceText(itemText, 180);
-
-//     currentItem.text(splicedItemText);
-//   });
-// }
-
 function setValidSliderTextHeight() {
   $('.slider__text-wrap').height(getSliderTextLineHeight() * 5);
 }
@@ -352,4 +327,29 @@ function getSliderTextLineHeight() {
     return 22;
   }
   return 26;
+}
+
+// cookies
+const cookieName = 'visit';
+const cookieAlert = document.querySelector('.cookie-alert--js');
+const cookieAcceptBtn = document.querySelector('.accept-btn--js');
+const cookieRejectBtn = document.querySelector('.reject-btn--js');
+
+// Тут можно указать время жизни cookie, Сейчас стоит 5 минута.
+const expires = new Date(new Date().getTime() + 5 * 60 * 1000);
+
+if (!Cookies.get('visit')) {
+  setTimeout(() => {
+    cookieAlert.classList.add('active');
+  }, 1000);
+
+  cookieAcceptBtn.addEventListener('click', () => {
+    cookieAlert.classList.remove('active');
+
+    Cookies.set(cookieName, true, { expires });
+  });
+
+  cookieRejectBtn.addEventListener('click', () => {
+    cookieAlert.classList.remove('active');
+  });
 }

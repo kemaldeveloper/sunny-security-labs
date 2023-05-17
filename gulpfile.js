@@ -36,6 +36,7 @@ const jsLibsPaths = [
   'node_modules/inputmask/dist/jquery.inputmask.min.js',
   'node_modules/slick-carousel/slick/slick.min.js',
   'node_modules/choices.js/public/assets/scripts/choices.min.js',
+  'node_modules/js-cookie/dist/js.cookie.min.js',
 ];
 
 // Tasks
