@@ -1,5 +1,7 @@
 .mobile-menu.is-opened
   transform: none
+  opacity: 1
+  visibility: visible
 
 .mobile-menu
   position: fixed
@@ -14,6 +16,8 @@
   z-index: 100
   transition: all 0.4s linear
   overflow: auto
+  opacity: 0
+  visibility: hidden
 
   &__logo-link
     width: 100px
