@@ -7,7 +7,7 @@
 
   .tab-nav
     margin-bottom: 40px
-  
+
     .active
       border-color: transparent
       color: $white
@@ -46,7 +46,7 @@
 
     .animate__animated
       animation-duration: 1.5s
-      animation-name: fadeIn 
+      animation-name: fadeIn
       animation-delay: 0.6s
       animation-timing-function: ease-in-out
 
@@ -56,7 +56,7 @@
 
         0%
           filter: brightness(0.9)
-        
+
         50%
           filter: brightness(1.10)
 
@@ -68,13 +68,12 @@
 
     &__item
       display: none
- 
+
     .active
       display: block
 
     &__hover
-      +md 
-        // pointer-events: none
+      +md
 
     &__inner
       padding: 23px 0 33px 50px
@@ -82,7 +81,7 @@
       border-image: $gradient_plate 1
       +xxxl
         padding: 23px 0 33px 43px
-      +xl 
+      +xl
         padding: 23px 0 33px 25px
 
       &--bottom
@@ -98,9 +97,9 @@
       margin-bottom: 32px
       max-width: 486px
       color: $dark_blue
-      +xl 
+      +xl
         font-size: 33px
-      +lg 
+      +lg
         font-size: 25px
         margin-bottom: 10px
 
@@ -113,9 +112,9 @@
       letter-spacing: 0.02em
       color: $dark_blue
       margin-bottom: 53px
-      +xl 
+      +xl
         max-width: 385px
-      +lg 
+      +lg
         font-size: 16px
         max-width: 295px
         margin-bottom: 20px
@@ -148,7 +147,7 @@
         height: 100%
         background: rgba($dark_blue , 0.15)
         opacity: 0
-      +xl 
+      +xl
         height: 100%
 
     &__images
@@ -183,7 +182,7 @@
     +sm
       padding-top: 20px
 
-    &__img 
+    &__img
       height: 285px
       object-fit: cover
       width: 100%
@@ -217,7 +216,6 @@
 
     &__block-hover:hover .columns__subtitle
       color: $hover
-
 
     &__block-hover:hover .columns__date
       &::before
