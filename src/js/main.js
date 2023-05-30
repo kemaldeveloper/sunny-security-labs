@@ -335,8 +335,8 @@ const cookieAlert = document.querySelector('.cookie-alert--js');
 const cookieAcceptBtn = document.querySelector('.accept-btn--js');
 const cookieRejectBtn = document.querySelector('.reject-btn--js');
 
-// Тут можно указать время жизни cookie, Сейчас стоит 5 минута.
-const expires = new Date(new Date().getTime() + 5 * 60 * 1000);
+// Тут можно указать время жизни cookie, Сейчас стоит 1 час.
+const expires = new Date(new Date().getTime() + 90 * 60 * 1000);
 
 if (!Cookies.get('visit')) {
   setTimeout(() => {

@@ -1,4 +1,6 @@
-.blockchain
+.wrapper.dark-theme .main-solutions
+  background: $dark_blue
+.main-solutions
   padding: 51px 0 54px
   +xxxl
     padding: 58px 0 52px 0
@@ -146,34 +148,34 @@
 .solutions-resume
   display: flex
   position: relative
+  +xxxl
+    width: 620px
   +xxl
+    max-width: 560px
+  +lg
     max-width: 100%
-  +md
-    margin-bottom: 30px
-  +sm
-    margin: 0
-
+    width: auto
+  &__reverse-md
+    +md
+      display: flex
+      flex-direction: column-reverse
+      position: relative
+      top: 150px
+    +sm
+      margin-bottom: 30px
+      top: 130px
   &__avatar
     min-width: 148px
     max-width: 148px
     margin-right: 40px
     padding-top: 6px
     z-index: 1
-    +md
-      margin-right: 25px
-    +sm
-      min-width: 90px
-      max-width: 90px
-      margin-right: 24.5px
 
   &__avatar-img
     width: 148px
     height: 148px
     object-fit: cover
     margin-bottom: 18px
-    +sm
-      width: 90.47px
-      height: 90.47px
 
   &__avatar-name
     font-weight: 700
@@ -184,11 +186,6 @@
     padding-bottom: 16px
     margin-bottom: 12px
     position: relative
-    +md
-      font-size: 24px
-    +sm
-      font-size: 16px
-      line-height: 20px
     &::after
       content: ''
       position: absolute
@@ -204,11 +201,6 @@
     line-height: 21px
     letter-spacing: 0.02em
     color: $white
-    +md
-      font-size: 14px
-    +sm
-      font-size: 13px
-      line-height: 18px
 
   &__review
     z-index: 1
@@ -217,16 +209,6 @@
     color: $white
     max-width: 432px
     margin-bottom: 47px
-    +lg
-      max-width: 100%
-    +md
-      font-size: 16px
-      margin-bottom: 15px
-      line-height: 24px
-    &--web-mb
-      margin-bottom: 70px
-      +md
-        margin-bottom: 20px
 
   &__review-btn
     display: flex
@@ -240,35 +222,8 @@
     line-height: 34px
     letter-spacing: 0.01em
     color: $mid_blue
-    transition: all 0.3s ease
     &:hover
-      background: $mid_blue
-      color: $white
-      border: none
-    +md
-      font-size: 20px
-    +md
-      display: none
-
-  &__review-btn-sm
-    display: none
-    span
       color: $mid_blue
-      &:hover
-        color: $mid_blue
-    +md
-      display: inline-block
-      padding: 0 12px 0px 11px
-      letter-spacing: 0.01em
-      border: 1px solid $mid_blue
-
-  &__review-btn-sm
-    font-weight: 700
-    font-size: 16px
-    line-height: 34px
-    letter-spacing: 0.01em
-    color: $mid_blue
-    white-space: nowrap
 
   &__img
     position: absolute
@@ -276,40 +231,19 @@
     bottom: -128px
     min-width: 1095px
     min-height: 604px
-    +xxxl
-      right: -122px
-    +xxl
-      right: -100px
-    +xl
-      right: -180px
-    +lg
-      right: 0
-    +md
-      display: none
 
 .solutions-package
   max-width: 599px
   margin: 0 0 0 auto
   +xxxl
-    position: relative
-  +lg
-    max-width: 100%
-    padding: 140px 0 75px 0
-  +md
-    padding: 0
-    margin-bottom: 40px
+    width: 525px
+  +xxl
+    width: 100%
+    margin: 0 auto
 
   &__title
     color: $white
     margin-bottom: 22px
-    +md
-      font-size: 24px
-      line-height: 23px
-    +sm
-      font-size: 20px
-      margin-bottom: 10px
-
-  &__list
 
   &__item
     display: flex
@@ -320,11 +254,6 @@
     letter-spacing: 0.01em
     color: $white
     border-bottom: 1px solid $mid_blue
-    +md
-      font-size: 18px
-      line-height: 40px
-    +sm
-      font-size: 15px
 
   &__item span
     margin-left: 20px

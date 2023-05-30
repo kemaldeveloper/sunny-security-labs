@@ -1,0 +1,143 @@
+.solutions-resume
+  display: flex
+  position: relative
+  +xxl
+    max-width: 100%
+  +md
+    margin-bottom: 30px
+  +sm
+    margin: 0
+
+  &__avatar
+    min-width: 148px
+    max-width: 148px
+    margin-right: 40px
+    padding-top: 6px
+    z-index: 1
+    +md
+      margin-right: 25px
+    +sm
+      min-width: 90px
+      max-width: 90px
+      margin-right: 24.5px
+
+  &__avatar-img
+    width: 148px
+    height: 148px
+    object-fit: cover
+    margin-bottom: 18px
+    +sm
+      width: 90.47px
+      height: 90.47px
+
+  &__avatar-name
+    font-weight: 700
+    font-size: 26px
+    line-height: 32px
+    letter-spacing: 0.02em
+    color: $white
+    padding-bottom: 16px
+    margin-bottom: 12px
+    position: relative
+    +md
+      font-size: 24px
+    +sm
+      font-size: 16px
+      line-height: 20px
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background: $grey_color
+
+  &__avatar-job
+    font-weight: 400
+    font-size: 15px
+    line-height: 21px
+    letter-spacing: 0.02em
+    color: $white
+    +md
+      font-size: 14px
+    +sm
+      font-size: 13px
+      line-height: 18px
+
+  &__review
+    z-index: 1
+
+  &__review-text
+    color: $white
+    max-width: 432px
+    margin-bottom: 47px
+    +lg
+      max-width: 100%
+    +md
+      font-size: 16px
+      margin-bottom: 15px
+      line-height: 24px
+    &--web-mb
+      margin-bottom: 70px
+      +md
+        margin-bottom: 20px
+
+  &__review-btn
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 260px
+    height: 54px
+    border: 1px solid $mid_blue
+    font-weight: 700
+    font-size: 22px
+    line-height: 34px
+    letter-spacing: 0.01em
+    color: $mid_blue
+    transition: all 0.3s ease
+    &:hover
+      background: $mid_blue
+      color: $white
+      border: none
+    +md
+      font-size: 20px
+    +md
+      display: none
+
+  &__review-btn-sm
+    display: none
+    span
+      color: $mid_blue
+      &:hover
+        color: $mid_blue
+    +md
+      display: inline-block
+      padding: 0 12px 0px 11px
+      letter-spacing: 0.01em
+      border: 1px solid $mid_blue
+
+  &__review-btn-sm
+    font-weight: 700
+    font-size: 16px
+    line-height: 34px
+    letter-spacing: 0.01em
+    color: $mid_blue
+    white-space: nowrap
+
+  &__img
+    position: absolute
+    right: -50px
+    bottom: -128px
+    min-width: 1095px
+    min-height: 604px
+    +xxxl
+      right: -122px
+    +xxl
+      right: -100px
+    +xl
+      right: -180px
+    +lg
+      right: 0
+    +md
+      display: none
