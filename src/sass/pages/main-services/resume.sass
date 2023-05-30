@@ -1,0 +1,116 @@
+.resume
+  display: flex
+  justify-content: space-between
+
+  &--mt
+    margin-top: 62px
+
+  &__avatar
+    max-width: 148px
+    +xl
+      max-width: 130px
+
+  &__avatar-img
+    max-width: 148px
+    max-height: 148px
+    object-fit: cover
+    +xl
+      max-width: 130px
+      max-height: 130px
+    +sm
+      width: 91px
+      height: 91px
+
+  &__person-name
+    font-weight: 700
+    font-size: 26px
+    line-height: 32px
+    letter-spacing: 0.02em
+    color: $dark_blue
+    position: relative
+    margin-top: 18px
+    padding-bottom: 16px
+    margin-bottom: 12px
+    +xl
+      font-size: 24px
+    +sm
+      font-size: 16px
+      line-height: 20px
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background: $grey_color
+
+  &__person-job
+    font-weight: 400
+    font-size: 15px
+    line-height: 21px
+    letter-spacing: 0.02em
+    color: $dark_blue
+    max-width: 104px
+    +sm
+      font-size: 13px
+      line-height: 18px
+
+  &__review
+    height: min-content
+    position: relative
+    padding: 0 40px 42px 0
+    +xxxl
+      padding: 0 0 41px
+    +lg
+      padding: 0 0 25px
+    +lg
+      padding: 0 41px 36px 25px
+    +md
+      padding: 0 25px 15px 25px
+    +sm
+      padding: 0 25px 26px 25px
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      width: 2px
+      height: 100%
+      background: $gradient_plate
+      +xxxl
+        right: -34px
+      +lg
+        right: 0
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      height: 2px
+      width: 190px
+      background: $gradient_plate
+      +xxxl
+        right: -32px
+        width: 165px
+      +lg
+        right: 0
+
+  &__review-text
+    font-style: italic
+    font-weight: 400
+    font-size: 16px
+    line-height: 28px
+    letter-spacing: 0.02em
+    max-width: 439px
+    margin: -7px 0 0 0
+    +xxxl
+      max-width: 387px
+    +xl
+      max-width: 284px
+    +lg
+      max-width: 423px
+    +sm
+      font-size: 15px
+      line-height: 24px
