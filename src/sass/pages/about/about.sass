@@ -23,7 +23,8 @@
   &__col
     padding-top: 25px
     z-index: 1
-    animation: about-text 0.8s ease 1
+    +min_md
+      animation: about-text 0.8s ease 1
     +xxxl
       padding-top: 12px
     +md
@@ -186,7 +187,8 @@
     letter-spacing: 0.01em
     position: relative
     z-index: 1
-    animation: about-title 0.8s ease 1
+    +min_md
+      animation: about-title 0.8s ease 1
     br
       +md
         display: none
@@ -215,7 +217,7 @@
       line-height: 24px
       margin: 0
 
-  &__text--mb
+  &__text:first-child
     margin-bottom: 31px
     +xl
       margin-bottom: 20px
