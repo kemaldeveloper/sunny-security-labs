@@ -3,15 +3,15 @@
   +xxxl
     padding-top: 118px
   +xl
-    padding-top: 85px
+    padding-top: 60px
   +lg
-    padding-top: 58px
+    padding-top: 75px
   +md
     padding-top: 38px
 
   &__wrapper
     +xxl
-      position: relative
+      // position: relative
 
   &__row
     padding-bottom: 112px
@@ -37,36 +37,34 @@
   &__img-1
     position: absolute
     top: 73px
-    right: 74px
+    left: 50%
+    transform: translateX(calc( -50% + 23rem ))
     +xxxl
       display: none
     +min_md
       animation: about-1 0.8s ease 1
     +xxl
       display: block
-      top: -100px
+      top: 127px
       max-width: 920px
-      right: -155px
+      transform: translateX(calc( -50% + 17rem ))
     +xl
-      top: -70px
-      max-width: 770px
-      right: -150px
+      top: 61px
     +lg
-      max-width: 1020px
-      right: -505px
-      top: -95px
+      max-width: 915px
+      top: 57px
     +md
-      right: -100px
-      max-width: 820px
-      top: 135px
+      max-width: 786px
+      top: 235px
+      transform: translateX(-50%)
     +sm
       display: none
       right: -120px
       top: 135px
       max-width: 890px
-    +xsm
-      top: 125px
-      max-width: 930px
+    // +xsm
+    //   top: 125px
+    //   max-width: 930px
 
   &__img-2
     position: absolute
@@ -77,21 +75,22 @@
     +xxxl
       left: -54px
     +xxl
-      top: 0
+      top: 125px
     +xl
       max-width: 410px
       left: -75px
-      top: 0
+      top: 105px
     +lg
-      top: 0
-      left: -125px
+      top: 105px
+      left: -120px
+      max-width: 360px
     +md
-      top: -20px
-      left: -150px
-      max-width: 305px
+      top: 83px
+      left: -25px
+      max-width: 250px
     +sm
       max-width: 204px
-      top: -21px
+      top: 90px
       left: -52px
 
   &__img-3
@@ -104,20 +103,24 @@
       animation: about-3 0.8s ease 1
     +xxl
       display: block
-      top: 200px
+      top: 475px
       right: 215px
     +xl
       max-width: 270px
       right: 205px
+      top: 395px
     +lg
-      top: 290px
+      top: 446px
       right: 123px
     +md
-      top: 450px
+      top: 550px
       max-width: 227px
+      left: 50%
+      transform: translateX(calc( -50% + 3rem ))
+      right: 0
     +sm
       right: 50px
-      top: 492px
+      top: 603px
 
   &__img-4
     position: absolute
@@ -128,9 +131,9 @@
     +xxxl
       left: 441px
     +xxl
-      max-width: 455px
-      left: 350px
-      top: -234px
+      max-width: 388px
+      left: 408px
+      top: 0
     +xl
       left: 300px
     +lg
@@ -147,7 +150,9 @@
       animation: about-1 0.8s ease 1
     +xxxl
       top: 74px
-      right: 0
+      // right: 0
+      left: 50%
+      transform: translateX(calc( -50% + 329px ))
       z-index: -1
     +xxl
       display: none
@@ -171,9 +176,9 @@
       display: block
       position: absolute
       width: 565px
-      height: 375px
+      height: 402px
       left: 0
-      top: 193px
+      top: 300px
       background: rgba(1, 213, 255, 0.8)
       filter: blur(12.5px)
       z-index: -1
@@ -212,8 +217,10 @@
     +xxxl
       max-width: 630px
     +xl
-      font-size: 16px
+      font-size: 14px
+      line-height: 28px
     +sm
+      font-size: 16px
       line-height: 24px
       margin: 0
 
@@ -229,7 +236,6 @@
     transform: translateX(100%) rotate(90deg) scale(0)
 
   100%
-    transform: none
 
 @keyframes about-2
   0%
