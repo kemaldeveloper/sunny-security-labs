@@ -19,7 +19,9 @@
     &:hover
       .portfolio-blog__content-title
         color: $hover
-        margin-left: 20px
+        margin-left: 40px
+        +xl
+          margin-left: 20px
         +md
           margin-left: 0
           color: $dark
@@ -39,6 +41,8 @@
     color: $dark
     max-width: 439px
     transition: all 0.3s linear
+    +xl
+      font-size: 34px
     +sm
       font-size: 22px
       line-height: 28px
@@ -63,22 +67,22 @@
     position: relative
     &::before
       content: ''
-      transition: all 0.3s linear
       position: absolute
       left: 0
       bottom: 0
       height: 97%
       width: 2px
       background: $gradient_plate
+      transition: all 0.3s linear
     &::after
       content: ''
-      transition: all 0.3s linear
       position: absolute
       left: 0
       bottom: 0
       height: 2px
       width: 512px
       background: $gradient_plate
+      transition: all 0.3s linear
       +xxxl
         width: 447px
       +xl
@@ -132,15 +136,15 @@
   &__wrapper
     &:hover
       .portfolio-blog__text-link
-        margin-right: 40px
+        margin-right: 60px
         color: $hover
+        +xxl
+          margin-right: 30px
         +md
           margin-right: 0
           color: $mid_blue
 
       .portfolio-blog__text-wrap
-
-        transition: all 0.5s ease
         &::before
           content: ''
           background: linear-gradient(90deg, #002865 0%, #002865 59.42%)
@@ -149,9 +153,9 @@
         &::after
           content: ''
           background: linear-gradient(90deg, #002865 0%, #002865 59.42%)
-          width: 510px
+          width: 490px
           +xxxl
-            width: 460px
+            width: 425px
           +xxl
             width: 410px
           +xl

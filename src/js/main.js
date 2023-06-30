@@ -104,60 +104,6 @@ $('input[type="tel"]').inputmask({
   showMaskOnHover: false,
 });
 
-// E-mail Ajax Send
-// $('form').on('submit', function (e) {
-//   e.preventDefault();
-
-//   let form = $(this);
-//   let formData = {};
-//   formData.data = {};
-
-//   // Serialize
-//   form.find('input, textarea').each(function () {
-//     let name = $(this).attr('name');
-//     let title = $(this).attr('data-name');
-//     let value = $(this).val();
-
-//     formData.data[name] = {
-//       title: title,
-//       value: value,
-//     };
-
-//     if (name === 'subject') {
-//       formData.subject = {
-//         value: value,
-//       };
-//       delete formData.data.subject;
-//     }
-//   });
-
-//   $.ajax({
-//     type: 'POST',
-//     url: 'mail/mail.php',
-//     dataType: 'json',
-//     data: formData,
-//   }).done(function (data) {
-//     if (data.status === 'success') {
-//       if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-//         form.find('.form-result').addClass('form-result--success');
-//       } else {
-//         mfpPopup('#success');
-//       }
-
-//       setTimeout(function () {
-//         if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-//           form.find('.form-result').removeClass('form-result--success');
-//         }
-//         $.magnificPopup.close();
-//         form.trigger('reset');
-//       }, 3000);
-//     } else {
-//       alert('Ajax result: ' + data.status);
-//     }
-//   });
-//   return false;
-// });
-
 const mfpPopup = function (popupID, source) {
   $.magnificPopup.open({
     items: { src: popupID },
@@ -254,30 +200,6 @@ $('.next').on('click', function () {
   $(this).closest('.slider-block').find('.slider').slick('slickNext');
 });
 
-// const tabNavItems = document.querySelectorAll('.tab-nav__link');
-// const tabContentItems = document.querySelectorAll('.tab-content__item');
-
-// tabNavItems.forEach((tab, index) => {
-//   tab.addEventListener('click', (event) => {
-//     event.preventDefault();
-
-//     if (!tab.classList.contains('active')) {
-//       tabNavItems.forEach((tab) => tab.classList.remove('active'));
-//       tab.classList.add('active');
-
-//       tabContentItems.forEach((content) => {
-//         content.classList.remove('animate__animated', 'animate__fadeIn');
-//         content.style.opacity = 0;
-//         content.style.display = 'none';
-//       });
-
-//       tabContentItems[index].style.display = 'block';
-//       tabContentItems[index].classList.add('animate__animated', 'animate__fadeIn');
-//       tabContentItems[index].style.opacity = 1;
-//     }
-//   });
-// });
-
 // Custom select
 
 const multiSelect = () => {
@@ -292,29 +214,6 @@ const multiSelect = () => {
 };
 
 multiSelect();
-
-// menu links active class toggler
-const menuLinks = () => {
-  const pageHref = window.location.href.split('/').slice('-1').join('/');
-  const currentElement = $(`.header__sub-link[href='${pageHref}']`);
-  const subList = currentElement.closest('.header__sub-list');
-
-  currentElement.addClass('active');
-  subList.addClass('active');
-  subList.siblings('.header__link').addClass('active');
-};
-
-menuLinks();
-//
-
-$('.header__link').on('mouseenter', (e) => {
-  // $('.header__link').removeClass('active');
-  $('.header__sub-list').removeClass('active');
-});
-
-// $('.header__link').on('mouseleave', (e) => {
-//   menuLinks();
-// });
 
 function setValidSliderTextHeight() {
   $('.slider__text-wrap').height(getSliderTextLineHeight() * 5);
@@ -335,8 +234,7 @@ const cookieAlert = document.querySelector('.cookie-alert--js');
 const cookieAcceptBtn = document.querySelector('.accept-btn--js');
 const cookieRejectBtn = document.querySelector('.reject-btn--js');
 
-// Тут можно указать время жизни cookie, Сейчас стоит 1 час.
-const expires = new Date(new Date().getTime() + 90 * 60 * 1000);
+// console.log(expires);
 
 if (!Cookies.get('visit')) {
   setTimeout(() => {
@@ -346,7 +244,7 @@ if (!Cookies.get('visit')) {
   cookieAcceptBtn.addEventListener('click', () => {
     cookieAlert.classList.remove('active');
 
-    Cookies.set(cookieName, true, { expires });
+    Cookies.set(cookieName, true, { expires: 7 });
   });
 
   cookieRejectBtn.addEventListener('click', () => {
